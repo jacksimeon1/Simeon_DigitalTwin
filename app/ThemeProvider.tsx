@@ -33,20 +33,25 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     console.log('Applying theme:', newTheme);
     
+    // Remove the dark class first
+    root.classList.remove('dark');
+    
+    // Force a reflow to clear any cached styles
+    void root.offsetHeight;
+    
+    // Now add the dark class if needed
     if (newTheme === 'dark') {
       root.classList.add('dark');
-      root.style.colorScheme = 'dark';
-    } else {
-      root.classList.remove('dark');
-      root.style.colorScheme = 'light';
     }
     
+    root.style.colorScheme = newTheme;
     localStorage.setItem('theme', newTheme);
   };
 
   const toggleTheme = () => {
     console.log('Toggling theme from:', theme);
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
   };
 
   return (
