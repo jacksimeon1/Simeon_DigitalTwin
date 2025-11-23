@@ -31,14 +31,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                const theme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const isDark = theme === 'dark' || (theme === null && prefersDark);
-                
-                if (isDark) {
-                  document.documentElement.classList.add('dark');
+                const theme = localStorage.getItem('theme') || 'dark';
+                if (theme === 'light') {
+                  document.documentElement.classList.add('light');
                 } else {
-                  document.documentElement.classList.remove('dark');
+                  document.documentElement.classList.add('dark');
                 }
               })();
             `,
