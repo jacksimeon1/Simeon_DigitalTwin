@@ -1,14 +1,7 @@
 {
-  "env": [
-    {
-      "key": "GROQ_API_KEY",
-      "value": "@groq_api_key"
-    },
-    {
-      "key": "GROQ_MODEL",
-      "value": "llama-3.3-70b-versatile"
-    }
-  ],
+  "env": {
+    "GROQ_MODEL": "llama-3.3-70b-versatile"
+  },
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs"
