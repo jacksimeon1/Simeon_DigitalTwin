@@ -36,14 +36,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     }
     
     localStorage.setItem('theme', newTheme);
-    console.log('Theme set to:', newTheme);
   };
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    console.log('Toggling theme from', theme, 'to', newTheme);
-    applyTheme(newTheme);
-    setTheme(newTheme);
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(newTheme);
+      return newTheme;
+    });
   };
 
   if (!mounted) {
