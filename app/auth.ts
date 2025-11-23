@@ -1,18 +1,8 @@
+import { getServerSession } from "next-auth";
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 
-declare module "next-auth" {
-  interface Session {
-    user: {
-      id?: string;
-      name?: string | null;
-      email?: string | null;
-      image?: string | null;
-    };
-  }
-}
-
-export const { handlers, auth, signIn, signOut } = NextAuth({
+export const authOptions = {
   providers: [
     Google({
       clientId: process.env.GOOGLE_ID || "",
@@ -36,4 +26,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: {
     signIn: "/auth/signin",
   },
-});
+};
+
+export const { signIn, signOut, auth } = NextAuth(authOptions);
