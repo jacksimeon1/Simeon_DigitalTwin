@@ -1,44 +1,55 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const navLinks = [
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#skills', label: 'Skills' },
+  ];
+
   return (
-    <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+    <nav className="fixed w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl z-50 shadow-sm hover:shadow-md transition-shadow border-b border-slate-200/50 dark:border-slate-700/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">RSJ</span>
+          {/* Logo with animation */}
+          <Link href="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all">
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform">RSJ</span>
             </div>
-            <span className="hidden sm:inline font-semibold text-slate-900">Robert Simeon Jr.</span>
+            <span className="hidden sm:inline font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Robert Simeon Jr.</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#about" className="text-slate-600 hover:text-blue-600 transition">
-              About
-            </Link>
-            <Link href="#projects" className="text-slate-600 hover:text-blue-600 transition">
-              Projects
-            </Link>
-            <Link href="#skills" className="text-slate-600 hover:text-blue-600 transition">
-              Skills
-            </Link>
-            <Link href="#chat" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group font-medium"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              </Link>
+            ))}
+            <a
+              href="#chat"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2 group"
+            >
+              <Sparkles size={16} className="group-hover:rotate-180 transition-transform" />
               Chat with AI
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-600 hover:text-blue-600"
+            className="md:hidden text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -46,19 +57,24 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 border-t border-slate-200">
-            <Link href="#about" className="block py-2 text-slate-600 hover:text-blue-600">
-              About
-            </Link>
-            <Link href="#projects" className="block py-2 text-slate-600 hover:text-blue-600">
-              Projects
-            </Link>
-            <Link href="#skills" className="block py-2 text-slate-600 hover:text-blue-600">
-              Skills
-            </Link>
-            <Link href="#chat" className="block py-2 text-blue-600 font-semibold">
+          <div className="md:hidden pb-4 border-t border-slate-200 dark:border-slate-700 bg-white/90 dark:bg-slate-800/90 backdrop-blur-xl">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block py-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="#chat"
+              className="block py-2 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
               Chat with AI
-            </Link>
+            </a>
           </div>
         )}
       </div>
