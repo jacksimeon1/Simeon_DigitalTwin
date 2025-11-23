@@ -1,11 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sparkles, LogOut } from 'lucide-react';
 import Link from 'next/link';
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession();
 
   const navLinks = [
     { href: '#about', label: 'About' },
@@ -37,13 +39,41 @@ export default function Navigation() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
-            <a
-              href="#chat"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2 group"
-            >
-              <Sparkles size={16} className="group-hover:rotate-180 transition-transform" />
-              Chat with AI
-            </a>
+
+            {/* Auth Section */}
+            <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-200 dark:border-slate-700">
+              {session?.user ? (
+                <>
+                  <div className="flex items-center gap-2">
+                    {session.user.image && (
+                      <img
+                        src={session.user.image}
+                        alt={session.user.name || 'User'}
+                        className="w-8 h-8 rounded-full"
+                      />
+                    )}
+                    <span className="text-sm text-slate-700 dark:text-slate-300 hidden sm:inline">
+                      {session.user.name?.split(' ')[0]}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => signOut()}
+                    className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors font-medium text-sm"
+                  >
+                    <LogOut size={16} />
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <button
+                  onClick={() => signIn('google')}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2 group"
+                >
+                  <Sparkles size={16} className="group-hover:rotate-180 transition-transform" />
+                  Sign In
+                </button>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -75,6 +105,47 @@ export default function Navigation() {
             >
               Chat with AI
             </a>
+
+            {/* Mobile Auth */}
+            <div className="pt-4 border-t border-slate-200 dark:border-slate-700 mt-4">
+              {session?.user ? (
+                <>
+                  <div className="flex items-center gap-2 mb-3 py-2">
+                    {session.user.image && (
+                      <img
+                        src={session.user.image}
+                        alt={session.user.name || 'User'}
+                        className="w-8 h-8 rounded-full"
+                      />
+                    )}
+                    <span className="text-sm text-slate-700 dark:text-slate-300">
+                      {session.user.name}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => {
+                      signOut();
+                      setIsOpen(false);
+                    }}
+                    className="w-full flex items-center justify-center gap-2 text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 font-medium py-2"
+                  >
+                    <LogOut size={16} />
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <button
+                  onClick={() => {
+                    signIn('google');
+                    setIsOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all flex items-center justify-center gap-2"
+                >
+                  <Sparkles size={16} />
+                  Sign In
+                </button>
+              )}
+            </div>
           </div>
         )}
       </div>
