@@ -15,15 +15,18 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [isMounted, setIsMounted] = useState(false);
 
-  // Apply theme to DOM
-  const applyTheme = (newTheme: Theme) => {
+  // Apply theme to DOM immediately
+  useEffect(() => {
     const root = document.documentElement;
-    if (newTheme === 'dark') {
+    if (theme === 'dark') {
       root.classList.add('dark');
+      root.style.colorScheme = 'dark';
     } else {
       root.classList.remove('dark');
+      root.style.colorScheme = 'light';
     }
-  };
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   // Initialize theme on mount
   useEffect(() => {
@@ -33,18 +36,16 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const initialTheme = saved || (systemDark ? 'dark' : 'light');
     
     setTheme(initialTheme);
-    applyTheme(initialTheme);
     setIsMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === 'light' ? 'dark' : 'light';
-      applyTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-      return newTheme;
-    });
+    setTheme((prevTheme) => prevTheme === 'light' ? 'dark' : 'light');
   };
+
+  if (!isMounted) {
+    return <>{children}</>;
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -56,7 +57,8 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within ThemeProvider');
+    // Return default values if not mounted yet
+    return { theme: 'light' as const, toggleTheme: () => {} };
   }
   return context;
 }
