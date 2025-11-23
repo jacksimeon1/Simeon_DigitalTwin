@@ -50,7 +50,7 @@ export default function Navigation() {
                 className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 aria-label="Toggle theme"
               >
-                {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
+                {theme === 'dark' ? <Moon size={18} /> : <Sun size={18} />}
               </button>
 
               {session?.user ? (
@@ -124,8 +124,8 @@ export default function Navigation() {
                 onClick={toggleTheme}
                 className="w-full flex items-center justify-center gap-2 py-2 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-medium mb-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               >
-                {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-                {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+                {theme === 'dark' ? <Moon size={18} /> : <Sun size={18} />}
+                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
               </button>
 
               {session?.user ? (
