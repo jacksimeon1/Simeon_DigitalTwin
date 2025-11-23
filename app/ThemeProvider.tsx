@@ -15,7 +15,17 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
   const [isMounted, setIsMounted] = useState(false);
 
-  // Apply theme to DOM immediately
+  // Initialize theme on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('theme') as Theme | null;
+    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = saved || (systemDark ? 'dark' : 'light');
+    
+    setTheme(initialTheme);
+    setIsMounted(true);
+  }, []);
+
+  // Update DOM whenever theme changes
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'dark') {
@@ -28,24 +38,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  // Initialize theme on mount
-  useEffect(() => {
-    // Get saved theme or system preference
-    const saved = localStorage.getItem('theme') as Theme | null;
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialTheme = saved || (systemDark ? 'dark' : 'light');
-    
-    setTheme(initialTheme);
-    setIsMounted(true);
-  }, []);
-
   const toggleTheme = () => {
-    setTheme((prevTheme) => prevTheme === 'light' ? 'dark' : 'light');
+    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
   };
-
-  if (!isMounted) {
-    return <>{children}</>;
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
@@ -57,7 +52,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 export function useTheme() {
   const context = useContext(ThemeContext);
   if (!context) {
-    // Return default values if not mounted yet
     return { theme: 'light' as const, toggleTheme: () => {} };
   }
   return context;
