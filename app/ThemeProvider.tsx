@@ -41,8 +41,9 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
+    console.log('Toggling theme from', theme, 'to', newTheme);
     applyTheme(newTheme);
+    setTheme(newTheme);
   };
 
   if (!mounted) {
