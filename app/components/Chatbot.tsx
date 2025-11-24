@@ -14,7 +14,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hi! 👋 I\'m Robert\'s AI assistant. Ask me anything about my projects, skills, achievements, or anything else you\'d like to know!',
+      text: 'Hi! 👋 I\'m Robert\'s AI assistant. I can tell you about my 5 projects including my Godot game "Bert and Jack Adventure", my skills in web development and game development, my HTML/CSS certification, and my experience as a 4th year IT student at SPUP. What would you like to know?',
       sender: 'assistant',
     },
   ]);
