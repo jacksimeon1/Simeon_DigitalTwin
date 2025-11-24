@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, Code2, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="about" className="relative w-full px-4 py-20 sm:py-32 md:py-40 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
+    <section id="about" className="relative w-full px-4 py-16 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animate-morph"></div>
@@ -24,7 +24,7 @@ export default function Hero() {
           </p>
 
           {/* Main Headline with animated gradient */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in animate-neon-flicker" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out, neon-flicker 1.5s ease-in-out infinite'}}>
+          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in animate-neon-flicker" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out, neon-flicker 1.5s ease-in-out infinite'}}>
             Robert Simeon Jr.
           </h1>
 
@@ -32,17 +32,17 @@ export default function Hero() {
           <div className="flex justify-center md:justify-end mb-6 animate-slide-up absolute top-0 right-0" style={{animationDelay: '0.1s'}}>
             <div className="relative group">
               {/* Animated glow ring */}
-              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute inset-0 w-48 h-48 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
               
               {/* Rotating border ring */}
-              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full animate-spin-slow opacity-50 group-hover:animate-spin-fast transition-all duration-300"></div>
+              <div className="absolute inset-0 w-48 h-48 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full animate-spin-slow opacity-50 group-hover:animate-spin-fast transition-all duration-300"></div>
               
               {/* Main frame */}
-              <div className="relative w-64 h-64 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
+              <div className="relative w-48 h-48 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
                 {/* Inner circle for picture */}
                 <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border-4 border-slate-200 dark:border-slate-700">
                   {/* Placeholder icon or image goes here */}
-                  <div className="text-7xl font-bold text-slate-400 dark:text-slate-600">
+                  <div className="text-5xl font-bold text-slate-400 dark:text-slate-600">
                     👨‍💻
                   </div>
                   {/* Uncomment below when you have your image */}
@@ -61,11 +61,11 @@ export default function Hero() {
           </div>
 
           {/* Subtitle */}
-          <p className="text-2xl sm:text-3xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-in-right" style={{animationDelay: '0.2s'}}>
+          <p className="text-xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-in-right" style={{animationDelay: '0.2s'}}>
             4th Year IT Student @ SPUP
           </p>
 
-          <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed animate-slide-up" style={{animationDelay: '0.2s'}}>
+          <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed animate-slide-up" style={{animationDelay: '0.2s'}}>
             Information Technology student at St. Paul University Philippines (SPUP). 
             Specializing in information systems and software development with a focus on 
             creating practical solutions for real-world problems.
@@ -75,23 +75,23 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-slide-up" style={{animationDelay: '0.3s'}}>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
             >
-              <Sparkles className="mr-2 group-hover:animate-spin" size={20} />
+              <Sparkles className="mr-2 group-hover:animate-spin" size={16} />
               View My Projects
-              <ArrowRight className="ml-2 group-hover:translate-x-1" size={20} />
+              <ArrowRight className="ml-2 group-hover:translate-x-1" size={16} />
             </a>
             <a
               href="#chat"
-              className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 border-2 border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-400 group"
+              className="inline-flex items-center justify-center px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 border-2 border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-400 group"
             >
-              <Code2 className="mr-2 group-hover:scale-110" size={20} />
+              <Code2 className="mr-2 group-hover:scale-110" size={16} />
               Chat with AI Assistant
             </a>
           </div>
 
           {/* Stats with enhanced cards */}
-          <div className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto md:mx-0">
+          <div className="grid grid-cols-3 gap-4 mt-12 max-w-md mx-auto md:mx-0">
             {[
               { label: 'Projects', value: '10+', icon: '📁', color: 'blue' },
               { label: 'Skills', value: '15+', icon: '🎯', color: 'purple' },
@@ -99,10 +99,10 @@ export default function Hero() {
             ].map((stat, idx) => (
               <div
                 key={stat.label}
-                className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-lg hover:shadow-lg dark:hover:shadow-blue-500/20 transition-all cursor-pointer transform hover:-translate-y-1 animate-slide-up"
+                className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-3 rounded-lg hover:shadow-lg dark:hover:shadow-blue-500/20 transition-all cursor-pointer transform hover:-translate-y-1 animate-slide-up"
                 style={{animationDelay: `${0.4 + idx * 0.1}s`}}
               >
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">{stat.value}</p>
+                <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">{stat.value}</p>
                 <p className="text-sm text-slate-600 dark:text-slate-400">{stat.label}</p>
               </div>
             ))}
