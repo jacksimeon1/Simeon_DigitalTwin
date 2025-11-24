@@ -23,6 +23,16 @@ const projects: Project[] = [
     github: '#',
     featured: true,
   },
+  {
+    id: 2,
+    title: 'E-Bayo',
+    description:
+      'A modern ecommerce website platform designed for seamless online shopping experiences. Features product catalog management, secure payment processing, user authentication, shopping cart functionality, and order tracking. Built with responsive design and optimized for performance.',
+    tags: ['E-commerce', 'React', 'Node.js', 'MongoDB', 'Payment Integration'],
+    link: '#',
+    github: '#',
+    featured: true,
+  },
 ];
 
 export default function Projects() {
