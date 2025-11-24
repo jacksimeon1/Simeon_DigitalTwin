@@ -68,7 +68,7 @@ export default function Projects() {
               style={{animationDelay: `${idx * 0.2}s`}}
             >
               {/* Card Container */}
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col transform-gpu hover:scale-105 hover:rotate-1 perspective-1000">
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col transform-gpu hover:scale-105 hover:rotate-1 perspective-1000 hover-lift hover-glow">
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 right-4 z-10 flex items-center gap-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold group-hover:scale-110 transition-transform">

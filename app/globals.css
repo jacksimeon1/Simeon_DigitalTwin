@@ -491,6 +491,146 @@ body {
   animation: scale-in 0.6s ease-out;
 }
 
+/* Additional Advanced Effects */
+@keyframes morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(180deg) scale(1.1);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(147, 51, 234, 0.4);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0) translateY(0) rotateZ(0deg);
+  }
+  25% {
+    transform: translateX(10px) translateY(-10px) rotateZ(90deg);
+  }
+  50% {
+    transform: translateX(-10px) translateY(10px) rotateZ(180deg);
+  }
+  75% {
+    transform: translateX(5px) translateY(-5px) rotateZ(270deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotateZ(360deg);
+  }
+}
+
+@keyframes bounce-3d {
+  0%, 100% {
+    transform: translateY(0) rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: translateY(-20px) rotateX(15deg) rotateY(15deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(-15deg) rotateY(-15deg);
+  }
+  75% {
+    transform: translateY(-30px) rotateX(10deg) rotateY(-10deg);
+  }
+}
+
+@keyframes neon-flicker {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.8), 0 0 10px rgba(59, 130, 246, 0.6), 0 0 15px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes matrix-rain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.animate-morph {
+  animation: morph 8s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+}
+
+.animate-bounce-3d {
+  animation: bounce-3d 2s ease-in-out infinite;
+}
+
+.animate-neon-flicker {
+  animation: neon-flicker 1.5s ease-in-out infinite;
+}
+
+.matrix-rain {
+  position: fixed;
+  color: #00ff00;
+  font-family: monospace;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0.1;
+  animation: matrix-rain 5s linear infinite;
+}
+
+/* Advanced Hover Effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6), 0 0 50px rgba(147, 51, 234, 0.4);
+  transform: scale(1.05);
+}
+
+.hover-tilt {
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.hover-tilt:hover {
+  transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.02);
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

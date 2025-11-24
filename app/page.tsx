@@ -7,11 +7,13 @@ import Projects from './components/Projects';
 import ChatSection from './components/ChatSection';
 import Footer from './components/Footer';
 import ParticleEffects from './components/ParticleEffects';
+import MatrixRain from './components/MatrixRain';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-slate-950 relative">
       <ParticleEffects />
+      <MatrixRain />
       <Navigation />
       <main className="pt-16">
         <Hero />

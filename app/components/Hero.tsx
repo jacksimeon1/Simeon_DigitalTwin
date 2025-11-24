@@ -7,9 +7,13 @@ export default function Hero() {
     <section id="about" className="relative w-full px-4 py-20 sm:py-32 md:py-40 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animate-morph"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-2000 animate-wave"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000 animate-glow-pulse"></div>
+        
+        {/* Additional morphing shapes */}
+        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-10 animate-morph animate-bounce-3d"></div>
+        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 opacity-10 animate-morph animate-wave" style={{animationDelay: '1s'}}></div>
       </div>
 
       <div className="relative max-w-6xl mx-auto">
@@ -20,7 +24,7 @@ export default function Hero() {
           </p>
 
           {/* Main Headline with animated gradient */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out'}}>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in animate-neon-flicker" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out, neon-flicker 1.5s ease-in-out infinite'}}>
             Robert Simeon Jr.
           </h1>
 
