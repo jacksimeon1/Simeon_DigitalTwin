@@ -1,6 +1,6 @@
 'use client';
 
-import { Zap, Code2, Layers, Database, Cloud } from 'lucide-react';
+import { Zap, Code2, Layers, Database, Cloud, Cpu, Globe, Gamepad2 } from 'lucide-react';
 
 interface Skill {
   category: string;
@@ -13,17 +13,24 @@ interface Skill {
 const skills: Skill[] = [
   {
     category: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS'],
+    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
     icon: <Code2 size={24} />,
     color: 'blue',
     gradient: 'from-blue-600 to-cyan-600',
   },
   {
     category: 'Backend',
-    items: ['Node.js', 'Python', 'Express.js', 'PostgreSQL', 'MongoDB'],
+    items: ['Node.js', 'Python', 'Express.js', 'PostgreSQL', 'MongoDB', 'PHP', 'Laravel', 'MySQL'],
     icon: <Layers size={24} />,
     color: 'purple',
     gradient: 'from-purple-600 to-pink-600',
+  },
+  {
+    category: 'Game Development',
+    items: ['Godot Engine', 'GDScript', 'C#', 'Game Design', 'Unity Basics'],
+    icon: <Gamepad2 size={24} />,
+    color: 'green',
+    gradient: 'from-green-600 to-emerald-600',
   },
   {
     category: 'Tools & Platforms',
@@ -50,7 +57,7 @@ export default function Skills() {
         </div>
 
         {/* Skills Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skillGroup, idx) => (
             <div
               key={skillGroup.category}

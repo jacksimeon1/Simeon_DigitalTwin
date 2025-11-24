@@ -53,6 +53,16 @@ const projects: Project[] = [
     github: '#',
     featured: false,
   },
+  {
+    id: 5,
+    title: 'Bert and Jack Adventure',
+    description:
+      'An exciting adventure game developed in Godot Engine where players control Bert and Jack to fight enemies and collect valuable gems and treasures. Features character progression, combat mechanics, treasure hunting, and engaging gameplay. Built with Godot Engine and GDScript to showcase game development skills.',
+    tags: ['Godot Engine', 'GDScript', 'Game Development', 'Adventure', 'Combat System'],
+    link: '#',
+    github: '#',
+    featured: true,
+  },
 ];
 
 export default function Projects() {
