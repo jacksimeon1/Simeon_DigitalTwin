@@ -6,11 +6,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ChatSection from './components/ChatSection';
 import Footer from './components/Footer';
+import ParticleEffects from './components/ParticleEffects';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
-      
+    <div className="min-h-screen bg-gray-50 dark:bg-slate-950 relative">
+      <ParticleEffects />
       <Navigation />
       <main className="pt-16">
         <Hero />

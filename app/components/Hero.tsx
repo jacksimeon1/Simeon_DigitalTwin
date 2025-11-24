@@ -20,12 +20,12 @@ export default function Hero() {
           </p>
 
           {/* Main Headline with animated gradient */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-slide-up" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite'}}>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out'}}>
             Robert Simeon Jr.
           </h1>
 
           {/* Subtitle */}
-          <p className="text-2xl sm:text-3xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-up" style={{animationDelay: '0.1s'}}>
+          <p className="text-2xl sm:text-3xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-in-right" style={{animationDelay: '0.2s'}}>
             4th Year IT Student @ SPUP
           </p>
 

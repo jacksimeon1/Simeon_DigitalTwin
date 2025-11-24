@@ -68,7 +68,7 @@ export default function Projects() {
               style={{animationDelay: `${idx * 0.2}s`}}
             >
               {/* Card Container */}
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col">
+              <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col transform-gpu hover:scale-105 hover:rotate-1 perspective-1000">
                 {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 right-4 z-10 flex items-center gap-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold group-hover:scale-110 transition-transform">
@@ -78,16 +78,23 @@ export default function Projects() {
                 )}
 
                 {/* Project Image/Header */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-600 transition-all duration-300 flex items-center justify-center overflow-hidden">
+                <div className="relative h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-600 transition-all duration-500 flex items-center justify-center overflow-hidden">
+                  {/* 3D Rotating Elements */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="absolute w-20 h-20 bg-white/10 rounded-full animate-spin-slow group-hover:animate-spin-fast"></div>
+                    <div className="absolute w-16 h-16 bg-blue-400/20 rounded-full animate-spin-reverse group-hover:animate-spin-reverse-fast"></div>
+                    <div className="absolute w-12 h-12 bg-purple-400/20 rounded-full animate-spin-slow group-hover:animate-spin-fast"></div>
+                  </div>
+                  
                   {/* Animated background */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity">
                     <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent animate-pulse"></div>
                   </div>
                   
-                  {/* Content */}
-                  <div className="relative text-center text-white px-4 transform group-hover:scale-110 transition-transform duration-300">
-                    <p className="text-sm font-semibold opacity-75 mb-2">Project Showcase</p>
-                    <p className="text-3xl font-bold">📋</p>
+                  {/* Content with 3D effect */}
+                  <div className="relative text-center text-white px-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 preserve-3d">
+                    <p className="text-sm font-semibold opacity-75 mb-2 group-hover:opacity-100 transition-opacity">Project Showcase</p>
+                    <p className="text-3xl font-bold transform group-hover:rotate-180 transition-transform duration-1000">📋</p>
                   </div>
                 </div>
 
