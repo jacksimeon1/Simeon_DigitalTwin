@@ -5,6 +5,8 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import ChatSection from './components/ChatSection';
+import ContactForm from './components/ContactForm';
+import ResumeSection from './components/ResumeSection';
 import Footer from './components/Footer';
 import ParticleEffects from './components/ParticleEffects';
 import MatrixRain from './components/MatrixRain';
@@ -19,6 +21,8 @@ export default function Home() {
         <Hero />
         <Projects />
         <Skills />
+        <ResumeSection />
+        <ContactForm />
         <ChatSection />
       </main>
       <Footer />
