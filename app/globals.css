@@ -119,6 +119,36 @@ html:not(.dark) body {
   background-color: #fafafa !important;
 }
 
+/* Fix navbar visibility in light mode */
+html:not(.dark) nav {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+html:not(.dark) .bg-white\/70 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+html:not(.dark) .text-slate-900 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .border-slate-200 {
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .border-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
 html.dark .bg-slate-950 {
   background-color: #020617 !important;
 }
