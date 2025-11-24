@@ -133,6 +133,10 @@ html:not(.dark) .text-slate-900 {
   color: #1e293b !important;
 }
 
+html:not(.dark) .text-slate-700 {
+  color: #334155 !important;
+}
+
 html:not(.dark) .text-slate-600 {
   color: #475569 !important;
 }
@@ -141,12 +145,62 @@ html:not(.dark) .text-slate-400 {
   color: #64748b !important;
 }
 
+html:not(.dark) .text-slate-300 {
+  color: #94a3b8 !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #64748b !important;
+}
+
+html:not(.dark) .text-slate-800 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-blue-600 {
+  color: #2563eb !important;
+}
+
+html:not(.dark) .text-blue-400 {
+  color: #3b82f6 !important;
+}
+
 html:not(.dark) .border-slate-200 {
   border-color: #e2e8f0 !important;
 }
 
 html:not(.dark) .border-slate-700 {
   border-color: #cbd5e1 !important;
+}
+
+/* Fix all text elements in light mode */
+html:not(.dark) h1, 
+html:not(.dark) h2, 
+html:not(.dark) h3, 
+html:not(.dark) h4, 
+html:not(.dark) h5, 
+html:not(.dark) h6 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) p, 
+html:not(.dark) span, 
+html:not(.dark) div {
+  color: #334155 !important;
+}
+
+/* Override for specific colored text */
+html:not(.dark) .text-blue-600,
+html:not(.dark) .text-purple-600,
+html:not(.dark) .text-pink-600 {
+  color: #2563eb !important;
+}
+
+/* Fix gradient text */
+html:not(.dark) .bg-clip-text {
+  color: #1e293b !important;
+  background-clip: unset !important;
+  -webkit-background-clip: unset !important;
 }
 
 html.dark .bg-slate-950 {
