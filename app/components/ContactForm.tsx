@@ -164,13 +164,7 @@ export default function ContactForm() {
             </div>
           )}
 
-          {/* Setup Notice */}
-          <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-            <p className="text-yellow-700 dark:text-yellow-300 text-sm text-center">
-              ⚠️ <strong>Developer Note:</strong> To enable email notifications, sign up at <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-600">formspree.io</a> and update the FORMSPREE_ID in <code className="bg-yellow-100 dark:bg-yellow-900 px-1 rounded">app/api/contact/route.ts</code>
-            </p>
-          </div>
-        </div>
+                  </div>
 
         {/* Alternative Contact Methods */}
         <div className="mt-12 text-center">

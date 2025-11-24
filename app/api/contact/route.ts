@@ -22,8 +22,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Using Formspree (free and easy to set up)
-    // You need to sign up at formspree.io and get your form ID
-    const FORMSPREE_ID = 'YOUR_FORMSPREE_FORM_ID'; // Replace with your actual Formspree ID
+    // Your Formspree form ID
+    const FORMSPREE_ID = 'mblerkbl';
 
     const response = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
       method: 'POST',
