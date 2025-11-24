@@ -320,11 +320,11 @@ Web Development, AI/ML, Game Development, UI/UX Design
               </h3>
               
               <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-sm">
-                Get the complete version of my resume in PDF format with detailed project descriptions and achievements.
+                Download my professional resume in PDF format with detailed project descriptions, skills, and certifications.
               </p>
 
-              {/* Download Buttons */}
-              <div className="w-full space-y-4">
+              {/* Download Button */}
+              <div className="w-full">
                 <button
                   onClick={() => handleDownload('pdf')}
                   className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
@@ -332,20 +332,12 @@ Web Development, AI/ML, Game Development, UI/UX Design
                   <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                   Download Resume (PDF)
                 </button>
-
-                <button
-                  onClick={() => handleDownload('txt')}
-                  className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-all duration-300 border-2 border-slate-200 dark:border-slate-600 hover:border-green-400 dark:hover:border-green-400 group"
-                >
-                  <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  Download Resume (TXT)
-                </button>
               </div>
 
               {/* Additional Info */}
               <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                 <p className="text-sm text-blue-700 dark:text-blue-300">
-                  Resume includes: Education, Projects, Skills, Achievements, and Contact Information
+                  📄 Professional PDF format with Education, Projects, Skills, Certifications, and Contact Information
                 </p>
               </div>
             </div>
