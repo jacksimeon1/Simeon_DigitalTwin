@@ -1,13 +1,23 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Github, Linkedin, Mail, Sparkles, LogOut } from 'lucide-react';
 import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import NavbarParticles from './NavbarParticles';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { data: session } = useSession();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navLinks = [
     { href: '#about', label: 'About' },
@@ -16,27 +26,44 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl z-50 shadow-sm hover:shadow-md transition-shadow border-b border-slate-200/50 dark:border-slate-700/50">
+    <nav className={`fixed w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-xl z-50 transition-all duration-300 border-b border-slate-200/50 dark:border-slate-700/50 ${scrolled ? 'shadow-lg shadow-blue-500/10 dark:shadow-purple-500/10' : 'shadow-sm hover:shadow-md'}`}>
+      {/* Animated border line */}
+      <div className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 animate-pulse"></div>
+      
+      {/* Navbar particles */}
+      <NavbarParticles />
+      
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo with animation */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all">
-              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform">RSJ</span>
+          <Link href="/" className="flex items-center space-x-2 group relative">
+            {/* Glow effect behind logo */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg opacity-0 group-hover:opacity-20 blur-lg transition-opacity animate-pulse"></div>
+            
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all transform group-hover:rotate-12 group-hover:scale-110 relative overflow-hidden">
+              {/* Animated inner glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent animate-pulse"></div>
+              <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform relative z-10">RSJ</span>
             </div>
-            <span className="hidden sm:inline font-semibold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">Robert Simeon Jr.</span>
+            <span className="hidden sm:inline font-bold text-slate-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-purple-600 transition-all duration-300">Robert Simeon Jr.</span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative group font-medium"
+                className="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 relative group font-medium px-2 py-1 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20"
+                style={{animationDelay: `${index * 0.1}s`}}
               >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+                {/* Animated underline */}
+                <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                
+                {/* Hover glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                <span className="relative z-10">{link.label}</span>
               </Link>
             ))}
 
@@ -77,14 +104,21 @@ export default function Navigation() {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="relative p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group"
+            >
+              {/* Animated background glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              
+              {/* Icon with rotation */}
+              <span className="relative z-10 block transform transition-transform duration-300 group-hover:rotate-12">
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </span>
+            </button>
+          </div>
 
         {/* Mobile Menu */}
         {isOpen && (
