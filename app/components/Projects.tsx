@@ -33,6 +33,26 @@ const projects: Project[] = [
     github: '#',
     featured: true,
   },
+  {
+    id: 3,
+    title: 'AI-Powered Student Assistant Chatbot',
+    description:
+      'An intelligent chatbot designed to help students with academic queries, course information, and campus resources. Features natural language processing, contextual understanding, and integration with university databases. Provides 24/7 support for student needs.',
+    tags: ['AI/ML', 'Natural Language Processing', 'Python', 'TensorFlow', 'Chatbot'],
+    link: '#',
+    github: '#',
+    featured: false,
+  },
+  {
+    id: 4,
+    title: 'Student Grade Calculator',
+    description:
+      'A simple yet useful web application for students to calculate and track their grades throughout the semester. Features grade input, GPA calculation, grade forecasting, and visual progress tracking. Built with HTML, CSS, and JavaScript as a beginner project.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Student Project', 'Beginner'],
+    link: '#',
+    github: '#',
+    featured: false,
+  },
 ];
 
 export default function Projects() {
@@ -123,28 +143,7 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-700">
-                    {project.link && (
-                      <a
-                        href={project.link}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 group/link transition-colors"
-                      >
-                        <ExternalLink size={16} className="group-hover/link:translate-x-0.5 transition-transform" />
-                        Live Demo
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white group/link transition-colors"
-                      >
-                        <Github size={16} className="group-hover/link:rotate-180 transition-transform" />
-                        Source Code
-                      </a>
-                    )}
-                  </div>
-                </div>
+                                  </div>
 
                 {/* Bottom accent line */}
                 <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 w-0 group-hover:w-full transition-all duration-500"></div>
