@@ -46,10 +46,7 @@ export default function Navigation() {
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-200 dark:border-slate-700">
               {/* Theme Toggle */}
               <button
-                onClick={() => {
-                  console.log('Theme button clicked');
-                  toggleTheme();
-                }}
+                onClick={toggleTheme}
                 className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
                 aria-label="Toggle theme"
               >
