@@ -17,11 +17,24 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Simulate form submission (replace with actual email service)
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
       setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -146,10 +159,17 @@ export default function ContactForm() {
           {submitStatus === 'error' && (
             <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg animate-slide-up">
               <p className="text-red-700 dark:text-red-300 text-center">
-                ❌ Failed to send message. Please try again later.
+                ❌ Failed to send message. Please try again or contact me directly at robertsimeon12345@gmail.com
               </p>
             </div>
           )}
+
+          {/* Setup Notice */}
+          <div className="mt-4 p-4 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+            <p className="text-yellow-700 dark:text-yellow-300 text-sm text-center">
+              ⚠️ <strong>Developer Note:</strong> To enable email notifications, sign up at <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-600">formspree.io</a> and update the FORMSPREE_ID in <code className="bg-yellow-100 dark:bg-yellow-900 px-1 rounded">app/api/contact/route.ts</code>
+            </p>
+          </div>
         </div>
 
         {/* Alternative Contact Methods */}
@@ -157,11 +177,11 @@ export default function ContactForm() {
           <p className="text-slate-600 dark:text-slate-400 mb-4">Or reach out directly:</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:robert.simeon@example.com"
+              href="mailto:robertsimeon12345@gmail.com"
               className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors group"
             >
               <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              robert.simeon@example.com
+              robertsimeon12345@gmail.com
             </a>
             <a
               href="https://linkedin.com/in/robert-simeon"
