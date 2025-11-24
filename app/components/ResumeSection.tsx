@@ -3,14 +3,13 @@
 import { Download, FileText, Award, Briefcase, GraduationCap, Calendar } from 'lucide-react';
 
 export default function ResumeSection() {
-  const handleDownload = () => {
-    // Create a sample resume (in real implementation, this would be an actual PDF file)
+  const handleDownload = (format: 'pdf' | 'txt') => {
     const resumeContent = `
 ROBERT SIMEON JR.
 4th Year IT Student @ SPUP
 
 CONTACT
-📧 robert.simeon@example.com
+📧 robertsimeon12345@gmail.com
 📱 +63 912 345 6789
 🔗 linkedin.com/in/robert-simeon
 🐙 github.com/jacksimeon1
@@ -59,16 +58,146 @@ INTERESTS
 Web Development, AI/ML, Game Development, UI/UX Design
     `;
 
-    // Create blob and download
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Robert_Simeon_Jr_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    if (format === 'pdf') {
+      // Create PDF using jsPDF-like approach (simplified version)
+      createPDF(resumeContent);
+    } else {
+      // Create TXT file
+      const blob = new Blob([resumeContent], { type: 'text/plain' });
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Robert_Simeon_Jr_Resume.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(url);
+    }
+  };
+
+  const createPDF = (content: string) => {
+    // Create a simple PDF-like HTML document
+    const pdfContent = `
+    <html>
+    <head>
+      <style>
+        body { 
+          font-family: Arial, sans-serif; 
+          line-height: 1.6; 
+          margin: 40px;
+          color: #333;
+        }
+        h1 { 
+          color: #1e40af; 
+          border-bottom: 2px solid #1e40af;
+          padding-bottom: 10px;
+        }
+        h2 { 
+          color: #3730a3; 
+          margin-top: 30px;
+          border-left: 4px solid #3730a3;
+          padding-left: 10px;
+        }
+        .contact { 
+          background: #f8fafc; 
+          padding: 15px; 
+          border-radius: 5px;
+          margin: 20px 0;
+        }
+        .project { 
+          margin: 15px 0; 
+          padding: 10px;
+          border-left: 3px solid #10b981;
+        }
+        ul { 
+          margin: 10px 0; 
+        }
+        li { 
+          margin: 5px 0; 
+        }
+      </style>
+    </head>
+    <body>
+      <h1>ROBERT SIMEON JR.</h1>
+      <p><strong>4th Year IT Student @ SPUP</strong></p>
+      
+      <div class="contact">
+        <h2>CONTACT</h2>
+        <p>📧 robertsimeon12345@gmail.com</p>
+        <p>📱 +63 912 345 6789</p>
+        <p>🔗 linkedin.com/in/robert-simeon</p>
+        <p>🐙 github.com/jacksimeon1</p>
+      </div>
+
+      <h2>EDUCATION</h2>
+      <p><strong>St. Paul University Philippines</strong><br>
+      Bachelor of Science in Information Technology<br>
+      Expected Graduation: 2025</p>
+
+      <h2>SKILLS</h2>
+      <ul>
+        <li><strong>Programming:</strong> JavaScript, Python, Java, C++</li>
+        <li><strong>Web Development:</strong> React, Next.js, Node.js, HTML/CSS</li>
+        <li><strong>Database:</strong> MySQL, MongoDB, PostgreSQL</li>
+        <li><strong>Tools:</strong> Git, VS Code, Figma, Docker</li>
+        <li><strong>Soft Skills:</strong> Problem-solving, Teamwork, Communication</li>
+      </ul>
+
+      <h2>PROJECTS</h2>
+      <div class="project">
+        <p><strong>1. In-Off Campus Activity Scheduling Information System</strong><br>
+        Comprehensive event management system<br>
+        <em>Technologies: React, Node.js, MongoDB</em></p>
+      </div>
+      <div class="project">
+        <p><strong>2. E-Bayo E-commerce Platform</strong><br>
+        Full-stack online shopping platform<br>
+        <em>Technologies: React, Node.js, Payment Gateway</em></p>
+      </div>
+      <div class="project">
+        <p><strong>3. AI-Powered Student Assistant Chatbot</strong><br>
+        NLP-based academic support system<br>
+        <em>Technologies: Python, TensorFlow, NLP</em></p>
+      </div>
+      <div class="project">
+        <p><strong>4. Student Grade Calculator</strong><br>
+        Academic progress tracking tool<br>
+        <em>Technologies: HTML, CSS, JavaScript</em></p>
+      </div>
+
+      <h2>ACHIEVEMENTS</h2>
+      <ul>
+        <li>Dean's List - 3 consecutive semesters</li>
+        <li>Best IT Project Award - SPUP Tech Fair 2024</li>
+        <li>Active member - IT Student Society</li>
+        <li>Community Service Volunteer - 200+ hours</li>
+      </ul>
+
+      <h2>LANGUAGES</h2>
+      <ul>
+        <li>English (Fluent)</li>
+        <li>Filipino (Native)</li>
+        <li>Basic Japanese</li>
+      </ul>
+
+      <h2>INTERESTS</h2>
+      <p>Web Development, AI/ML, Game Development, UI/UX Design</p>
+    </body>
+    </html>
+    `;
+
+    // Create a new window and print to PDF
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      printWindow.document.write(pdfContent);
+      printWindow.document.close();
+      
+      // Wait for content to load, then trigger print dialog
+      printWindow.onload = () => {
+        printWindow.print();
+        printWindow.close();
+      };
+    }
   };
 
   const resumeHighlights = [
@@ -187,7 +316,7 @@ Web Development, AI/ML, Game Development, UI/UX Design
               {/* Download Buttons */}
               <div className="w-full space-y-4">
                 <button
-                  onClick={handleDownload}
+                  onClick={() => handleDownload('pdf')}
                   className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
                 >
                   <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
@@ -195,7 +324,7 @@ Web Development, AI/ML, Game Development, UI/UX Design
                 </button>
 
                 <button
-                  onClick={handleDownload}
+                  onClick={() => handleDownload('txt')}
                   className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 transition-all duration-300 border-2 border-slate-200 dark:border-slate-600 hover:border-green-400 dark:hover:border-green-400 group"
                 >
                   <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -206,7 +335,7 @@ Web Development, AI/ML, Game Development, UI/UX Design
               {/* Additional Info */}
               <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
                 <p className="text-sm text-blue-700 dark:text-blue-300">
-                  📄 Resume includes: Education, Projects, Skills, Achievements, and Contact Information
+                  Resume includes: Education, Projects, Skills, Achievements, and Contact Information
                 </p>
               </div>
             </div>
