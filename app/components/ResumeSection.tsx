@@ -26,6 +26,10 @@ SKILLS
 • Tools: Git, VS Code, Figma, Docker
 • Soft Skills: Problem-solving, Teamwork, Communication
 
+CERTIFICATIONS
+• HTML and CSS Certification - Professional Web Development
+  ✅ PASSED - Demonstrated proficiency in HTML5, CSS3, responsive design, and modern web standards
+
 PROJECTS
 1. In-Off Campus Activity Scheduling Information System
    - Comprehensive event management system
@@ -143,6 +147,12 @@ Web Development, AI/ML, Game Development, UI/UX Design
         <li><strong>Soft Skills:</strong> Problem-solving, Teamwork, Communication</li>
       </ul>
 
+      <h2>CERTIFICATIONS</h2>
+      <div class="project">
+        <p><strong>HTML and CSS Certification - Professional Web Development</strong><br>
+        ✅ <strong>PASSED</strong> - Demonstrated proficiency in HTML5, CSS3, responsive design, and modern web standards</p>
+      </div>
+
       <h2>PROJECTS</h2>
       <div class="project">
         <p><strong>1. In-Off Campus Activity Scheduling Information System</strong><br>
@@ -215,8 +225,8 @@ Web Development, AI/ML, Game Development, UI/UX Design
     },
     {
       icon: <Award className="w-5 h-5" />,
-      title: "Achievements",
-      value: "Dean's List",
+      title: "Certified",
+      value: "HTML/CSS",
       color: "pink"
     },
     {
