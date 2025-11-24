@@ -82,19 +82,41 @@ html.dark .bg-gray-100 {
 
 /* Ensure light mode is pure white */
 html:not(.dark) .bg-white {
-  background-color: #ffffff !important;
+  background-color: #fafafa !important;
 }
 
 html:not(.dark) .from-white {
-  background-color: #ffffff !important;
+  background-color: #fafafa !important;
 }
 
 html:not(.dark) .via-blue-50 {
-  background-color: #eff6ff !important;
+  background-color: #f0f9ff !important;
 }
 
 html:not(.dark) .to-purple-50 {
-  background-color: #faf5ff !important;
+  background-color: #fdf4ff !important;
+}
+
+/* Fix text visibility in light mode */
+html:not(.dark) .text-slate-900 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .text-slate-700 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-600 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Main body background for light mode */
+html:not(.dark) body {
+  background-color: #fafafa !important;
 }
 
 html.dark .bg-slate-950 {
