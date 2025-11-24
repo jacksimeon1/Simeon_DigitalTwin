@@ -28,12 +28,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const root = document.documentElement;
     
     if (newTheme === 'light') {
-      // Remove dark class and add light class
+      // Remove dark class for light mode
       root.classList.remove('dark');
-      root.classList.add('light');
     } else {
-      // Remove light class and add dark class
-      root.classList.remove('light');
+      // Add dark class for dark mode
       root.classList.add('dark');
     }
     
