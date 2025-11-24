@@ -178,7 +178,7 @@ export default function ContactForm() {
               robertsimeon12345@gmail.com
             </a>
             <a
-              href="https://linkedin.com/in/robert-simeon"
+              href="https://www.linkedin.com/in/robert-simeon-08063b214"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group"

@@ -11,7 +11,7 @@ ROBERT SIMEON JR.
 CONTACT
 📧 robertsimeon12345@gmail.com
 📱 09215512415
-🔗 www.linkedin.com/in/
+🔗 www.linkedin.com/in/robert-simeon-08063b214
 🐙 github.com/jacksimeon1
 
 EDUCATION
@@ -134,7 +134,7 @@ Web Development, AI/ML, Game Development, UI/UX Design
         <h2>CONTACT</h2>
         <p>📧 robertsimeon12345@gmail.com</p>
         <p>📱 09215512415</p>
-        <p>🔗 www.linkedin.com/in/</p>
+        <p>🔗 www.linkedin.com/in/robert-simeon-08063b214</p>
         <p>🐙 github.com/jacksimeon1</p>
       </div>
 
