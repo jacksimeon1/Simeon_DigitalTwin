@@ -5,107 +5,118 @@
   --font-geist-mono: 'Courier New', monospace;
 }
 
-/* Light theme base styles */
+/* LIGHT THEME - DEFAULT */
 html {
   background-color: #ffffff !important;
   color: #1e293b !important;
 }
 
-/* Ensure light theme colors */
-html .bg-white {
+html body {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+/* Light theme backgrounds */
+html .bg-white,
+html .bg-gray-50,
+html .bg-slate-50,
+html .bg-slate-100 {
   background-color: #ffffff !important;
 }
 
-html .bg-gray-50 {
+html .bg-gray-100 {
   background-color: #f9fafb !important;
 }
 
-html .bg-slate-50 {
-  background-color: #f8fafc !important;
-}
-
-html .bg-slate-100 {
-  background-color: #f1f5f9 !important;
-}
-
-html .text-slate-900 {
-  color: #0f172a !important;
-}
-
-html .text-slate-700 {
-  color: #334155 !important;
-}
-
-html .text-slate-600 {
-  color: #475569 !important;
-}
-
-html .text-slate-400 {
-  color: #94a3b8 !important;
-}
-
-html .text-slate-300 {
-  color: #cbd5e1 !important;
-}
-
-html .border-slate-200 {
-  border-color: #e2e8f0 !important;
-}
-
-html .border-slate-700 {
-  border-color: #334155 !important;
-}
-
-html nav {
-  background-color: rgba(255, 255, 255, 0.7) !important;
+/* Light theme navigation */
+html nav,
+html .bg-white\/70 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: blur(12px) !important;
 }
 
-html .bg-white\/70 {
-  background-color: rgba(255, 255, 255, 0.7) !important;
-}
-
-
-html.dark .bg-blue-100 {
-  background-color: #1e3a8a !important;
-}
-
-html.dark .bg-purple-100 {
-  background-color: #581c87 !important;
-}
-
-html.dark .bg-gray-50 {
-  background-color: #020617 !important;
-}
-
-html.dark .bg-gray-100 {
-  background-color: #1e293b !important;
-}
-
-/* Light mode styles (default) */
-html {
-  background-color: #ffffff !important;
+/* Light theme text */
+html .text-slate-900,
+html .text-slate-800,
+html .text-slate-700 {
   color: #1e293b !important;
 }
 
-/* Dark mode styles */
+html .text-slate-600,
+html .text-slate-500 {
+  color: #475569 !important;
+}
+
+html .text-slate-400,
+html .text-slate-300 {
+  color: #94a3b8 !important;
+}
+
+/* Light theme borders */
+html .border-slate-200,
+html .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+/* DARK THEME */
 html.dark {
   background-color: #020617 !important;
   color: #ffffff !important;
 }
 
-html.dark .bg-white {
+html.dark body {
   background-color: #020617 !important;
+  color: #ffffff !important;
 }
 
-html.dark .bg-gray-50 {
+/* Dark theme backgrounds */
+html.dark .bg-white,
+html.dark .bg-gray-50,
+html.dark .bg-slate-50 {
   background-color: #0f172a !important;
 }
 
-html.dark .bg-gray-100 {
+html.dark .bg-gray-100,
+html.dark .bg-slate-100 {
   background-color: #1e293b !important;
 }
 
+html.dark .bg-slate-900,
+html.dark .bg-slate-950 {
+  background-color: #020617 !important;
+}
+
+/* Dark theme navigation */
+html.dark nav,
+html.dark .bg-white\/70 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* Dark theme text */
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #ffffff !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400,
+html.dark .text-slate-300 {
+  color: #94a3b8 !important;
+}
+
+/* Dark theme borders */
+html.dark .border-slate-200,
+html.dark .border-slate-700 {
+  border-color: #334155 !important;
+}
+
+/* Dark theme gradients */
 html.dark .from-white {
   background-color: #0f172a !important;
 }
@@ -116,59 +127,6 @@ html.dark .via-blue-50 {
 
 html.dark .to-purple-50 {
   background-color: #581c87 !important;
-}
-
-html.dark .text-slate-900 {
-  color: #ffffff !important;
-}
-
-html.dark .text-slate-700 {
-  color: #e2e8f0 !important;
-}
-
-html.dark .text-slate-600 {
-  color: #cbd5e1 !important;
-}
-
-html.dark .text-slate-400 {
-  color: #94a3b8 !important;
-}
-
-html.dark .text-slate-300 {
-  color: #94a3b8 !important;
-}
-
-html.dark .text-slate-500 {
-  color: #94a3b8 !important;
-}
-
-html.dark .text-slate-800 {
-  color: #ffffff !important;
-}
-
-html.dark .text-blue-600 {
-  color: #3b82f6 !important;
-}
-
-html.dark .text-blue-400 {
-  color: #60a5fa !important;
-}
-
-html.dark .border-slate-200 {
-  border-color: #334155 !important;
-}
-
-html.dark .border-slate-700 {
-  border-color: #475569 !important;
-}
-
-html.dark nav {
-  background-color: rgba(15, 23, 42, 0.9) !important;
-  backdrop-filter: blur(12px) !important;
-}
-
-html.dark .bg-white\/70 {
-  background-color: rgba(15, 23, 42, 0.9) !important;
 }
 
 html.dark .bg-gradient-to-br {
