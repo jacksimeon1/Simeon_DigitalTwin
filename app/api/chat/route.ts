@@ -15,13 +15,48 @@ const client = new Groq({
 
 export async function POST(req: NextRequest) {
   try {
-    const { message } = await req.json();
+    const { message, language = 'en' } = await req.json();
 
     if (!message) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 });
     }
 
-    const systemPrompt = `You are an AI assistant representing Robert Simeon Jr., a 4th year Information Technology student at SPUP (St. Paul University Philippines).
+    const languageInstructions = {
+  en: "Respond in English. Be friendly, professional, and engaging.",
+  es: "Responde en español. Sé amigable, profesional y entretenido.",
+  fr: "Répondez en français. Soyez amical, professionnel et engageant.",
+  de: "Antworte auf Deutsch. Sei freundlich, professionell und ansprechend.",
+  it: "Rispondi in italiano. Sii amichevole, professionale e coinvolgente.",
+  pt: "Responda em português. Seja amigável, profissional e envolvente.",
+  nl: "Antwoord in het Nederlands. Wees vriendelijk, professioneel en boeiend.",
+  sv: "Svara på svenska. Var vänlig, professionell och engagerande.",
+  no: "Svar på norsk. Vær vennlig, profesjonell og engasjerende.",
+  da: "Svar på dansk. Vær venlig, professionel og engagerende.",
+  fi: "Vastaa suomeksi. Ole ystävällinen, ammattimainen ja osallistuva.",
+  pl: "Odpowiadaj po polsku. Bądź przyjazny, profesjonalny i zaangażowany.",
+  cs: "Odpovídejte v češtině. Buďte přátelský, profesionální a angažovaný.",
+  hu: "Válaszoljon magyarul. Legyen barátságos, professzionális és elkötelezett.",
+  ro: "Răspundeți în română. Fiți prietenos, profesionist și implicat.",
+  bg: "Отговорете на български. Бъдете приятелски, професионален и ангажиран.",
+  hr: "Odgovorite na hrvatskom. Budite prijateljski, profesionalni i angažirani.",
+  sk: "Odpovedzte v slovenčine. Buďte priateľský, profesionálny a angažovaný.",
+  sl: "Odgovorite v slovenščini. Bodite prijazen, profesionalen in vpleten.",
+  et: "Vastake eesti keeles. Ole sõbralik, professionaalne ja kaasahääldav.",
+  lv: "Atbildiet latviski. Būiet draudzīgs, profesionāls un iesaistīts.",
+  lt: "Atsakykite lietuviškai. Būkite draugiškas, profesionalus ir įsitraukęs.",
+  mt: "Irrispondi bil-Malti. Kun ħerrief, professjonali u involut.",
+  ga: "Freagair as Gaeilge. Bí cáirdiúil, gairmiúil agus páirteach.",
+  cy: "Ateb yn y Gymraeg. Byddwch yn gyfeillgar, proffesiynol a chyfrannol.",
+  eu: "Erantzun euskaraz. Izan zaitez lagunkoi, profesionala eta inplikatua.",
+  ca: "Respongueu en català. Sigueu amistós, professional i participatiu.",
+  gl: "Responde en galego. Sede amigable, profesional e participativo.",
+  is: "Svarað á íslensku. Vertu vinalegur, fagmenn og áhugasamur.",
+  ja: "日本語で応答してください。親切で、プロフェッショナルで、魅力的な対応をお願いします。"
+};
+
+const systemPrompt = `You are an AI assistant representing Robert Simeon Jr., a 4th year Information Technology student at SPUP (St. Paul University Philippines).
+
+${languageInstructions[language as keyof typeof languageInstructions] || languageInstructions.en}
 
 **About Robert:**
 - Name: Robert Simeon Jr.
@@ -49,8 +84,9 @@ export async function POST(req: NextRequest) {
 **Projects Showcase:**
 1. **In-Off Campus Activity Scheduling Information System** (Featured)
    - Comprehensive event management system
-   - Technologies: React, Node.js, MongoDB
+   - Technologies: PHP, Laravel, Bootstrap, MySQL
    - Enables efficient event planning, participant registration, and resource allocation
+   - Features responsive design with Bootstrap and robust MySQL database management
 
 2. **E-Bayo E-commerce Platform** (Featured)
    - Modern ecommerce website with seamless shopping experience

@@ -17,8 +17,8 @@ const projects: Project[] = [
     id: 1,
     title: 'In-Off Campus Activity Scheduling Information System',
     description:
-      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with modern full-stack technologies.',
-    tags: ['Information Systems', 'Database Design', 'Web Development'],
+      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with PHP, Laravel framework, Bootstrap for responsive design, and MySQL database for robust data management.',
+    tags: ['PHP', 'Laravel', 'Bootstrap', 'MySQL', 'Information Systems'],
     link: '#',
     github: '#',
     featured: true,
