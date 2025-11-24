@@ -1,14 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, Sparkles, LogOut } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sparkles, LogOut, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
+import { useTheme } from '../ThemeProvider';
 import NavbarParticles from './NavbarParticles';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
   const { data: session } = useSession();
 
   useEffect(() => {
@@ -68,6 +70,21 @@ export default function Navigation() {
                 <span className="relative z-10">{link.label}</span>
               </Link>
             ))}
+
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              className="relative p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group"
+              aria-label="Toggle theme"
+            >
+              {/* Animated background glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 dark:from-blue-500/20 dark:to-purple-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              
+              {/* Icon with rotation */}
+              <span className="relative z-10 block transform transition-all duration-300 group-hover:rotate-12">
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </span>
+            </button>
 
             {/* Auth Section */}
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-200 dark:border-slate-700">
@@ -142,6 +159,18 @@ export default function Navigation() {
             >
               Chat with AI
             </a>
+
+            {/* Mobile Theme Toggle */}
+            <button
+              onClick={() => {
+                toggleTheme();
+                setIsOpen(false);
+              }}
+              className="flex items-center gap-2 py-2 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            </button>
 
             {/* Mobile Auth */}
             <div className="pt-4 border-t border-slate-200 dark:border-slate-700 mt-4">
