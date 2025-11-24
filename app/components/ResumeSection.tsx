@@ -10,8 +10,8 @@ ROBERT SIMEON JR.
 
 CONTACT
 📧 robertsimeon12345@gmail.com
-📱 +63 912 345 6789
-🔗 linkedin.com/in/robert-simeon
+📱 09215512415
+🔗 linkedin.com/in/robert-simeon-08063b214/
 🐙 github.com/jacksimeon1
 
 EDUCATION
@@ -20,9 +20,10 @@ Bachelor of Science in Information Technology
 Expected Graduation: 2025
 
 SKILLS
-• Programming: JavaScript, Python, Java, C++
-• Web Development: React, Next.js, Node.js, HTML/CSS
+• Programming: JavaScript, C#, PHP, Python, Java
+• Web Development: React, Next.js, Node.js, HTML/CSS, Laravel
 • Database: MySQL, MongoDB, PostgreSQL
+• Game Development: Godot Engine, GDScript
 • Tools: Git, VS Code, Figma, Docker
 • Soft Skills: Problem-solving, Teamwork, Communication
 
@@ -47,6 +48,11 @@ PROJECTS
    - Academic progress tracking tool
    - Technologies: HTML, CSS, JavaScript
 
+5. Bert and Jack Adventure
+   - Adventure game with enemy fighting and treasure looting
+   - Technologies: Godot Engine, GDScript
+   - Features: Character progression, combat system, gem collection, treasure hunting
+
 ACHIEVEMENTS
 • Dean's List - 3 consecutive semesters
 • Best IT Project Award - SPUP Tech Fair 2024
@@ -54,9 +60,8 @@ ACHIEVEMENTS
 • Community Service Volunteer - 200+ hours
 
 LANGUAGES
-• English (Fluent)
+• English (Mid-Fluent)
 • Filipino (Native)
-• Basic Japanese
 
 INTERESTS
 Web Development, AI/ML, Game Development, UI/UX Design
@@ -128,8 +133,8 @@ Web Development, AI/ML, Game Development, UI/UX Design
       <div class="contact">
         <h2>CONTACT</h2>
         <p>📧 robertsimeon12345@gmail.com</p>
-        <p>📱 +63 912 345 6789</p>
-        <p>🔗 linkedin.com/in/robert-simeon</p>
+        <p>📱 09215512415</p>
+        <p>🔗 linkedin.com/in/robert-simeon-08063b214/</p>
         <p>🐙 github.com/jacksimeon1</p>
       </div>
 
@@ -140,9 +145,10 @@ Web Development, AI/ML, Game Development, UI/UX Design
 
       <h2>SKILLS</h2>
       <ul>
-        <li><strong>Programming:</strong> JavaScript, Python, Java, C++</li>
-        <li><strong>Web Development:</strong> React, Next.js, Node.js, HTML/CSS</li>
+        <li><strong>Programming:</strong> JavaScript, C#, PHP, Python, Java</li>
+        <li><strong>Web Development:</strong> React, Next.js, Node.js, HTML/CSS, Laravel</li>
         <li><strong>Database:</strong> MySQL, MongoDB, PostgreSQL</li>
+        <li><strong>Game Development:</strong> Godot Engine, GDScript</li>
         <li><strong>Tools:</strong> Git, VS Code, Figma, Docker</li>
         <li><strong>Soft Skills:</strong> Problem-solving, Teamwork, Communication</li>
       </ul>
@@ -174,6 +180,12 @@ Web Development, AI/ML, Game Development, UI/UX Design
         Academic progress tracking tool<br>
         <em>Technologies: HTML, CSS, JavaScript</em></p>
       </div>
+      <div class="project">
+        <p><strong>5. Bert and Jack Adventure</strong><br>
+        Adventure game with enemy fighting and treasure looting<br>
+        <em>Technologies: Godot Engine, GDScript</em><br>
+        <strong>Features:</strong> Character progression, combat system, gem collection, treasure hunting</p>
+      </div>
 
       <h2>ACHIEVEMENTS</h2>
       <ul>
@@ -185,9 +197,8 @@ Web Development, AI/ML, Game Development, UI/UX Design
 
       <h2>LANGUAGES</h2>
       <ul>
-        <li>English (Fluent)</li>
+        <li>English (Mid-Fluent)</li>
         <li>Filipino (Native)</li>
-        <li>Basic Japanese</li>
       </ul>
 
       <h2>INTERESTS</h2>
