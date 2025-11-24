@@ -71,136 +71,91 @@ html.dark .bg-gray-100 {
   background-color: #1e293b !important;
 }
 
-/* Light mode should be pure white, not gray */
-.bg-gray-50 {
-  background-color: #ffffff !important;
+/* Dark mode only - force dark theme */
+html {
+  background-color: #020617;
+  color: #ffffff;
 }
 
-.bg-gray-100 {
-  background-color: #ffffff !important;
+html .bg-white {
+  background-color: #020617 !important;
 }
 
-/* Ensure light mode is pure white */
-html:not(.dark) .bg-white {
-  background-color: #fafafa !important;
+html .bg-gray-50 {
+  background-color: #020617 !important;
 }
 
-html:not(.dark) .from-white {
-  background-color: #fafafa !important;
+html .bg-gray-100 {
+  background-color: #1e293b !important;
 }
 
-html:not(.dark) .via-blue-50 {
-  background-color: #f0f9ff !important;
+html .from-white {
+  background-color: #0f172a !important;
 }
 
-html:not(.dark) .to-purple-50 {
-  background-color: #fdf4ff !important;
+html .via-blue-50 {
+  background-color: #1e3a8a !important;
 }
 
-/* Fix text visibility in light mode */
-html:not(.dark) .text-slate-900 {
-  color: #1e293b !important;
+html .to-purple-50 {
+  background-color: #581c87 !important;
 }
 
-html:not(.dark) .text-slate-700 {
-  color: #334155 !important;
+html .text-slate-900 {
+  color: #ffffff !important;
 }
 
-html:not(.dark) .text-slate-600 {
-  color: #475569 !important;
+html .text-slate-700 {
+  color: #e2e8f0 !important;
 }
 
-html:not(.dark) .text-slate-400 {
-  color: #64748b !important;
+html .text-slate-600 {
+  color: #cbd5e1 !important;
 }
 
-/* Main body background for light mode */
-html:not(.dark) body {
-  background-color: #fafafa !important;
-}
-
-/* Fix navbar visibility in light mode */
-html:not(.dark) nav {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(12px) !important;
-}
-
-html:not(.dark) .bg-white\/70 {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-}
-
-html:not(.dark) .text-slate-900 {
-  color: #1e293b !important;
-}
-
-html:not(.dark) .text-slate-700 {
-  color: #334155 !important;
-}
-
-html:not(.dark) .text-slate-600 {
-  color: #475569 !important;
-}
-
-html:not(.dark) .text-slate-400 {
-  color: #64748b !important;
-}
-
-html:not(.dark) .text-slate-300 {
+html .text-slate-400 {
   color: #94a3b8 !important;
 }
 
-html:not(.dark) .text-slate-500 {
-  color: #64748b !important;
+html .text-slate-300 {
+  color: #94a3b8 !important;
 }
 
-html:not(.dark) .text-slate-800 {
-  color: #1e293b !important;
+html .text-slate-500 {
+  color: #94a3b8 !important;
 }
 
-html:not(.dark) .text-blue-600 {
-  color: #2563eb !important;
+html .text-slate-800 {
+  color: #ffffff !important;
 }
 
-html:not(.dark) .text-blue-400 {
+html .text-blue-600 {
   color: #3b82f6 !important;
 }
 
-html:not(.dark) .border-slate-200 {
-  border-color: #e2e8f0 !important;
+html .text-blue-400 {
+  color: #60a5fa !important;
 }
 
-html:not(.dark) .border-slate-700 {
-  border-color: #cbd5e1 !important;
+html .border-slate-200 {
+  border-color: #334155 !important;
 }
 
-/* Fix all text elements in light mode */
-html:not(.dark) h1, 
-html:not(.dark) h2, 
-html:not(.dark) h3, 
-html:not(.dark) h4, 
-html:not(.dark) h5, 
-html:not(.dark) h6 {
-  color: #1e293b !important;
+html .border-slate-700 {
+  border-color: #475569 !important;
 }
 
-html:not(.dark) p, 
-html:not(.dark) span, 
-html:not(.dark) div {
-  color: #334155 !important;
+html nav {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
 }
 
-/* Override for specific colored text */
-html:not(.dark) .text-blue-600,
-html:not(.dark) .text-purple-600,
-html:not(.dark) .text-pink-600 {
-  color: #2563eb !important;
+html .bg-white\/70 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
 }
 
-/* Fix gradient text */
-html:not(.dark) .bg-clip-text {
-  color: #1e293b !important;
-  background-clip: unset !important;
-  -webkit-background-clip: unset !important;
+html .bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #0f172a, #1e3a8a, #581c87) !important;
 }
 
 html.dark .bg-slate-950 {
