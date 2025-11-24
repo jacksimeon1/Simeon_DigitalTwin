@@ -71,6 +71,32 @@ html.dark .bg-gray-100 {
   background-color: #1e293b !important;
 }
 
+/* Light mode should be pure white, not gray */
+.bg-gray-50 {
+  background-color: #ffffff !important;
+}
+
+.bg-gray-100 {
+  background-color: #ffffff !important;
+}
+
+/* Ensure light mode is pure white */
+html:not(.dark) .bg-white {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) .from-white {
+  background-color: #ffffff !important;
+}
+
+html:not(.dark) .via-blue-50 {
+  background-color: #eff6ff !important;
+}
+
+html:not(.dark) .to-purple-50 {
+  background-color: #faf5ff !important;
+}
+
 html.dark .bg-slate-950 {
   background-color: #020617 !important;
 }

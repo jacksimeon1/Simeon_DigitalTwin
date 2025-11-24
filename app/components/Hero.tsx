@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, Code2, Zap } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="about" className="relative w-full px-4 py-20 sm:py-32 md:py-40 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
+    <section id="about" className="relative w-full px-4 py-20 sm:py-32 md:py-40 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob"></div>
