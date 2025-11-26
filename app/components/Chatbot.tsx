@@ -308,8 +308,8 @@ export default function Chatbot() {
           <Globe className="w-4 h-4 text-slate-500 dark:text-slate-400" />
           <span className="text-sm text-slate-600 dark:text-slate-400">Language:</span>
           <select
-            value={selectedLanguage}
-            onChange={(e) => setSelectedLanguage(e.target.value)}
+            value={language}
+            onChange={(e) => setLanguage(e.target.value as Language)}
             className="px-3 py-1 text-sm border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="en">English</option>

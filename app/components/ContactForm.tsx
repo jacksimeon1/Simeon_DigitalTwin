@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Mail, Send, User, MessageSquare } from 'lucide-react';
 import HydrationSafeButton from './HydrationSafeButton';
+import HydrationSafeInput from './HydrationSafeInput';
+import HydrationSafeTextarea from './HydrationSafeTextarea';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -80,7 +82,7 @@ export default function ContactForm() {
                 <User className="inline w-4 h-4 mr-2" />
                 Your Name
               </label>
-              <input
+              <HydrationSafeInput
                 type="text"
                 id="name"
                 name="name"
@@ -98,7 +100,7 @@ export default function ContactForm() {
                 <Mail className="inline w-4 h-4 mr-2" />
                 Your Email
               </label>
-              <input
+              <HydrationSafeInput
                 type="email"
                 id="email"
                 name="email"
@@ -116,7 +118,7 @@ export default function ContactForm() {
                 <MessageSquare className="inline w-4 h-4 mr-2" />
                 Your Message
               </label>
-              <textarea
+              <HydrationSafeTextarea
                 id="message"
                 name="message"
                 value={formData.message}
