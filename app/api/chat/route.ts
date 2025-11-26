@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Message is required' }, { status: 400 });
     }
 
-    // Check for quick responses first
+// Check for quick responses first
     const quickResponse = getQuickResponse(message, language);
     if (quickResponse) {
       return NextResponse.json({ response: quickResponse });

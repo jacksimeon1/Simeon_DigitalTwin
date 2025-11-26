@@ -2,7 +2,27 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, message } = await request.json();
+    const body = await request.text();
+    
+    if (!body) {
+      return NextResponse.json(
+        { error: 'Request body is empty' },
+        { status: 400 }
+      );
+    }
+    
+    let name, email, message;
+    try {
+      const parsed = JSON.parse(body);
+      name = parsed.name;
+      email = parsed.email;
+      message = parsed.message;
+    } catch (parseError) {
+      return NextResponse.json(
+        { error: 'Invalid JSON in request body' },
+        { status: 400 }
+      );
+    }
 
     // Validate input
     if (!name || !email || !message) {

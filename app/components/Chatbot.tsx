@@ -12,6 +12,42 @@ interface Message {
   timeStr?: string;
 }
 
+const getWelcomeMessage = (lang: string) => {
+    const messages = {
+      en: "Hi! 👋 I'm Robert's AI assistant. I can tell you about my projects, skills in web development and game development, my HTML/CSS certification, and my experience as a 4th year IT student at SPUP. What would you like to know?",
+      es: "¡Hola! 👋 Soy el asistente de IA de Robert. Puedo decirte sobre mis proyectos, habilidades en desarrollo web y de juegos, mi certificación HTML/CSS, y mi experiencia como estudiante de 4to año de TI en SPUP. ¿Qué te gustaría saber?",
+      fr: "Salut ! 👋 Je suis l'assistant IA de Robert. Je peux vous parler de mes projets, compétences en développement web et jeux, ma certification HTML/CSS, et mon expérience en tant qu'étudiant de 4ème année en TI à SPUP. Que souhaitez-vous savoir ?",
+      de: "Hallo! 👋 Ich bin Roberts KI-Assistent. Ich kann dir über meine Projekte, Fähigkeiten in Web- und Spielentwicklung, meine HTML/CSS-Zertifizierung und meine Erfahrung als 4. IT-Student an der SPUP erzählen. Was möchtest du wissen?",
+      it: "Ciao! 👋 Sono l'assistente IA di Robert. Posso parlarti dei miei progetti, competenze nello sviluppo web e di giochi, la mia certificazione HTML/CSS, e la mia esperienza da studente di 4° anno in IT alla SPUP. Cosa vorresti sapere?",
+      pt: "Olá! 👋 Sou o assistente de IA do Robert. Posso falar sobre meus projetos, habilidades em desenvolvimento web e de jogos, minha certificação HTML/CSS, e minha experiência como estudante de 4º ano de TI na SPUP. O que gostaria de saber?",
+      nl: "Hallo! 👋 Ik ben Roberts AI-assistent. Ik kan je vertellen over mijn projecten, vaardigheden in web- en game-ontwikkeling, mijn HTML/CSS-certificering, en mijn ervaring als 4e-jaar IT-student aan SPUP. Wat wil je weten?",
+      sv: "Hej! 👋 Jag är Roberts AI-assistent. Jag kan berätta om mina projekt, färdigheter i webb- och spelutveckling, min HTML/CSS-certifiering, och min erfarenhet som 4:e-års IT-student vid SPUP. Vad vill du veta?",
+      no: "Hei! 👋 Jeg er Roberts AI-assistent. Jeg kan fortelle deg om prosjektene mine, ferdigheter i web- og spillutvikling, min HTML/CSS-sertifisering, og min erfaring som 4. års IT-student ved SPUP. Hva vil du vite?",
+      da: "Hej! 👋 Jeg er Roberts AI-assistent. Jeg kan fortælle dig om mine projekter, færdigheder i web- og spiludvikling, min HTML/CSS-certificering, og min erfaring som 4. års IT-student på SPUP. Hvad vil du vide?",
+      fi: "Hei! 👋 Olen Robertin AI-avustaja. Voin kertoa projekteistani, taidoistani web- ja pelikehityksessä, HTML/CSS-sertifikaatistani ja kokemuksestani 4. vuoden IT-opiskelijana SPUP:ssa. Mitä haluaisit tietää?",
+      pl: "Cześć! 👋 Jestem asystentem AI Roberta. Mogę opowiedzieć o moich projektach, umiejętnościach w tworzeniu stron i gier, mojej certyfikacji HTML/CSS, i moich doświadczeniach jako studenta 4. roku informatyki na SPUP. Co chciałbyś wiedzieć?",
+      cs: "Ahoj! 👋 Jsem AI asistent Roberta. Můžu ti říct o svých projektech, dovednostech ve vývoji webu a her, mé HTML/CSS certifikaci a mých zkušenostech jako 4. ročník IT studenta na SPUP. Co bys chtěl vědět?",
+      hu: "Szia! 👋 Én vagy Robert AI asszisztense. Mesélhetek a projektemről, a web- és játékfejlesztési készségeimről, a HTML/CSS tanúsítványomról és a 4. éves IT hallgatói tapasztalataimról a SPUP-on. Mit szeretnél tudni?",
+      ro: "Salut! 👋 Sunt asistentul AI al lui Robert. Pot să îți povestesc despre proiectele mele, abilitățile mele în dezvoltare web și de jocuri, certificarea mea HTML/CSS, și experiența mea ca student de 4 ani IT la SPUP. Ce ai dori să afli?",
+      bg: "Здравейте! 👋 Аз съм AI асистентът на Робърт. Мога да ви разкажа за проектите си, уменията си в уеб и игрална разработка, моята HTML/CSS сертификация и опита си като 4-ти курсист по IT в СПУП. Какво бихте ли да научите?",
+      hr: "Bok! 👋 Ja sam Robertov AI asistent. Mogu vam reći o mojim projektima, vještinama u web i razvoju igara, mojoj HTML/CSS certifikaciji i mojem iskustvu kao 4. godine IT studenta na SPUP-u. Što biste željeli znati?",
+      sk: "Ahoj! 👋 Som AI asistent Roberta. Môžem ti povedať o svojich projektoch, zručnostiach vo vývoji webu a hier, mojej HTML/CSS certifikácii a mojich skúsenostiach ako 4. ročník IT študenta na SPUP. Čo by si chcel vedieť?",
+      sl: "Živjo! 👋 Jaz sem Robertov AI asistent. Lahko povem o svojih projektih, veščinah v razvoju spletnih strani in iger, moji HTML/CSS certificaciji in mojih izkušnjah kot 4. letni IT študent na SPUP. Kaj bi želel vedeti?",
+      et: "Tere! 👋 Ma olen Roberti AI-assistent. Ma võin rääkida oma projektidest, veebi- ja mänguarenduse oskustest, oma HTML/CSS sertifikaadist ja oma kogemustest 4. aasta IT üliõpilasena SPUP-is. Mida sa teada tahaksid?",
+      lv: "Sveiki! 👋 Es esmu Roberta AI asistents. Es varu pastāstīt par saviem projektiem, prasmēm tīmekļa un spēļu izstrādē, manu HTML/CSS sertifikāciju un manu pieredzi kā 4. kursa IT studentam SPUP. Ko jūs gribētu zināt?",
+      lt: "Sveiki! 👋 Aš esu Roberto AI asistentas. Aš galiu papasakoti apie savus projektus, įgūdžius web ir žaidimų kūrime, savo HTML/CSS sertifikatą ir savo patirtį kaip 4-o kurso IT studento SPUP. Ką norėtumėte sužinoti?",
+      mt: "Hi! 👋 I am l-assistent AI ta' Robert. Nista' ngħidlek dwar il-proġetti tiegħu, l-abilitajiet tiegħu fl-iżvilupp web u tal-logħob, iċ-ċertifikazzjoni HTML/CSS tiegħu, u l-esperjenza tiegħu bħala student ta' 4 senka IT fl-SPUP. X'tixtieq taf?",
+      ga: "Dia dhuit! 👋 Is é cúntóir AI Robert atá annam. Is féidir liom a rádh faoi mo thionscadail, scileanna sa forbhairt gréasáin agus cluichí, mo theastas HTML/CSS, agus mo thaithí mar mhac léinn 4ú bliana IT ag SPUP. Cad ba mhaith leis a bheith agat ar eolas?",
+      cy: "Helo! 👋 Dw i'n gynorthwydd AI Robert. Dw i'n gallu dweud am fy mhrojectau, sgiliau mewn datblygiad gwe a gemau, fy nghymhwyster HTML/CSS, a'm profiad fel myfyriwr 4ydd flwyddyn IT yn SPUP. Beth hoffech chi wybod?",
+      eu: "Kaixo! 👋 Roberten AI laguntzailea naiz. Nire proiektuez, web eta joko garapeneko gaitasunez, HTML/CSS ziurtagiriari eta 4. urteko ikasle gisa SPUPen dudan esperientziari buruz har dezaket. Nahi duzu jakin?",
+      ca: "Hola! 👋 Soc l'assistent IA de Robert. Puc parlar-te dels meus projectes, habilitats en desenvolupament web i de jocs, la meva certificació HTML/CSS, i la meva experiència com a estudiant de 4t any d'IT a la SPUP. Què t'agradaria saber?",
+      gl: "Ola! 👋 Son o asistente IA de Robert. Podo dicir sobre os meus proxectos, habilidades en desenvolvemento web e de xogos, a miña certificación HTML/CSS, e a miña experiencia como estudante de 4º ano de TI na SPUP. Qué gustaría saber?",
+      is: "Halló! 👋 Ég er Robert AI aðstoðarmaðurinn. Ég get segð þér frá verkefnum mínum, hæfileikum í vef- og leikjaþróun, HTML/CSS réttindum mínum og reynslu míni sem 4. árs IT nemi við SPUP. Hvað viltu vita?",
+      ja: "こんにちは！👋 ロバートのAIアシスタントです。私のプロジェクト、ウェブ開発とゲーム開発のスキル、HTML/CSS認定証、そしてSPUPの4年生IT学生としての経験についてお話しできます。何を知りたいですか？"
+    };
+    return messages[lang as keyof typeof messages] || messages.en;
+  };
+
 export default function Chatbot() {
   const { language, setLanguage, t } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([
@@ -93,6 +129,17 @@ export default function Chatbot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Update welcome message when language changes
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].sender === 'assistant') {
+      setMessages([{
+        id: '1',
+        text: getWelcomeMessage(selectedLanguage),
+        sender: 'assistant',
+      }]);
+    }
+  }, [selectedLanguage]);
 
   const getTimeString = () => {
     return new Date().toLocaleTimeString([], {
@@ -289,6 +336,50 @@ export default function Chatbot() {
           </div>
         )}
         <div ref={messagesEndRef} />
+      </div>
+
+      {/* Language Selector */}
+      <div className="border-t border-slate-200 dark:border-slate-700 p-3 bg-white dark:bg-slate-800">
+        <div className="flex items-center gap-2">
+          <Globe className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+          <span className="text-sm text-slate-600 dark:text-slate-400">Language:</span>
+          <select
+            value={selectedLanguage}
+            onChange={(e) => setSelectedLanguage(e.target.value)}
+            className="px-3 py-1 text-sm border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="nl">Nederlands</option>
+            <option value="sv">Svenska</option>
+            <option value="no">Norsk</option>
+            <option value="da">Dansk</option>
+            <option value="fi">Suomi</option>
+            <option value="pl">Polski</option>
+            <option value="cs">Čeština</option>
+            <option value="hu">Magyar</option>
+            <option value="ro">Română</option>
+            <option value="bg">Български</option>
+            <option value="hr">Hrvatski</option>
+            <option value="sk">Slovenčina</option>
+            <option value="sl">Slovenščina</option>
+            <option value="et">Eesti</option>
+            <option value="lv">Latviešu</option>
+            <option value="lt">Lietuvių</option>
+            <option value="mt">Malti</option>
+            <option value="ga">Gaeilge</option>
+            <option value="cy">Cymraeg</option>
+            <option value="eu">Euskara</option>
+            <option value="ca">Català</option>
+            <option value="gl">Galego</option>
+            <option value="is">Íslenska</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
       </div>
 
       {/* Input Area */}

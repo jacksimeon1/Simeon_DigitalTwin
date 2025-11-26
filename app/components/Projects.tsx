@@ -17,8 +17,8 @@ const projects: Project[] = [
     id: 1,
     title: 'In-Off Campus Activity Scheduling Information System',
     description:
-      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with modern full-stack technologies.',
-    tags: ['Information Systems', 'Database Design', 'Web Development'],
+      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with PHP, Laravel framework, Bootstrap for responsive design, and MySQL database for robust data management.',
+    tags: ['PHP', 'Laravel', 'Bootstrap', 'MySQL', 'Information Systems'],
     link: '#',
     github: '#',
     featured: true,
@@ -52,6 +52,16 @@ const projects: Project[] = [
     link: '#',
     github: '#',
     featured: false,
+  },
+  {
+    id: 5,
+    title: 'Bert and Jack Adventure',
+    description:
+      'An exciting adventure game developed in Godot Engine where players control Bert and Jack to fight enemies and collect valuable gems and treasures. Features character progression, combat mechanics, treasure hunting, and engaging gameplay. Built with Godot Engine and GDScript to showcase game development skills.',
+    tags: ['Godot Engine', 'GDScript', 'Game Development', 'Adventure', 'Combat System'],
+    link: '#',
+    github: '#',
+    featured: true,
   },
 ];
 
