@@ -344,7 +344,6 @@ Web Development, AI/ML, Game Development, UI/UX Design
 
               {/* Download Button */}
               <div className="w-full">
-<<<<<<< HEAD
                 <HydrationSafeButton
                   onClick={() => handleDownload('pdf')}
                   className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
@@ -352,17 +351,6 @@ Web Development, AI/ML, Game Development, UI/UX Design
                   <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
                   Download Resume (PDF)
                 </HydrationSafeButton>
-=======
-                {mounted && (
-                  <button
-                    onClick={() => handleDownload('pdf')}
-                    className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
-                  >
-                    <Download className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                    Download Resume (PDF)
-                  </button>
-                )}
->>>>>>> 93114fe5d3b8ec5bf4c804e945b3c498b5244b65
               </div>
 
               {/* Additional Info */}
