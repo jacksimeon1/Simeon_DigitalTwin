@@ -302,50 +302,6 @@ export default function Chatbot() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Language Selector */}
-      <div className="border-t border-slate-200 dark:border-slate-700 p-3 bg-white dark:bg-slate-800">
-        <div className="flex items-center gap-2">
-          <Globe className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-          <span className="text-sm text-slate-600 dark:text-slate-400">Language:</span>
-          <select
-            value={language}
-            onChange={(e) => setLanguage(e.target.value as Language)}
-            className="px-3 py-1 text-sm border border-slate-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-            <option value="de">Deutsch</option>
-            <option value="it">Italiano</option>
-            <option value="pt">Português</option>
-            <option value="nl">Nederlands</option>
-            <option value="sv">Svenska</option>
-            <option value="no">Norsk</option>
-            <option value="da">Dansk</option>
-            <option value="fi">Suomi</option>
-            <option value="pl">Polski</option>
-            <option value="cs">Čeština</option>
-            <option value="hu">Magyar</option>
-            <option value="ro">Română</option>
-            <option value="bg">Български</option>
-            <option value="hr">Hrvatski</option>
-            <option value="sk">Slovenčina</option>
-            <option value="sl">Slovenščina</option>
-            <option value="et">Eesti</option>
-            <option value="lv">Latviešu</option>
-            <option value="lt">Lietuvių</option>
-            <option value="mt">Malti</option>
-            <option value="ga">Gaeilge</option>
-            <option value="cy">Cymraeg</option>
-            <option value="eu">Euskara</option>
-            <option value="ca">Català</option>
-            <option value="gl">Galego</option>
-            <option value="is">Íslenska</option>
-            <option value="ja">日本語</option>
-          </select>
-        </div>
-      </div>
-
       {/* Input Area */}
       <div className="border-t border-slate-200 dark:border-slate-700 p-4 bg-white dark:bg-slate-800 rounded-b-2xl">
         {/* Quick Question Buttons */}
