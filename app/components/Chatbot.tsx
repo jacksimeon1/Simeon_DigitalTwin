@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, Mic, MicOff, VolumeX } from 'lucide-react';
+import { Send, Mic, MicOff, VolumeX, Globe } from 'lucide-react';
+import HydrationSafeButton from './HydrationSafeButton';
+import { useLanguage, Language } from '../contexts/LanguageContext';
 
 interface Message {
   id: string;
@@ -11,10 +13,11 @@ interface Message {
 }
 
 export default function Chatbot() {
+  const { language, setLanguage, t } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: 'Hi! 👋 I\'m Robert\'s AI assistant. Ask me anything about my projects, skills, achievements, or anything else you\'d like to know!',
+      text: t('chat.welcome'),
       sender: 'assistant',
     },
   ]);
@@ -116,7 +119,7 @@ export default function Chatbot() {
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ message: input, language }),
       });
 
       if (!response.ok) throw new Error('Failed to get response');
@@ -203,21 +206,51 @@ export default function Chatbot() {
           <div className="animate-slide-left">
             <h3 className="font-bold text-lg flex items-center gap-2">
               <span className="text-xl animate-bounce">🤖</span>
-              Robert's AI Assistant
+              {t('chat.title')}
             </h3>
-            <p className="text-sm text-blue-100 mt-1">Powered by Groq AI with Voice Support</p>
+            <p className="text-sm text-blue-100 mt-1">{t('chat.subtitle')}</p>
           </div>
-          {isSpeaking && (
-            <div className="flex gap-1">
-              {[1, 2, 3].map((i) => (
-                <div
-                  key={i}
-                  className="w-1 h-4 bg-white rounded-full animate-pulse"
-                  style={{animationDelay: `${i * 0.1}s`}}
-                ></div>
-              ))}
+          <div className="flex items-center gap-3">
+            {/* Language Selector */}
+            <div className="relative group">
+              <HydrationSafeButton
+                className="p-2 bg-white/20 hover:bg-white/30 rounded-lg transition-colors flex items-center gap-2"
+                title="Select Language"
+              >
+                <Globe size={16} />
+                <span className="text-sm font-medium">{t(`lang.${language}`)}</span>
+              </HydrationSafeButton>
+              
+              {/* Language Dropdown */}
+              <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                <div className="py-2">
+                  {(['en', 'es', 'fr', 'de', 'zh', 'ja', 'ko', 'tl'] as Language[]).map((lang) => (
+                    <HydrationSafeButton
+                      key={lang}
+                      onClick={() => setLanguage(lang)}
+                      className={`w-full px-4 py-2 text-left hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors text-sm ${
+                        language === lang ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400' : 'text-slate-700 dark:text-slate-300'
+                      }`}
+                    >
+                      {t(`lang.${lang}`)}
+                    </HydrationSafeButton>
+                  ))}
+                </div>
+              </div>
             </div>
-          )}
+            
+            {isSpeaking && (
+              <div className="flex gap-1">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="w-1 h-4 bg-white rounded-full animate-pulse"
+                    style={{animationDelay: `${i * 0.1}s`}}
+                  ></div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -260,6 +293,25 @@ export default function Chatbot() {
 
       {/* Input Area */}
       <div className="border-t border-slate-200 dark:border-slate-700 p-4 bg-white dark:bg-slate-800 rounded-b-2xl">
+        {/* Quick Question Buttons */}
+        <div className="mb-3 flex flex-wrap gap-2">
+          {[
+            'quick.projects',
+            'quick.skills', 
+            'quick.education',
+            'quick.contact',
+            'quick.available'
+          ].map((key, index) => (
+            <HydrationSafeButton
+              key={index}
+              onClick={() => setInput(t(key))}
+              className="px-3 py-1.5 text-xs bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+            >
+              {t(key)}
+            </HydrationSafeButton>
+          ))}
+        </div>
+        
         <div className="flex gap-3">
           <div className="flex-1 relative">
             <input
@@ -267,7 +319,7 @@ export default function Chatbot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Ask me anything or use voice..."
+              placeholder={t('chat.placeholder')}
               disabled={loading}
               className="w-full px-4 py-3 border-2 border-slate-200 dark:border-slate-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white disabled:bg-slate-100 dark:disabled:bg-slate-900 disabled:cursor-not-allowed transition-all hover:border-blue-300 dark:hover:border-blue-500"
             />
@@ -278,43 +330,43 @@ export default function Chatbot() {
 
           {mounted && hasVoiceSupport && (
             <>
-              <button
+              <HydrationSafeButton
                 onClick={toggleListening}
                 disabled={loading}
                 className={`px-4 py-3 rounded-xl transition-all font-medium flex items-center gap-2 transform hover:scale-105 active:scale-95 ${
                   isListening
                     ? 'bg-red-500 text-white shadow-lg shadow-red-500/50 animate-pulse'
-                    : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
+                    : 'bg-blue-500 text-white shadow-lg shadow-blue-500/50 hover:bg-blue-600'
                 } disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none`}
-                title={isListening ? 'Stop listening' : 'Start voice input'}
+                title={isListening ? t('chat.voice.stop') : t('chat.voice.start')}
               >
                 {isListening ? <MicOff size={18} /> : <Mic size={18} />}
-              </button>
+              </HydrationSafeButton>
               {isSpeaking && (
-                <button
+                <HydrationSafeButton
                   onClick={toggleSpeech}
                   className="px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-xl hover:from-green-600 hover:to-emerald-600 transition-all shadow-lg shadow-green-500/50 flex items-center gap-2 animate-pulse"
-                  title="Stop audio playback"
+                  title={t('chat.voice.stop_audio')}
                 >
                   <VolumeX size={18} />
-                </button>
+                </HydrationSafeButton>
               )}
             </>
           )}
 
-          <button
+          <HydrationSafeButton
             onClick={handleSend}
             disabled={loading || !input.trim()}
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center gap-2 transform hover:scale-105 active:scale-95 font-medium group"
           >
             <Send size={18} className="group-hover:translate-x-0.5 transition-transform" />
-            <span className="hidden sm:inline">Send</span>
-          </button>
+            <span className="hidden sm:inline">{t('chat.send')}</span>
+          </HydrationSafeButton>
         </div>
 
         {/* Helper text */}
         <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 text-center">
-          Tip: Press Enter to send or use the microphone to speak
+          {t('chat.helper')}
         </p>
       </div>
     </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Mail, Send, User, MessageSquare } from 'lucide-react';
+import HydrationSafeButton from './HydrationSafeButton';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -128,7 +129,7 @@ export default function ContactForm() {
             </div>
 
             {/* Submit Button */}
-            <button
+            <HydrationSafeButton
               type="submit"
               disabled={isSubmitting}
               className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none group"
@@ -144,7 +145,7 @@ export default function ContactForm() {
                   Send Message
                 </>
               )}
-            </button>
+            </HydrationSafeButton>
           </form>
 
           {/* Status Messages */}

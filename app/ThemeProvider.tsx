@@ -20,7 +20,15 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const saved = localStorage.getItem('theme') as Theme | null;
     const initialTheme = saved || 'light'; // Default to light mode
     setTheme(initialTheme);
-    applyTheme(initialTheme);
+    
+    // Apply theme after setting mounted to prevent SSR issues
+    const root = document.documentElement;
+    if (initialTheme === 'light') {
+      root.classList.remove('dark');
+    } else {
+      root.classList.add('dark');
+    }
+    
     setMounted(true);
   }, []);
 

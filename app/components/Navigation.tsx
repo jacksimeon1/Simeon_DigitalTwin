@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { useTheme } from '../ThemeProvider';
 import NavbarParticles from './NavbarParticles';
+import HydrationSafeButton from './HydrationSafeButton';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +73,7 @@ export default function Navigation() {
             ))}
 
             {/* Theme Toggle */}
-            <button
+            <HydrationSafeButton
               onClick={toggleTheme}
               className="relative p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group"
               aria-label="Toggle theme"
@@ -84,9 +85,7 @@ export default function Navigation() {
               <span className="relative z-10 block transform transition-all duration-300 group-hover:rotate-12">
                 {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
               </span>
-            </button>
-
-            {/* Auth Section */}
+            </HydrationSafeButton>
             <div className="flex items-center gap-4 ml-4 pl-4 border-l border-slate-200 dark:border-slate-700">
 
               {session?.user ? (
@@ -103,29 +102,29 @@ export default function Navigation() {
                       {session.user.name?.split(' ')[0]}
                     </span>
                   </div>
-                  <button
+                  <HydrationSafeButton
                     onClick={() => signOut()}
                     className="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-red-600 dark:hover:text-red-400 transition-colors font-medium text-sm"
                   >
                     <LogOut size={16} />
                     Sign Out
-                  </button>
+                  </HydrationSafeButton>
                 </>
               ) : (
-                <button
+                <HydrationSafeButton
                   onClick={() => signIn('google')}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 font-semibold flex items-center gap-2 group"
                 >
                   <Sparkles size={16} className="group-hover:rotate-180 transition-transform" />
                   Sign In
-                </button>
+                </HydrationSafeButton>
               )}
             </div>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <HydrationSafeButton
               onClick={() => setIsOpen(!isOpen)}
               className="relative p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group"
             >
@@ -136,7 +135,7 @@ export default function Navigation() {
               <span className="relative z-10 block transform transition-transform duration-300 group-hover:rotate-12">
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </span>
-            </button>
+            </HydrationSafeButton>
           </div>
 
         {/* Mobile Menu */}
@@ -161,7 +160,7 @@ export default function Navigation() {
             </a>
 
             {/* Mobile Theme Toggle */}
-            <button
+            <HydrationSafeButton
               onClick={() => {
                 toggleTheme();
                 setIsOpen(false);
@@ -170,7 +169,7 @@ export default function Navigation() {
             >
               {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
               {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
-            </button>
+            </HydrationSafeButton>
 
             {/* Mobile Auth */}
             <div className="pt-4 border-t border-slate-200 dark:border-slate-700 mt-4">
@@ -189,7 +188,7 @@ export default function Navigation() {
                       {session.user.name}
                     </span>
                   </div>
-                  <button
+                  <HydrationSafeButton
                     onClick={() => {
                       signOut();
                       setIsOpen(false);
@@ -198,10 +197,10 @@ export default function Navigation() {
                   >
                     <LogOut size={16} />
                     Sign Out
-                  </button>
+                  </HydrationSafeButton>
                 </>
               ) : (
-                <button
+                <HydrationSafeButton
                   onClick={() => {
                     signIn('google');
                     setIsOpen(false);
@@ -210,7 +209,7 @@ export default function Navigation() {
                 >
                   <Sparkles size={16} />
                   Sign In
-                </button>
+                </HydrationSafeButton>
               )}
             </div>
           </div>

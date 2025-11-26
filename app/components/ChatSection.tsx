@@ -3,6 +3,7 @@
 import { Sparkles, Mic, Volume2, Lock } from 'lucide-react';
 import { useSession, signIn } from 'next-auth/react';
 import Chatbot from './Chatbot';
+import HydrationSafeButton from './HydrationSafeButton';
 
 export default function ChatSection() {
   const { data: session, status } = useSession();
@@ -130,7 +131,7 @@ export default function ChatSection() {
                   To access the AI Chat Assistant and enjoy voice features, please sign in with your Google account.
                 </p>
 
-                <button
+                <HydrationSafeButton
                   onClick={() => signIn('google', { callbackUrl: '#chat' })}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 group mb-4"
                 >
@@ -153,7 +154,7 @@ export default function ChatSection() {
                     />
                   </svg>
                   Sign in with Google
-                </button>
+                </HydrationSafeButton>
 
                 <p className="text-sm text-slate-500 dark:text-slate-400">
                   Don't have a Google account?{' '}
