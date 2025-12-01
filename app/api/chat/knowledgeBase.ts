@@ -37,7 +37,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "You can reach me at robertsimeon12345@gmail.com or 09215512415. I'm also active on LinkedIn (linkedin.com/in/robert-simeon-08063b214/) and GitHub (github.com/jacksimeon1). I'm always open to discussing projects and opportunities!",
+      "You can reach me at robertsimeon12345@gmail.com or +63 921 551 2415. I'm also active on LinkedIn (linkedin.com/in/robert-simeon-08063b214/) and GitHub (github.com/jacksimeon1). I'm always open to discussing projects and opportunities!",
       "I'd love to connect! Email me at robertsimeon12345@gmail.com, find me on LinkedIn, or check out my GitHub projects. I'm currently seeking internship and full-time opportunities as I approach graduation in 2025."
     ],
     
@@ -84,7 +84,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "Puedes contactarme en robertsimeon12345@gmail.com o 09215512415. También estoy activo en LinkedIn (linkedin.com/in/robert-simeon-08063b214/) y GitHub (github.com/jacksimeon1). ¡Siempre estoy abierto a discutir proyectos y oportunidades!",
+      "Puedes contactarme en robertsimeon12345@gmail.com o +63 921 551 2415. También estoy activo en LinkedIn (linkedin.com/in/robert-simeon-08063b214/) y GitHub (github.com/jacksimeon1). ¡Siempre estoy abierto a discutir proyectos y oportunidades!",
       "¡Me encantaría conectarme! Envíame un correo a robertsimeon12345@gmail.com, encuéntrame en LinkedIn, o revisa mis proyectos en GitHub. Actualmente busco oportunidades de prácticas y tiempo completo mientras me acerco a la graduación en 2025."
     ],
     
@@ -131,7 +131,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "Vous pouvez me contacter à robertsimeon12345@gmail.com ou 09215512415. Je suis aussi actif sur LinkedIn (linkedin.com/in/robert-simeon-08063b214/) et GitHub (github.com/jacksimeon1). Je suis toujours ouvert à discuter de projets et d'opportunités !",
+      "Vous pouvez me contacter à robertsimeon12345@gmail.com ou +63 921 551 2415. Je suis aussi actif sur LinkedIn (linkedin.com/in/robert-simeon-08063b214/) et GitHub (github.com/jacksimeon1). Je suis toujours ouvert à discuter de projets et d'opportunités !",
       "J'aimerais me connecter ! Envoyez-moi un email à robertsimeon12345@gmail.com, trouvez-moi sur LinkedIn, ou consultez mes projets GitHub. Je cherche actuellement des opportunités de stage et à temps plein alors que j'approche de l'obtention de mon diplôme en 2025."
     ],
     
@@ -178,7 +178,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "Sie können mich unter robertsimeon12345@gmail.com oder 09215512415 erreichen. Ich bin auch auf LinkedIn (linkedin.com/in/robert-simeon-08063b214/) und GitHub (github.com/jacksimeon1) aktiv. Ich bin immer offen für Diskussionen über Projekte und Möglichkeiten!",
+      "Sie können mich unter robertsimeon12345@gmail.com oder +63 921 551 2415 erreichen. Ich bin auch auf LinkedIn (linkedin.com/in/robert-simeon-08063b214/) und GitHub (github.com/jacksimeon1) aktiv. Ich bin immer offen für Diskussionen über Projekte und Möglichkeiten!",
       "Ich würde mich gerne verbinden! Schicken Sie mir eine E-Mail an robertsimeon12345@gmail.com, finden Sie mich auf LinkedIn oder sehen Sie sich meine GitHub-Projekte an. Ich suche derzeit Praktika und Vollzeitstellen, während ich dem Abschluss 2025 nähere."
     ],
     
@@ -225,7 +225,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "你可以在robertsimeon12345@gmail.com或09215512415联系我。我也在LinkedIn（linkedin.com/in/robert-simeon-08063b214/）和GitHub（github.com/jacksimeon1）上活跃。我总是乐于讨论项目和机会！",
+      "你可以在robertsimeon12345@gmail.com或+63 921 551 2415联系我。我也在LinkedIn（linkedin.com/in/robert-simeon-08063b214/）和GitHub（github.com/jacksimeon1）上活跃。我总是乐于讨论项目和机会！",
       "我很想联系！给我发邮件到robertsimeon12345@gmail.com，在LinkedIn上找我，或查看我的GitHub项目。随着我接近2025年毕业，我目前正在寻找实习和全职机会。"
     ],
     
@@ -272,7 +272,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "robertsimeon12345@gmail.comまたは09215512415で連絡できます。LinkedIn（linkedin.com/in/robert-simeon-08063b214/）とGitHub（github.com/jacksimeon1）でも活動しています。プロジェクトと機会について議論することに常にオープンです！",
+      "robertsimeon12345@gmail.comまたは+63 921 551 2415で連絡できます。LinkedIn（linkedin.com/in/robert-simeon-08063b214/）とGitHub（github.com/jacksimeon1）でも活動しています。プロジェクトと機会について議論することに常にオープンです！",
       "繋がりたいです！robertsimeon12345@gmail.comにメールを送信し、LinkedInで私を見つけ、私のGitHubプロジェクトをチェックしてください。2025年卒業に近づくにつれ、現在インターンシップとフルタイムの機会を探しています。"
     ],
     
@@ -319,7 +319,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "robertsimeon12345@gmail.com 또는 09215512415로 연락할 수 있습니다. 저는 LinkedIn(linkedin.com/in/robert-simeon-08063b214/)과 GitHub(github.com/jacksimeon1)에서도 활동합니다. 저는 항상 프로젝트와 기회에 대해 논의하는 데 열려 있습니다!",
+      "robertsimeon12345@gmail.com 또는 +63 921 551 2415로 연락할 수 있습니다. 저는 LinkedIn(linkedin.com/in/robert-simeon-08063b214/)과 GitHub(github.com/jacksimeon1)에서도 활동합니다. 저는 항상 프로젝트와 기회에 대해 논의하는 데 열려 있습니다!",
       "연결하고 싶습니다! robertsimeon12345@gmail.com으로 이메일을 보내시고, LinkedIn에서 저를 찾으시거나, 저의 GitHub 프로젝트를 확인하세요. 2025년 졸업에 다가가면서 현재 인턴십과 풀타임 기회를 찾고 있습니다."
     ],
     
@@ -366,7 +366,7 @@ export const knowledgeBase = {
     ],
     
     contact: [
-      "Makakontak mo ako sa robertsimeon12345@gmail.com o 09215512415. Ako rin ay aktibo sa LinkedIn (linkedin.com/in/robert-simeon-08063b214/) at GitHub (github.com/jacksimeon1). Ako ay palaging open sa pag-discuss ng projects at opportunities!",
+      "Makakontak mo ako sa robertsimeon12345@gmail.com o +63 921 551 2415. Ako rin ay aktibo sa LinkedIn (linkedin.com/in/robert-simeon-08063b214/) at GitHub (github.com/jacksimeon1). Ako ay palaging open sa pag-discuss ng projects at opportunities!",
       "Gusto kitang konektahin! I-email mo ako sa robertsimeon12345@gmail.com, hanapin mo ako sa LinkedIn, o check ang aking GitHub projects. Kasalukuyan akong naghahanap ng internship at full-time opportunities habang papalapit ako sa graduation sa 2025."
     ],
     

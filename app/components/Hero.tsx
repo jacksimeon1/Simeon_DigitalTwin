@@ -28,8 +28,8 @@ export default function Hero() {
             Robert Simeon Jr.
           </h1>
 
-          {/* Profile Picture Frame */}
-          <div className="flex justify-center md:justify-end mb-6 animate-slide-up absolute top-0 right-0" style={{animationDelay: '0.1s'}}>
+          {/* Profile Picture Frame - Original desktop positioning */}
+          <div className="hidden md:flex justify-end mb-6 animate-slide-up absolute top-0 right-0" style={{animationDelay: '0.1s'}}>
             <div className="relative group">
               {/* Animated glow ring */}
               <div className="absolute inset-0 w-64 h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
@@ -41,22 +41,46 @@ export default function Hero() {
               <div className="relative w-64 h-64 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
                 {/* Inner circle for picture */}
                 <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border-4 border-slate-200 dark:border-slate-700">
-                  {/* Placeholder icon or image goes here */}
-                  <div className="text-7xl font-bold text-slate-400 dark:text-slate-600">
-                    👨‍💻
-                  </div>
-                  {/* Uncomment below when you have your image */}
-                  {/* <img 
-                    src="/your-photo.jpg" 
+                  {/* Profile Picture */}
+                  <img 
+                    src="/robert_.jpg" 
                     alt="Robert Simeon Jr" 
                     className="w-full h-full object-cover"
-                  /> */}
+                  />
                 </div>
               </div>
               
               {/* Floating particles around frame */}
               <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full animate-bounce-3d opacity-60"></div>
               <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-500 rounded-full animate-wave opacity-60" style={{animationDelay: '0.5s'}}></div>
+            </div>
+          </div>
+
+          {/* Mobile Profile Picture - Responsive */}
+          <div className="flex md:hidden justify-center mb-6 animate-slide-up" style={{animationDelay: '0.1s'}}>
+            <div className="relative group">
+              {/* Animated glow ring */}
+              <div className="absolute inset-0 w-40 h-40 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
+              
+              {/* Rotating border ring */}
+              <div className="absolute inset-0 w-40 h-40 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full animate-spin-slow opacity-50 group-hover:animate-spin-fast transition-all duration-300"></div>
+              
+              {/* Main frame */}
+              <div className="relative w-40 h-40 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
+                {/* Inner circle for picture */}
+                <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border-4 border-slate-200 dark:border-slate-700">
+                  {/* Profile Picture */}
+                  <img 
+                    src="/robert_.jpg" 
+                    alt="Robert Simeon Jr" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Floating particles around frame */}
+              <div className="absolute -top-2 -right-2 w-3 h-3 bg-blue-500 rounded-full animate-bounce-3d opacity-60"></div>
+              <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-purple-500 rounded-full animate-wave opacity-60" style={{animationDelay: '0.5s'}}></div>
             </div>
           </div>
 

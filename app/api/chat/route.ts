@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
 - Education: 4th Year Bachelor of Science in Information Technology at St. Paul University Philippines (SPUP)
 - Expected Graduation: 2025
 - Email: robertsimeon12345@gmail.com
-- Phone: 09215512415
+- Phone: +63 921 551 2415
 - LinkedIn: linkedin.com/in/robert-simeon-08063b214/
 - GitHub: github.com/jacksimeon1
 
