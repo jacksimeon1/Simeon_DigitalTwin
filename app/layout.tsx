@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "./providers";
 import { ThemeProvider } from "./ThemeProvider";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,6 +53,7 @@ export default function RootLayout({
         <LanguageProvider>
           <ThemeProvider>
             <AuthProvider>
+              <AnalyticsTracker />
               {children}
             </AuthProvider>
           </ThemeProvider>

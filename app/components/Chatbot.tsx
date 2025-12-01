@@ -14,19 +14,14 @@ interface Message {
 
 export default function Chatbot() {
   const { language, setLanguage, t } = useLanguage();
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      text: t('chat.welcome'),
-      sender: 'assistant',
-    },
-  ]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [hasVoiceSupport, setHasVoiceSupport] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [sessionId, setSessionId] = useState('');
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const recognitionRef = useRef<any>(null);
@@ -35,6 +30,18 @@ export default function Chatbot() {
   // Initialize on client only to avoid hydration mismatch
   useEffect(() => {
     setMounted(true);
+
+    // Generate or retrieve session ID
+    const savedSessionId = localStorage.getItem('chatSessionId');
+    const newSessionId = savedSessionId || `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    setSessionId(newSessionId);
+    
+    if (!savedSessionId) {
+      localStorage.setItem('chatSessionId', newSessionId);
+    }
+
+    // Load chat session from Redis
+    loadChatSession(newSessionId);
 
     // Detect voice support
     if (typeof window !== 'undefined') {
@@ -69,22 +76,62 @@ export default function Chatbot() {
         };
       }
     }
-
-    // Fill timestamps for initial message after mount
-    setMessages((prev) =>
-      prev.map((m) =>
-        m.timeStr
-          ? m
-          : {
-              ...m,
-              timeStr: new Date().toLocaleTimeString([], {
-                hour: '2-digit',
-                minute: '2-digit',
-              }),
-            }
-      )
-    );
   }, []);
+
+  // Load chat session from Redis
+  const loadChatSession = async (sessionId: string) => {
+    try {
+      const response = await fetch(`/api/chat/session?sessionId=${sessionId}`);
+      const data = await response.json();
+      
+      if (data.messages && data.messages.length > 0) {
+        setMessages(data.messages);
+      } else {
+        // Set welcome message if no session exists
+        setMessages([{
+          id: '1',
+          text: t('chat.welcome'),
+          sender: 'assistant',
+          timeStr: getTimeString(),
+        }]);
+      }
+    } catch (error) {
+      console.error('Failed to load chat session:', error);
+      // Set welcome message on error
+      setMessages([{
+        id: '1',
+        text: t('chat.welcome'),
+        sender: 'assistant',
+        timeStr: getTimeString(),
+      }]);
+    }
+  };
+
+  // Save chat session to Redis
+  const saveChatSession = async (sessionId: string, messages: Message[]) => {
+    try {
+      await fetch('/api/chat/session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId, messages })
+      });
+    } catch (error) {
+      console.error('Failed to save chat session:', error);
+    }
+  };
+
+  // Track analytics events
+  const trackAnalytics = async (type: string, data?: any) => {
+    try {
+      await fetch('/api/analytics/track', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type, data })
+      });
+    } catch (error) {
+      console.error('Failed to track analytics:', error);
+    }
+  };
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -126,6 +173,9 @@ export default function Chatbot() {
     setInput('');
     setLoading(true);
 
+    // Track chat interaction
+    trackAnalytics('chat_interaction');
+
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',
@@ -144,7 +194,13 @@ export default function Chatbot() {
         timeStr: mounted ? getTimeString() : undefined,
       };
 
-      setMessages((prev) => [...prev, assistantMessage]);
+      const updatedMessages = [...messages, userMessage, assistantMessage];
+      setMessages(updatedMessages);
+
+      // Save chat session to Redis
+      if (sessionId) {
+        await saveChatSession(sessionId, updatedMessages);
+      }
 
       // Speak the response
       if (mounted && 'speechSynthesis' in window) {

@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@upstash/redis": "^1.35.7",
     "dotenv": "^17.2.3",
     "groq-sdk": "^0.34.0",
     "lucide-react": "^0.553.0",
