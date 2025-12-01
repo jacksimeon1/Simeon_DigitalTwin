@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
     
     // Get project views (all projects)
     const projectKeys = await redis.keys('analytics:project:*');
-    const projectViews = {};
+    const projectViews: Record<string, number> = {};
     
     for (const key of projectKeys.slice(0, 10)) { // Limit to 10 projects
       const projectId = key.split(':')[2];
