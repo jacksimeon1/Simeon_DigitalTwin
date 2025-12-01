@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
     for (const key of projectKeys.slice(0, 10)) { // Limit to 10 projects
       const projectId = key.split(':')[2];
       const views = await redis.get(key) as string;
-      projectViews[projectId] = parseInt(views || '0');
+      (projectViews as Record<string, number>)[projectId] = parseInt(views || '0');
     }
     
     // Get weekly visits
