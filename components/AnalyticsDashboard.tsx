@@ -6,7 +6,7 @@ interface AnalyticsData {
   todayVisits: number;
   totalChats: number;
   totalContacts: number;
-  projectViews: Record<string, number>;
+  projectViews: Array<{ projectId: string; views: number }>;
   weeklyData: Array<{ date: string; visits: number }>;
 }
 
@@ -85,14 +85,14 @@ export default function AnalyticsDashboard() {
         </div>
       </div>
       
-      {Object.keys(data.projectViews).length > 0 && (
+      {data.projectViews.length > 0 && (
         <div>
           <h4 className="text-lg font-semibold mb-3 text-slate-900 dark:text-white">Project Views</h4>
           <div className="space-y-2">
-            {Object.entries(data.projectViews).map(([projectId, views]) => (
-              <div key={projectId} className="flex justify-between items-center">
-                <span className="text-sm text-slate-600 dark:text-slate-400">{projectId}</span>
-                <span className="text-sm font-medium text-slate-900 dark:text-white">{views}</span>
+            {data.projectViews.map((project) => (
+              <div key={project.projectId} className="flex justify-between items-center">
+                <span className="text-sm text-slate-600 dark:text-slate-400">{project.projectId}</span>
+                <span className="text-sm font-medium text-slate-900 dark:text-white">{project.views}</span>
               </div>
             ))}
           </div>
