@@ -6,13 +6,13 @@ export async function GET(req: NextRequest) {
     const today = new Date().toISOString().split('T')[0];
     
     // Get today's visits
-    const todayVisits = await redis.get(`analytics:visits:${today}`);
+    const todayVisits = await redis.get(`analytics:visits:${today}`) as string;
     
     // Get total chats
-    const totalChats = await redis.get('analytics:chats');
+    const totalChats = await redis.get('analytics:chats') as string;
     
     // Get total contacts
-    const totalContacts = await redis.get('analytics:contacts');
+    const totalContacts = await redis.get('analytics:contacts') as string;
     
     // Get project views (all projects)
     const projectKeys = await redis.keys('analytics:project:*');
@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
     
     for (const key of projectKeys.slice(0, 10)) { // Limit to 10 projects
       const projectId = key.split(':')[2];
-      const views = await redis.get(key);
+      const views = await redis.get(key) as string;
       projectViews[projectId] = parseInt(views || '0');
     }
     
@@ -30,7 +30,7 @@ export async function GET(req: NextRequest) {
       const date = new Date();
       date.setDate(date.getDate() - i);
       const dateStr = date.toISOString().split('T')[0];
-      const visits = await redis.get(`analytics:visits:${dateStr}`);
+      const visits = await redis.get(`analytics:visits:${dateStr}`) as string;
       weeklyData.push({
         date: dateStr,
         visits: parseInt(visits || '0')
