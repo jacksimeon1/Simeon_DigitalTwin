@@ -40,17 +40,17 @@ export async function GET(req: NextRequest) {
     
     if (type === 'visits') {
       const today = new Date().toISOString().split('T')[0];
-      const visits = await redis.get(`analytics:visits:${today}`);
+      const visits = await redis.get(`analytics:visits:${today}`) as string;
       return NextResponse.json({ visits: parseInt(visits || '0') });
     }
     
     if (type === 'chats') {
-      const chats = await redis.get('analytics:chats');
+      const chats = await redis.get('analytics:chats') as string;
       return NextResponse.json({ chats: parseInt(chats || '0') });
     }
     
     if (type === 'contacts') {
-      const contacts = await redis.get('analytics:contacts');
+      const contacts = await redis.get('analytics:contacts') as string;
       return NextResponse.json({ contacts: parseInt(contacts || '0') });
     }
     
