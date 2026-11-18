@@ -17,14 +17,14 @@ export default function ParticleEffects() {
   useEffect(() => {
     const generateParticles = () => {
       const newParticles: Particle[] = [];
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 16; i++) {
         newParticles.push({
           id: i,
           x: Math.random() * 100,
           y: Math.random() * 100,
-          size: Math.random() * 4 + 2,
-          duration: Math.random() * 10 + 15,
-          delay: Math.random() * 5,
+          size: Math.random() * 2.5 + 1.5,
+          duration: Math.random() * 12 + 18,
+          delay: Math.random() * 4,
         });
       }
       setParticles(newParticles);
@@ -34,17 +34,18 @@ export default function ParticleEffects() {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-10">
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="particle absolute rounded-full bg-gradient-to-r from-blue-400/20 to-purple-400/20 backdrop-blur-sm"
+          className="particle absolute rounded-full bg-purple-400/15"
           style={{
             left: `${particle.x}%`,
             width: `${particle.size}px`,
             height: `${particle.size}px`,
             animationDuration: `${particle.duration}s`,
             animationDelay: `${particle.delay}s`,
+            boxShadow: '0 0 10px rgba(168, 85, 247, 0.2)',
           }}
         />
       ))}

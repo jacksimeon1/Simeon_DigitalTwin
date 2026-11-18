@@ -1,118 +1,213 @@
 'use client';
 
-import { Zap, Code2, Layers, Database, Cloud, Cpu, Globe, Gamepad2 } from 'lucide-react';
+import { useState } from 'react';
+import {
+  Code2,
+  Server,
+  Wrench,
+  Sparkles,
+} from 'lucide-react';
+import { TechIcons } from './TechIcons';
+import ScrollReveal from './ScrollReveal';
 
-interface Skill {
-  category: string;
-  items: string[];
-  icon: React.ReactNode;
-  color: string;
-  gradient: string;
+interface TechItem {
+  name: string;
+  role: string;
 }
 
-const skills: Skill[] = [
+interface SkillCategory {
+  id: string;
+  category: string;
+  tagline: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
+  accentColor: string;
+  glowColor: string;
+  items: TechItem[];
+}
+
+const skillCategories: SkillCategory[] = [
   {
+    id: 'frontend',
     category: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML/CSS', 'JavaScript'],
-    icon: <Code2 size={24} />,
-    color: 'blue',
-    gradient: 'from-blue-600 to-cyan-600',
+    tagline: 'Client-side interfaces & responsive web systems',
+    icon: Code2,
+    accentColor: 'text-violet-400 border-violet-500/30 bg-violet-500/10',
+    glowColor: 'from-violet-500/20 to-transparent',
+    items: [
+      { name: 'React', role: 'Component UI Library' },
+      { name: 'Next.js', role: 'Full-Stack React Framework' },
+      { name: 'TypeScript', role: 'Typed JavaScript' },
+      { name: 'Tailwind CSS', role: 'Utility-First Styling' },
+      { name: 'HTML/CSS', role: 'Web Standards & Semantics' },
+      { name: 'JavaScript', role: 'Core Web Programming' },
+      { name: 'Bootstrap', role: 'Responsive Grid & UI' },
+    ],
   },
   {
+    id: 'backend',
     category: 'Backend',
-    items: ['Node.js', 'Python', 'Express.js', 'PostgreSQL', 'MongoDB', 'PHP', 'Laravel', 'MySQL'],
-    icon: <Layers size={24} />,
-    color: 'purple',
-    gradient: 'from-purple-600 to-pink-600',
+    tagline: 'Server logic, APIs, architectures & database systems',
+    icon: Server,
+    accentColor: 'text-indigo-400 border-indigo-500/30 bg-indigo-500/10',
+    glowColor: 'from-indigo-500/20 to-transparent',
+    items: [
+      { name: 'Node.js', role: 'JavaScript Runtime' },
+      { name: 'Python', role: 'Programming & AI Scripts' },
+      { name: 'Express.js', role: 'Node.js Web Framework' },
+      { name: 'PostgreSQL', role: 'Advanced Relational DB' },
+      { name: 'MongoDB', role: 'NoSQL Document Database' },
+      { name: 'PHP', role: 'Server-Side Scripting' },
+      { name: 'Laravel', role: 'PHP MVC Framework' },
+      { name: 'MySQL', role: 'Relational Database Service' },
+      { name: 'NextAuth/Auth.js', role: 'Authentication & Security' },
+      { name: 'Java', role: 'Object-Oriented Programming' },
+    ],
   },
   {
-    category: 'Game Development',
-    items: ['Godot Engine', 'GDScript', 'C#', 'Game Design', 'Unity Basics'],
-    icon: <Gamepad2 size={24} />,
-    color: 'green',
-    gradient: 'from-green-600 to-emerald-600',
-  },
-  {
+    id: 'tools',
     category: 'Tools & Platforms',
-    items: ['Git', 'Docker', 'AWS', 'Vercel', 'Figma'],
-    icon: <Cloud size={24} />,
-    color: 'emerald',
-    gradient: 'from-emerald-600 to-teal-600',
+    tagline: 'Version control, containers, cloud & prototyping',
+    icon: Wrench,
+    accentColor: 'text-cyan-400 border-cyan-500/30 bg-cyan-500/10',
+    glowColor: 'from-cyan-500/20 to-transparent',
+    items: [
+      { name: 'Git', role: 'Distributed Version Control' },
+      { name: 'Docker', role: 'Software Containerization' },
+      { name: 'AWS', role: 'Cloud Infrastructure' },
+      { name: 'Vercel', role: 'Edge Deployment & Hosting' },
+      { name: 'Figma', role: 'UI/UX Interface Prototyping' },
+    ],
   },
 ];
 
 export default function Skills() {
+  const [activeTab, setActiveTab] = useState<string>('all');
+
+  const filteredCategories =
+    activeTab === 'all'
+      ? skillCategories
+      : skillCategories.filter((cat) => cat.id === activeTab);
+
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-transparent text-[var(--text-primary)] transition-colors duration-300">
+      {/* Background ambient radial gradients */}
+      <div className="absolute top-1/4 left-1/3 -translate-x-1/2 w-[450px] h-[280px] bg-purple-900/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="absolute bottom-1/3 right-1/4 translate-x-1/2 w-[420px] h-[260px] bg-indigo-900/10 rounded-full blur-[120px] pointer-events-none" />
+
+      {/* Subtle dot matrix pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4 flex items-center justify-center gap-2">
-            <Zap className="text-yellow-500 animate-pulse" size={28} />
-            Skills & Expertise
-          </h2>
-          <p className="text-center text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            A comprehensive overview of my technical skills and areas of expertise across modern web technologies.
-          </p>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-7 sm:mb-8">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-purple-500/20 bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 text-[11px] font-semibold mb-2 tracking-wide shadow-xs">
+              <Sparkles size={12} className="text-purple-600 dark:text-purple-400 animate-pulse" />
+              <span>TECHNICAL PROFICIENCY & STACK</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-2">
+              Skills & Core Technologies
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto text-xs leading-relaxed">
+              Languages, frameworks, and modern developer tooling applied across full-stack applications and client projects.
+            </p>
 
-        {/* Skills Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {skills.map((skillGroup, idx) => (
-            <div
-              key={skillGroup.category}
-              className="group animate-slide-up hover:translate-y-0 transition-all"
-              style={{animationDelay: `${idx * 0.15}s`}}
-            >
-              {/* Card */}
-              <div className={`relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 group-hover:border-${skillGroup.color}-300 dark:group-hover:border-${skillGroup.color}-500 overflow-hidden h-full`}>
-                {/* Background gradient effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${skillGroup.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+            {/* Category Filter Tabs */}
+            <div className="flex flex-wrap items-center justify-center gap-1.5 mt-4">
+              {[
+                { id: 'all', label: 'All Technologies' },
+                { id: 'frontend', label: 'Frontend' },
+                { id: 'backend', label: 'Backend' },
+                { id: 'tools', label: 'Tools & Platforms' },
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-2.5 sm:px-3.5 py-1 rounded-lg text-[11px] font-medium transition-all duration-200 cursor-pointer ${
+                    activeTab === tab.id
+                      ? 'bg-purple-600 text-white shadow-sm shadow-purple-600/30 border border-purple-400/40 scale-105'
+                      : 'bg-neutral-100 hover:bg-neutral-200 dark:bg-white/[0.03] dark:hover:bg-white/[0.07] text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white border border-neutral-200 dark:border-white/[0.06]'
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          </div>
+        </ScrollReveal>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon */}
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${skillGroup.gradient} flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {skillGroup.icon}
+        {/* Skill Category Sections */}
+        <div className="space-y-4 sm:space-y-5 mb-4">
+          {filteredCategories.map((group, idx) => {
+            const IconComponent = group.icon;
+            const waveAnim = idx % 2 === 0 ? 'wave-slide' : 'wave-slide-right';
+            return (
+              <ScrollReveal key={group.id} animation={waveAnim} duration={0.75} staggerIndex={idx} staggerDelay={0.12}>
+              <div
+                key={group.id}
+                className="group relative p-3.5 sm:p-5 rounded-xl border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-[#111116]/90 backdrop-blur-xl hover:border-purple-500/30 transition-all duration-300 shadow-sm dark:shadow-xl overflow-hidden"
+              >
+                {/* Internal Glow Backdrop */}
+                <div
+                  className={`absolute -top-24 -right-24 w-44 h-44 rounded-full bg-gradient-to-br ${group.glowColor} blur-2xl pointer-events-none group-hover:scale-150 transition-transform duration-500`}
+                />
+
+                {/* Category Header */}
+                <div className="flex items-center gap-2.5 mb-3.5 sm:mb-4 relative z-10">
+                  <div
+                    className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg border flex items-center justify-center ${group.accentColor}`}
+                  >
+                    <IconComponent size={16} />
                   </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-6 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r transition-all" style={{backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`}}>
-                    {skillGroup.category}
-                  </h3>
-
-                  {/* Skills List */}
-                  <ul className="space-y-3">
-                    {skillGroup.items.map((item, itemIdx) => (
-                      <li key={item} className="flex items-center text-slate-700 dark:text-slate-300 group/item hover:translate-x-1 transition-transform" style={{transitionDelay: `${itemIdx * 50}ms`}}>
-                        <span className={`w-2 h-2 bg-gradient-to-r ${skillGroup.gradient} rounded-full mr-3 group-hover/item:scale-150 transition-transform`}></span>
-                        <span className="font-medium">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
+                      {group.category}
+                    </h3>
+                    <p className="text-[10.5px] sm:text-[11px] text-neutral-500 dark:text-neutral-400">{group.tagline}</p>
+                  </div>
                 </div>
 
-                {/* Bottom accent line */}
-                <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r ${skillGroup.gradient} w-0 group-hover:w-full transition-all duration-500`}></div>
-              </div>
-            </div>
-          ))}
-        </div>
+                {/* Tech Logos Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 sm:gap-2.5 relative z-10">
+                  {group.items.map((tech) => {
+                    const SvgIcon = TechIcons[tech.name];
+                    return (
+                      <div
+                        key={tech.name}
+                        className="group/item flex items-center gap-2 p-2 sm:p-2.5 rounded-lg border border-neutral-200 dark:border-white/[0.06] bg-neutral-50 dark:bg-[#0d0d12]/90 hover:bg-neutral-100 dark:hover:bg-[#151520] hover:border-purple-500/40 transition-all duration-200 hover:-translate-y-0.5 shadow-xs dark:shadow-sm cursor-default min-w-0"
+                      >
+                        {/* SVG Logo */}
+                        <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-white dark:bg-white/[0.04] border border-neutral-200 dark:border-white/[0.06] flex items-center justify-center shrink-0 p-1 group-hover/item:scale-105 group-hover/item:border-purple-500/30 transition-all shadow-xs dark:shadow-none">
+                          {SvgIcon ? (
+                            <SvgIcon size={15} />
+                          ) : (
+                            <Code2 size={15} className="text-purple-500 dark:text-purple-400" />
+                          )}
+                        </div>
 
-        {/* Additional tech stack section */}
-        <div className="mt-20 pt-16 border-t border-slate-200 dark:border-slate-700 animate-slide-up" style={{animationDelay: '0.5s'}}>
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-8 text-center">Other Technologies & Areas</h3>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-            {['AI/ML', 'APIs', 'REST/GraphQL', 'Responsive Design', 'UI/UX', 'Database Design', 'System Architecture', 'Agile'].map((tech, idx) => (
-              <div
-                key={tech}
-                className="group p-4 rounded-lg bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-500 text-center hover:shadow-lg transition-all cursor-pointer animate-slide-up"
-                style={{animationDelay: `${0.5 + idx * 0.05}s`}}
-              >
-                <span className="font-semibold text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">{tech}</span>
+                        {/* Tech Label & Subtitle */}
+                        <div className="overflow-hidden min-w-0 flex-1">
+                          <p className="text-[11px] sm:text-[11.5px] font-bold text-neutral-900 dark:text-white group-hover/item:text-purple-600 dark:group-hover/item:text-purple-300 transition-colors truncate">
+                            {tech.name}
+                          </p>
+                          <p className="text-[9px] sm:text-[9.5px] text-neutral-500 dark:text-neutral-400 truncate">
+                            {tech.role}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            ))}
-          </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

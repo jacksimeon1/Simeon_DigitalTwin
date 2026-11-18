@@ -1,107 +1,72 @@
 'use client';
 
-import { Github, Linkedin, Mail, Heart, Code2, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Mail, Facebook, Youtube, Heart, Code2 } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, label: 'GitHub', href: 'https://github.com/jacksimeon1', color: 'hover:text-slate-300' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com', color: 'hover:text-blue-400' },
-    { icon: Mail, label: 'Email', href: 'mailto:your.email@example.com', color: 'hover:text-red-400' },
+    { icon: Github, label: 'GitHub', href: 'https://github.com/jacksimeon1' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/robert-simeon-08063b214' },
+    { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/jackieeeeeeeeeeeeeeee/' },
+    { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/@Track_Theory-4ever' },
+    { icon: Mail, label: 'Email', href: 'mailto:robertsimeon12345@gmail.com' },
   ];
 
   const quickLinks = [
     { label: 'About', href: '#about' },
     { label: 'Projects', href: '#projects' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Chat', href: '#chat' },
+    { label: 'Resume', href: '#resume' },
+    { label: 'Chat Assistant', href: '#chat' },
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-slate-300 py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl"></div>
-      </div>
-
+    <footer className="relative border-t border-neutral-200 dark:border-[var(--border)] text-neutral-600 dark:text-neutral-400 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[var(--surface)]/80 backdrop-blur-md transition-colors duration-300">
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          {/* Brand Section */}
-          <div className="md:col-span-1 animate-slide-up">
-            <div className="flex items-center space-x-2 mb-4 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-blue-500/50 transition-all">
-                <span className="text-white font-bold text-lg group-hover:scale-110 transition-transform">RSJ</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10">
+          {/* Brand */}
+          <div className="sm:col-span-2 md:col-span-1">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-white font-bold text-xs shadow-sm">
+                RS
               </div>
-              <span className="font-bold text-white text-lg">Robert Simeon Jr.</span>
+              <span className="font-bold text-neutral-900 dark:text-white text-sm tracking-tight">Robert Simeon Jr.</span>
             </div>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              4th Year IT Student @ SPUP | Full-Stack Developer | AI Enthusiast
+            <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed max-w-sm mb-3">
+              BSIT Graduate @ SPUP (June 2026) • Full-Stack Software Developer. Creating high-performance client solutions with modern stacks.
             </p>
-            <div className="mt-4 flex items-center gap-2 text-xs text-slate-400">
-              <Code2 size={14} />
-              Built with modern web technologies
+            <div className="inline-flex items-center gap-1.5 text-[11px] text-neutral-500 dark:text-neutral-400">
+              <Code2 size={13} className="text-purple-600 dark:text-purple-400" />
+              <span>Next.js • Tailwind CSS • Groq AI</span>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="animate-slide-up" style={{animationDelay: '0.1s'}}>
-            <h4 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-blue-600 to-purple-600 rounded-full"></div>
-              Navigation
+          {/* Quick Navigation */}
+          <div>
+            <h4 className="text-xs font-bold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">
+              Quick Links
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2 text-xs">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-white transition-all duration-300 inline-flex items-center gap-2 group"
+                    className="text-neutral-600 hover:text-purple-600 dark:text-neutral-400 dark:hover:text-purple-300 transition-colors inline-block py-0.5"
                   >
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-                    <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
+                    {link.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Resources */}
-          <div className="animate-slide-up" style={{animationDelay: '0.2s'}}>
-            <h4 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-purple-600 to-pink-600 rounded-full"></div>
-              Resources
-            </h4>
-            <ul className="space-y-3">
-              {[
-                { label: 'My GitHub', href: 'https://github.com/jacksimeon1' },
-                { label: 'Contact Me', href: 'mailto:your.email@example.com' },
-                { label: 'Portfolio', href: '#' },
-              ].map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    target={link.href.startsWith('https') || link.href.startsWith('mailto') ? '_blank' : undefined}
-                    rel={link.href.startsWith('https') || link.href.startsWith('mailto') ? 'noopener noreferrer' : undefined}
-                    className="text-slate-400 hover:text-blue-400 transition-all duration-300 inline-flex items-center gap-2 group"
-                  >
-                    <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
-                    {(link.href.startsWith('https') || link.href.startsWith('mailto')) && (
-                      <ExternalLink size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                    )}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Connect */}
-          <div className="animate-slide-up" style={{animationDelay: '0.3s'}}>
-            <h4 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-pink-600 to-rose-600 rounded-full"></div>
+          {/* Social Channels */}
+          <div>
+            <h4 className="text-xs font-bold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">
               Connect
             </h4>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-2 mb-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
                 return (
@@ -110,64 +75,24 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 ${social.color} transition-all duration-300 transform hover:scale-110 group`}
+                    className="w-9 h-9 sm:w-8 sm:h-8 rounded-lg bg-white dark:bg-white/[0.04] border border-neutral-300 dark:border-white/[0.08] flex items-center justify-center text-neutral-600 hover:text-purple-600 dark:text-neutral-400 dark:hover:text-white hover:border-purple-500/40 hover:bg-purple-50 dark:hover:bg-purple-500/10 transition-all shadow-xs dark:shadow-none"
                     title={social.label}
                   >
-                    <Icon size={18} />
+                    <Icon size={15} />
                   </a>
                 );
               })}
             </div>
-            <p className="text-xs text-slate-500 mt-4">Let's collaborate and create something amazing!</p>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t border-slate-700/50 pt-8">
-          {/* Stats */}
-          <div className="grid sm:grid-cols-4 gap-4 mb-8">
-            {[
-              { label: 'Projects', value: '10+' },
-              { label: 'Skills', value: '15+' },
-              { label: 'Technologies', value: '20+' },
-              { label: 'Coffee Cups', value: '∞' },
-            ].map((stat, idx) => (
-              <div
-                key={stat.label}
-                className="text-center p-3 rounded-lg bg-slate-800/50 hover:bg-slate-800 transition-all group cursor-default animate-slide-up"
-                style={{animationDelay: `${0.4 + idx * 0.05}s`}}
-              >
-                <p className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 group-hover:scale-110 transition-transform">{stat.value}</p>
-                <p className="text-xs text-slate-400 mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Footer */}
-          <div className="text-center py-4 border-t border-slate-700/50 animate-slide-up" style={{animationDelay: '0.5s'}}>
-            <p className="text-sm text-slate-400 flex items-center justify-center gap-2 flex-wrap">
-              <span>© {currentYear} Robert Simeon Jr.</span>
-              <span className="text-slate-600">•</span>
-              <span>Digital Twin Portfolio</span>
-              <span className="text-slate-600">•</span>
-              <span className="flex items-center gap-1">
-                Built with <Heart size={14} className="text-red-500 animate-pulse" /> in SPUP
-              </span>
+            <p className="text-[11px] text-neutral-500 dark:text-neutral-400">
+              Available for internships, technical roles, and collaboration.
             </p>
-            <p className="text-xs text-slate-500 mt-3">All rights reserved • Designed & Developed by Robert Simeon Jr.</p>
           </div>
         </div>
-      </div>
 
-      {/* Scroll to top button */}
-      <div className="fixed bottom-8 right-8 animate-float">
-        <a
-          href="#"
-          className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all opacity-0 hover:opacity-100 group focus:opacity-100"
-          title="Back to top"
-        >
-          <span className="text-xl">↑</span>
-        </a>
+        {/* Bottom copyright line */}
+        <div className="border-t border-neutral-200 dark:border-white/[0.06] pt-5 sm:pt-6 flex items-center justify-center sm:justify-start text-center sm:text-left text-[11px] text-neutral-500 dark:text-neutral-400">
+          <p>© {currentYear} Robert Simeon Jr. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

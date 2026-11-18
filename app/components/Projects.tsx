@@ -1,6 +1,8 @@
 'use client';
 
-import { ExternalLink, Github, Star, TrendingUp } from 'lucide-react';
+import { ExternalLink, Star, Sparkles, FolderGit2, Globe, Github } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
+import ProjectImageScroller from './ProjectImageScroller';
 
 interface Project {
   id: number;
@@ -8,8 +10,12 @@ interface Project {
   description: string;
   tags: string[];
   link?: string;
+  liveDemo?: string;
   github?: string;
   featured?: boolean;
+  isPrivate?: boolean;
+  isOpenSource?: boolean;
+  screenshotsKey?: 'off-campus' | 'santo-nino' | 'capstone-ai' | 'sip-3d' | '3d-room';
 }
 
 const projects: Project[] = [
@@ -17,171 +23,224 @@ const projects: Project[] = [
     id: 1,
     title: 'In-Off Campus Activity Scheduling Information System',
     description:
-      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with PHP, Laravel framework, Bootstrap for responsive design, and MySQL database for robust data management.',
-    tags: ['PHP', 'Laravel', 'Bootstrap', 'MySQL', 'Information Systems'],
+      'A comprehensive web-based system for managing and scheduling both on-campus and off-campus activities. Enables efficient event planning, participant registration, and resource allocation for educational institutions. Built with PHP, Laravel framework, Bootstrap, and MySQL.',
+    tags: ['PHP', 'Laravel', 'Bootstrap', 'MySQL', 'Info Systems'],
     link: '#',
     github: '#',
     featured: true,
+    isPrivate: true,
+    screenshotsKey: 'off-campus',
   },
   {
     id: 2,
-    title: 'E-Bayo',
+    title: 'Santo Niño Building Permit System',
     description:
-      'A modern ecommerce website platform designed for seamless online shopping experiences. Features product catalog management, secure payment processing, user authentication, shopping cart functionality, and order tracking. Built with responsive design and optimized for performance.',
-    tags: ['E-commerce', 'React', 'Node.js', 'MongoDB', 'Payment Integration'],
+      'A specialized municipal e-governance platform designed for the Local Government Unit of Santo Niño, Cagayan. Automates citizen building permit applications, blueprint and floor plan submissions, municipal administrative evaluations, cashier payment processing, and revenue reporting.',
+    tags: ['PHP', 'MySQL', 'Bootstrap', 'GovTech', 'Municipal Portal', 'PDF Reports'],
     link: '#',
     github: '#',
     featured: true,
+    isPrivate: true,
+    screenshotsKey: 'santo-nino',
   },
   {
     id: 3,
-    title: 'AI-Powered Student Assistant Chatbot',
+    title: 'Capstone AI Title Generator',
     description:
-      'An intelligent chatbot designed to help students with academic queries, course information, and campus resources. Features natural language processing, contextual understanding, and integration with university databases. Provides 24/7 support for student needs.',
-    tags: ['AI/ML', 'Natural Language Processing', 'Python', 'TensorFlow', 'Chatbot'],
-    link: '#',
-    github: '#',
-    featured: false,
+      'An open-source AI-powered academic research platform and thesis title synthesis engine. Formulates defensible, accredited capstone project titles tailored by academic program, project type, and target beneficiaries. Features an interactive AI title verification sandbox, live heuristic validation engine, and multi-paradigm research recommendations.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'AI Synthesis Engine', 'Academic Research', 'Open Source'],
+    link: 'https://jacksimeon1.github.io/capstone-title-ai/',
+    liveDemo: 'https://jacksimeon1.github.io/capstone-title-ai/',
+    github: 'https://github.com/jacksimeon1/capstone-title-ai',
+    featured: true,
+    isOpenSource: true,
+    screenshotsKey: 'capstone-ai',
   },
   {
     id: 4,
-    title: 'Student Grade Calculator',
+    title: 'SIP 3D – 3D Beverage Showcase Website',
     description:
-      'A simple yet useful web application for students to calculate and track their grades throughout the semester. Features grade input, GPA calculation, grade forecasting, and visual progress tracking. Built with HTML, CSS, and JavaScript as a beginner project.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Student Project', 'Beginner'],
-    link: '#',
-    github: '#',
-    featured: false,
+      'An interactive 3D beverage showcase and animation demonstration website. Features real-time 360° can cylinder rotation physics, multi-flavor switching (Crisp Pear, Midnight Apple, Tropical Exotic), dynamic background kinetic typography, floating fruit particles, and automated demonstration controls.',
+    tags: ['Three.js / 3D Web', 'CSS 3D Transforms', 'JavaScript ES6+', 'HTML5 Canvas', 'Kinetic Typography', 'Interactive UI', 'Open Source'],
+    link: 'https://jacksimeon1.github.io/3d-can-animation/',
+    liveDemo: 'https://jacksimeon1.github.io/3d-can-animation/',
+    github: 'https://github.com/jacksimeon1/3d-can-animation',
+    featured: true,
+    isOpenSource: true,
+    screenshotsKey: 'sip-3d',
   },
   {
     id: 5,
-    title: 'Bert and Jack Adventure',
+    title: '3D Room – Isometric 3D Room & Studio',
     description:
-      'An exciting adventure game developed in Godot Engine where players control Bert and Jack to fight enemies and collect valuable gems and treasures. Features character progression, combat mechanics, treasure hunting, and engaging gameplay. Built with Godot Engine and GDScript to showcase game development skills.',
-    tags: ['Godot Engine', 'GDScript', 'Game Development', 'Adventure', 'Combat System'],
-    link: '#',
-    github: '#',
+      'An interactive isometric 3D living sanctuary and studio showcase built with pure CSS 3D transforms, JavaScript, and HTML5. Features real-time camera perspective rotation, dynamic ambient lighting presets, interactive room elements, multi-channel animated TV display, and relaxing soundscapes.',
+    tags: ['CSS 3D Transforms', 'JavaScript ES6+', 'HTML5 Canvas', 'Interactive 3D', 'Isometric Design', 'Open Source'],
+    link: 'https://jacksimeon1.github.io/3D-Room/',
+    liveDemo: 'https://jacksimeon1.github.io/3D-Room/',
+    github: 'https://github.com/jacksimeon1/3D-Room',
     featured: true,
+    isOpenSource: true,
+    screenshotsKey: '3d-room',
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-slate-900 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 dark:bg-blue-900/20 rounded-full blur-3xl opacity-10"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 dark:bg-purple-900/20 rounded-full blur-3xl opacity-10"></div>
-      </div>
+    <section id="projects" className="pt-16 pb-10 sm:pt-20 sm:pb-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-transparent text-[var(--text-primary)] transition-colors duration-300">
+      {/* Subtle background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-purple-500/10 dark:bg-purple-900/10 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Header */}
-        <div className="text-center mb-16 animate-slide-up">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <TrendingUp className="text-blue-600" size={24} />
-            <span className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider">Featured Work</span>
+        <ScrollReveal animation="fade-up">
+          <div className="text-center mb-7 sm:mb-8">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-purple-500/20 bg-purple-50 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 text-[11px] font-semibold mb-2 tracking-wide">
+              <Sparkles size={12} className="text-purple-600 dark:text-purple-400" />
+              <span>PORTFOLIO & WORK</span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-neutral-900 dark:text-white tracking-tight mb-2">
+              Featured Projects
+            </h2>
+            <p className="text-neutral-600 dark:text-neutral-400 max-w-lg mx-auto text-xs leading-relaxed">
+              A curated selection of software engineering, open source platforms, web applications, and interactive systems.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">
-            Projects & Showcase
-          </h2>
-          <p className="text-center text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            Here are some of my recent projects that showcase my skills in full-stack development and problem-solving.
-          </p>
-        </div>
+        </ScrollReveal>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={project.id}
-              className="group animate-slide-up"
-              style={{animationDelay: `${idx * 0.2}s`}}
-            >
-              {/* Card Container */}
-              <div className="relative bg-white dark:bg-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-100 dark:border-slate-700 overflow-hidden h-full flex flex-col transform-gpu hover:scale-105 hover:rotate-1 perspective-1000 hover-lift hover-glow">
-                {/* Featured Badge */}
-                {project.featured && (
-                  <div className="absolute top-4 right-4 z-10 flex items-center gap-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold group-hover:scale-110 transition-transform">
-                    <Star size={14} fill="currentColor" />
-                    Featured
-                  </div>
-                )}
+        {/* Projects Grid - compact & uniform size */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4 items-stretch">
+          {projects.map((project, idx) => {
+            const isPrivate = project.isPrivate;
 
-                {/* Project Image/Header */}
-                <div className="relative h-48 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 group-hover:from-blue-600 group-hover:via-purple-600 group-hover:to-pink-600 transition-all duration-500 flex items-center justify-center overflow-hidden">
-                  {/* 3D Rotating Elements */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="absolute w-20 h-20 bg-white/10 rounded-full animate-spin-slow group-hover:animate-spin-fast"></div>
-                    <div className="absolute w-16 h-16 bg-blue-400/20 rounded-full animate-spin-reverse group-hover:animate-spin-reverse-fast"></div>
-                    <div className="absolute w-12 h-12 bg-purple-400/20 rounded-full animate-spin-slow group-hover:animate-spin-fast"></div>
+            return (
+              <ScrollReveal
+                key={project.id}
+                animation="tilt-3d"
+                duration={0.8}
+                staggerIndex={idx}
+                staggerDelay={0.1}
+                className="h-full"
+              >
+                <div
+                  className="group relative flex flex-col justify-between h-full rounded-xl p-3.5 sm:p-4 border border-neutral-200 dark:border-white/[0.08] bg-white dark:bg-[#111116] hover:border-purple-500/40 hover:bg-neutral-50 dark:hover:bg-[#15151c] transition-all duration-300 hover:-translate-y-1 shadow-sm dark:shadow-xl hover:shadow-purple-950/20"
+                >
+                  <div className="flex-1 flex flex-col">
+                    {/* Top header bar */}
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <div className="w-7 h-7 rounded-lg bg-neutral-100 dark:bg-white/[0.05] border border-neutral-200 dark:border-white/[0.08] flex items-center justify-center text-purple-600 dark:text-purple-400 group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">
+                        <FolderGit2 size={14} />
+                      </div>
+                      <div className="flex flex-wrap items-center gap-1.5">
+                        {project.isOpenSource && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/20 px-2 py-0.5 rounded-full">
+                            <Globe size={10} />
+                            Open Source
+                          </span>
+                        )}
+                        {isPrivate && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-neutral-600 dark:text-neutral-300 bg-neutral-100 dark:bg-white/[0.06] border border-neutral-300 dark:border-white/10 px-2 py-0.5 rounded-full">
+                            🔒 Private System
+                          </span>
+                        )}
+                        {project.featured && (
+                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-500/10 border border-amber-300 dark:border-amber-500/20 px-2 py-0.5 rounded-full">
+                            <Star size={10} fill="currentColor" />
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Title - clickable if live demo available */}
+                    <h3 className="text-sm sm:text-base font-bold text-neutral-900 dark:text-white mb-1.5 transition-colors break-words">
+                      {project.liveDemo ? (
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        >
+                          <span>{project.title}</span>
+                          <ExternalLink size={13} className="opacity-70 text-emerald-500 shrink-0" />
+                        </a>
+                      ) : (
+                        <span className="group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors">
+                          {project.title}
+                        </span>
+                      )}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-neutral-600 dark:text-neutral-400 text-xs leading-relaxed mb-2.5 line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    {/* Embedded Animated Screenshot Showcase */}
+                    {project.screenshotsKey && (
+                      <ProjectImageScroller systemKey={project.screenshotsKey} />
+                    )}
                   </div>
-                  
-                  {/* Animated background */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity">
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent animate-pulse"></div>
-                  </div>
-                  
-                  {/* Content with 3D effect */}
-                  <div className="relative text-center text-white px-4 transform group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 preserve-3d">
-                    <p className="text-sm font-semibold opacity-75 mb-2 group-hover:opacity-100 transition-opacity">Project Showcase</p>
-                    <p className="text-3xl font-bold transform group-hover:rotate-180 transition-transform duration-1000">📋</p>
+
+                  {/* Tags & Footer (pinned to bottom) */}
+                  <div className="pt-2.5 border-t border-neutral-200 dark:border-white/[0.06] mt-auto">
+                    <div className="flex flex-wrap gap-1 mb-2 items-start">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-1.5 py-0.5 text-[9px] font-medium text-neutral-700 dark:text-neutral-300 bg-neutral-100 dark:bg-white/[0.04] border border-neutral-200 dark:border-white/[0.06] rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-neutral-500 dark:text-neutral-400 pt-0.5">
+                      <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                        {project.liveDemo && (
+                          <a
+                            href={project.liveDemo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-[11px] shadow-xs hover:shadow-emerald-600/30 transition-all duration-200 group/btn"
+                          >
+                            <Globe size={11} />
+                            <span>Live Demo</span>
+                            <ExternalLink size={10} className="transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                          </a>
+                        )}
+                        {project.github && project.github !== '#' && (
+                          <a
+                            href={project.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md border border-neutral-300 dark:border-white/10 hover:border-neutral-400 dark:hover:border-white/20 bg-neutral-100 dark:bg-white/[0.05] hover:bg-neutral-200 dark:hover:bg-white/10 text-neutral-800 dark:text-neutral-200 hover:text-neutral-900 dark:hover:text-white font-semibold text-[11px] transition-all duration-200"
+                          >
+                            <Github size={11} />
+                            <span>Source Code</span>
+                          </a>
+                        )}
+                        <a
+                          href="#chat"
+                          className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold transition-colors"
+                        >
+                          <span>Ask AI</span>
+                          <ExternalLink size={11} />
+                        </a>
+                        {isPrivate && (
+                          <span className="text-[10px] text-neutral-400 dark:text-neutral-500 hidden sm:inline">
+                            • Confidential
+                          </span>
+                        )}
+                      </div>
+                      <span className="text-[10px] text-neutral-400 dark:text-neutral-500 font-mono">
+                        #0{project.id}
+                      </span>
+                    </div>
                   </div>
                 </div>
-
-                {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
-                    {project.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 leading-relaxed line-clamp-3 flex-1">
-                    {project.description}
-                  </p>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, tagIdx) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-slate-700 dark:to-slate-600 text-blue-700 dark:text-blue-300 text-xs font-semibold rounded-full hover:scale-105 transition-transform"
-                        style={{transitionDelay: `${tagIdx * 50}ms`}}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                                  </div>
-
-                {/* Bottom accent line */}
-                <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 w-0 group-hover:w-full transition-all duration-500"></div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-16 pt-16 border-t border-slate-200 dark:border-slate-700 text-center animate-slide-up" style={{animationDelay: '0.4s'}}>
-          <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">More Projects Coming Soon</h3>
-          <p className="text-slate-600 dark:text-slate-400 mb-6">I'm actively working on more exciting projects. Stay tuned for updates!</p>
-          <div className="flex gap-4 justify-center">
-            <a
-              href="#chat"
-              className="px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105"
-            >
-              Chat with me
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white font-semibold rounded-lg hover:border-blue-400 dark:hover:border-blue-400 transition-all hover:scale-105"
-            >
-              Visit GitHub
-            </a>
-          </div>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>

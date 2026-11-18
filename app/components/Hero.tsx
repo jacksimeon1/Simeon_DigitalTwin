@@ -1,150 +1,152 @@
 'use client';
 
-import { ArrowRight, Sparkles, Code2, Zap } from 'lucide-react';
+import { ArrowRight, Sparkles, Code2, GraduationCap } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 export default function Hero() {
   return (
-    <section id="about" className="relative w-full px-4 py-20 sm:py-32 md:py-40 bg-gradient-to-br from-white via-blue-50 to-purple-50 dark:from-slate-900 dark:via-blue-900 dark:to-slate-800 overflow-hidden">
-      {/* Decorative elements */}
+    <section id="about" className="relative w-full px-4 pt-20 pb-10 sm:pt-24 sm:pb-12 lg:pt-20 lg:pb-10 min-h-screen flex items-center overflow-hidden bg-transparent text-[var(--text-primary)] transition-colors duration-300">
+      {/* Subtle decorative glow elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animate-morph"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-2000 animate-wave"></div>
-        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 dark:opacity-10 animate-blob animation-delay-4000 animate-glow-pulse"></div>
-        
-        {/* Additional morphing shapes */}
-        <div className="absolute top-1/2 left-1/4 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-10 animate-morph animate-bounce-3d"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-24 h-24 bg-gradient-to-r from-purple-400 to-pink-500 opacity-10 animate-morph animate-wave" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-16 left-10 w-72 h-72 bg-purple-500/10 dark:bg-purple-600 rounded-full mix-blend-screen filter blur-[130px] opacity-[0.08]" />
+        <div className="absolute top-32 right-10 w-72 h-72 bg-indigo-500/10 dark:bg-indigo-600 rounded-full mix-blend-screen filter blur-[130px] opacity-[0.06]" />
+
+        {/* Minimalist dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.03] dark:opacity-[0.03]"
+          style={{
+            backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)',
+            backgroundSize: '24px 24px'
+          }}
+        />
       </div>
 
-      <div className="relative max-w-6xl mx-auto">
-        <div className="text-center md:text-left">
-          {/* Greeting with animation */}
-          <p className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4 flex items-center justify-center md:justify-start animate-slide-down">
-            <span className="inline-block mr-2 text-2xl animate-float">👋</span> Welcome to my Digital Twin
-          </p>
-
-          {/* Main Headline with animated gradient */}
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 mb-6 leading-tight animate-scale-in animate-neon-flicker" style={{backgroundSize: '200% 200%', animation: 'gradientShift 3s ease infinite, scale-in 0.8s ease-out, neon-flicker 1.5s ease-in-out infinite'}}>
-            Robert Simeon Jr.
-          </h1>
-
-          {/* Profile Picture Frame - Original desktop positioning */}
-          <div className="hidden md:flex justify-end mb-6 animate-slide-up absolute top-0 right-0" style={{animationDelay: '0.1s'}}>
-            <div className="relative group">
-              {/* Animated glow ring */}
-              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
-              
-              {/* Rotating border ring */}
-              <div className="absolute inset-0 w-64 h-64 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full animate-spin-slow opacity-50 group-hover:animate-spin-fast transition-all duration-300"></div>
-              
-              {/* Main frame */}
-              <div className="relative w-64 h-64 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
-                {/* Inner circle for picture */}
-                <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border-4 border-slate-200 dark:border-slate-700">
-                  {/* Profile Picture */}
-                  <img 
-                    src="/robert_.jpg" 
-                    alt="Robert Simeon Jr" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+      <div className="relative max-w-7xl mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Editorial Content */}
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left relative z-10 max-w-lg mx-auto lg:mx-0">
+            {/* Tagline */}
+            <ScrollReveal animation="fade-up" delay={0.1}>
+              <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 dark:bg-purple-500/10 text-purple-700 dark:text-purple-300 text-[11px] sm:text-xs font-semibold mb-4 backdrop-blur-md shadow-xs tracking-wide text-left">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                <span>Available for Work & Client Projects • 🇵🇭 Philippines</span>
               </div>
-              
-              {/* Floating particles around frame */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full animate-bounce-3d opacity-60"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-purple-500 rounded-full animate-wave opacity-60" style={{animationDelay: '0.5s'}}></div>
-            </div>
-          </div>
+            </ScrollReveal>
 
-          {/* Mobile Profile Picture - Responsive */}
-          <div className="flex md:hidden justify-center mb-6 animate-slide-up" style={{animationDelay: '0.1s'}}>
-            <div className="relative group">
-              {/* Animated glow ring */}
-              <div className="absolute inset-0 w-40 h-40 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full animate-pulse opacity-75 blur-lg group-hover:opacity-100 transition-opacity"></div>
-              
-              {/* Rotating border ring */}
-              <div className="absolute inset-0 w-40 h-40 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-full animate-spin-slow opacity-50 group-hover:animate-spin-fast transition-all duration-300"></div>
-              
-              {/* Main frame */}
-              <div className="relative w-40 h-40 bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 rounded-full p-1 group-hover:scale-105 transition-transform duration-300">
-                {/* Inner circle for picture */}
-                <div className="w-full h-full bg-white dark:bg-slate-900 rounded-full flex items-center justify-center overflow-hidden border-4 border-slate-200 dark:border-slate-700">
-                  {/* Profile Picture */}
-                  <img 
-                    src="/robert_.jpg" 
-                    alt="Robert Simeon Jr" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
-              {/* Floating particles around frame */}
-              <div className="absolute -top-2 -right-2 w-3 h-3 bg-blue-500 rounded-full animate-bounce-3d opacity-60"></div>
-              <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-purple-500 rounded-full animate-wave opacity-60" style={{animationDelay: '0.5s'}}></div>
-            </div>
-          </div>
-
-          {/* Subtitle */}
-          <p className="text-2xl sm:text-3xl text-slate-700 dark:text-slate-300 mb-4 font-semibold animate-slide-in-right" style={{animationDelay: '0.2s'}}>
-            4th Year IT Student @ SPUP
-          </p>
-
-          <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed animate-slide-up" style={{animationDelay: '0.2s'}}>
-            Information Technology student at St. Paul University Philippines (SPUP). 
-            Specializing in information systems and software development with a focus on 
-            creating practical solutions for real-world problems.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-slide-up" style={{animationDelay: '0.3s'}}>
-            <a
-              href="#projects"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 group"
-            >
-              <Sparkles className="mr-2 group-hover:animate-spin" size={20} />
-              View My Projects
-              <ArrowRight className="ml-2 group-hover:translate-x-1" size={20} />
-            </a>
-            <a
-              href="#chat"
-              className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-semibold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300 border-2 border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-blue-400 group"
-            >
-              <Code2 className="mr-2 group-hover:scale-110" size={20} />
-              Chat with AI Assistant
-            </a>
-          </div>
-
-          {/* Stats with enhanced cards */}
-          <div className="grid grid-cols-3 gap-4 mt-16 max-w-md mx-auto md:mx-0">
-            {[
-              { label: 'Projects', value: '10+', icon: '📁', color: 'blue' },
-              { label: 'Skills', value: '15+', icon: '🎯', color: 'purple' },
-              { label: 'Dedicated', value: '100%', icon: '⚡', color: 'pink' }
-            ].map((stat, idx) => (
-              <div
-                key={stat.label}
-                className="group bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-4 rounded-lg hover:shadow-lg dark:hover:shadow-blue-500/20 transition-all cursor-pointer transform hover:-translate-y-1 animate-slide-up"
-                style={{animationDelay: `${0.4 + idx * 0.1}s`}}
+            {/* Main Headline */}
+            <ScrollReveal animation="fade-up" delay={0.25}>
+              <h1
+                className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-6xl font-bold tracking-[-0.04em] mb-3 leading-[1.08] select-none break-words"
+                style={{ fontFamily: 'var(--font-display), var(--font-heading), ui-sans-serif, system-ui, sans-serif' }}
               >
-                <p className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:scale-110 transition-transform">{stat.value}</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">{stat.label}</p>
+                <span className="hero-name-gradient inline-block drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
+                  Robert Simeon Jr
+                </span>
+                <span className="text-purple-500 dark:text-purple-400 animate-pulse">.</span>
+              </h1>
+            </ScrollReveal>
+
+            {/* Subtitle */}
+            <ScrollReveal animation="fade-up" delay={0.4}>
+              <p className="text-xs sm:text-sm md:text-base mb-4 flex flex-wrap items-center justify-center lg:justify-start gap-x-2.5 sm:gap-x-3 gap-y-1.5">
+                <span
+                  className="font-bold tracking-wider uppercase text-purple-700 dark:text-purple-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
+                  style={{ fontFamily: 'var(--font-display), var(--font-heading), sans-serif', letterSpacing: '0.12em' }}
+                >
+                  Full-Stack Software Developer
+                </span>
+                <span className="hidden sm:inline-block w-px h-4 bg-purple-400/40 dark:bg-purple-500/30 rounded-full" />
+                <span className="text-neutral-700 dark:text-neutral-200 font-medium tracking-wide text-xs sm:text-sm drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" style={{ letterSpacing: '0.04em' }}>
+                  Philippines 🇵🇭
+                </span>
+              </p>
+            </ScrollReveal>
+
+            {/* Bio */}
+            <ScrollReveal animation="fade-up" delay={0.55}>
+              <p
+                className="text-xs sm:text-base md:text-lg text-neutral-800 dark:text-neutral-200 mb-4 sm:mb-5 leading-[1.7] sm:leading-[1.8] font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]"
+                style={{ fontFamily: 'var(--font-sans), ui-sans-serif, system-ui, sans-serif' }}
+              >
+                Passionate about developing software that solves real-world challenges.
+              </p>
+            </ScrollReveal>
+
+            {/* CTA Buttons */}
+            <ScrollReveal animation="fade-up" delay={0.7} className="w-full">
+              <div className="flex flex-col xs:flex-row flex-wrap gap-2.5 justify-center lg:justify-start w-full">
+                <a
+                  href="#projects"
+                  className="font-heading inline-flex items-center justify-center px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold rounded-xl transition-all duration-200 shadow-md shadow-purple-600/30 hover:shadow-purple-600/50 hover:scale-[1.02] active:scale-95 text-xs sm:text-sm gap-2 cursor-pointer w-full xs:w-auto"
+                >
+                  <Sparkles size={16} className="text-purple-200 shrink-0" />
+                  <span>Explore Work</span>
+                  <ArrowRight size={16} className="shrink-0" />
+                </a>
+
+                <a
+                  href="#chat"
+                  className="font-heading inline-flex items-center justify-center px-4.5 py-3 bg-neutral-900/60 dark:bg-white/[0.06] hover:bg-neutral-900/80 dark:hover:bg-white/[0.12] text-white font-semibold rounded-xl transition-all border border-neutral-700/60 dark:border-white/15 text-xs sm:text-sm gap-2 cursor-pointer backdrop-blur-md hover:scale-[1.02] active:scale-95 shadow-md w-full xs:w-auto"
+                >
+                  <Code2 size={16} className="text-purple-400 shrink-0" />
+                  <span>Chat with Digital Twin</span>
+                </a>
+
+                <a
+                  href="#resume"
+                  className="font-heading inline-flex items-center justify-center px-4 py-2.5 text-neutral-700 hover:text-purple-600 dark:text-neutral-300 dark:hover:text-purple-300 text-xs sm:text-sm font-semibold transition-colors w-full xs:w-auto"
+                >
+                  <span>View Resume →</span>
+                </a>
               </div>
-            ))}
+            </ScrollReveal>
+
+            {/* Education Highlight Card */}
+            <ScrollReveal animation="scale-in" delay={0.85} className="w-full max-w-[540px] mt-4">
+              <div className="p-3.5 sm:p-5 rounded-xl border border-neutral-300/80 dark:border-white/10 bg-white/70 dark:bg-[#111116]/80 backdrop-blur-md transition-all duration-300 hover:border-purple-500/40 hover:bg-white/90 dark:hover:bg-[#16161d] shadow-sm dark:shadow-none flex flex-col xs:flex-row items-center xs:items-start text-center xs:text-left gap-3 sm:gap-3.5">
+                <div className="w-10 h-10 rounded-lg bg-purple-500/10 dark:bg-purple-500/15 border border-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+                  <GraduationCap size={20} />
+                </div>
+                <div>
+                  <p className="text-xs sm:text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-normal">
+                    Graduated with a <span className="font-semibold text-neutral-900 dark:text-white">Bachelor of Science in Information Technology (BSIT)</span> from <span className="font-semibold text-neutral-900 dark:text-white">St. Paul University Philippines</span> in <span className="font-semibold text-purple-600 dark:text-purple-400">June 2026</span>, equipped with a strong foundation in software development, problem-solving, and emerging technologies.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
 
-          {/* Additional features highlight */}
-          <div className="mt-16 grid sm:grid-cols-3 gap-6 max-w-3xl animate-slide-up" style={{animationDelay: '0.7s'}}>
-            {[
-              { title: 'Full-Stack', description: 'Frontend to Backend', icon: '🚀' },
-              { title: 'AI-Powered', description: 'Groq Integration', icon: '🤖' },
-              { title: 'Responsive', description: 'Mobile-First Design', icon: '📱' }
-            ].map((feature) => (
-              <div key={feature.title} className="group text-center p-4 rounded-lg hover:bg-white/50 dark:hover:bg-slate-800/50 transition-all">
-                <p className="text-3xl mb-2 group-hover:scale-125 transition-transform">{feature.icon}</p>
-                <p className="font-semibold text-slate-900 dark:text-white">{feature.title}</p>
-                <p className="text-sm text-slate-600 dark:text-slate-400">{feature.description}</p>
+          {/* Right Profile Showcase */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end relative z-10 mt-2 lg:mt-0">
+            <ScrollReveal animation="scale-in" delay={0.5} duration={0.8}>
+              <div className="relative group">
+                {/* Ambient radial cosmic glow */}
+                <div className="absolute -inset-3 bg-gradient-to-tr from-purple-600/30 via-indigo-600/20 to-purple-400/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-700 opacity-80" />
+
+                {/* Glassmorphic card frame */}
+                <div className="relative rounded-2xl sm:rounded-3xl p-2.5 sm:p-3 bg-white/70 dark:bg-[#0c0c11]/80 backdrop-blur-xl border border-neutral-300/80 dark:border-white/10 shadow-2xl shadow-purple-950/30 transition-all duration-500 hover:border-purple-500/40 hover:scale-[1.02]">
+                  {/* Photo container */}
+                  <div className="relative w-40 h-40 xs:w-48 xs:h-48 sm:w-52 sm:h-52 md:w-56 md:h-56 rounded-xl sm:rounded-2xl overflow-hidden bg-neutral-100 dark:bg-neutral-950 border border-neutral-200 dark:border-white/10">
+                    <img
+                      src="/robert_.jpg"
+                      alt="Robert Simeon Jr"
+                      className="w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.04] group-hover:scale-105 transition-transform duration-700"
+                    />
+                    {/* Subtle inner bottom gradient overlay for badge contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+                    {/* Corner status chip */}
+                    <div className="absolute bottom-2 left-2 right-2 flex items-center justify-between px-2 sm:px-2.5 py-1.5 rounded-lg bg-black/75 backdrop-blur-md border border-white/15 text-[10px] sm:text-[11px] font-medium text-white shadow-lg">
+                      <span className="flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-neutral-200 text-[10px] sm:text-[10.5px]">Open to Work</span>
+                      </span>
+                      <span className="text-[9px] sm:text-[10px] text-purple-300 font-semibold tracking-wider uppercase">BSIT '26</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </ScrollReveal>
           </div>
         </div>
       </div>

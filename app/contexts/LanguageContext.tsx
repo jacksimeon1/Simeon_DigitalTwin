@@ -41,10 +41,10 @@ const translations = {
     'lang.ko': '한국어',
     'lang.tl': 'Filipino',
     
-    // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '4th Year Bachelor of Science in Information Technology at St. Paul University Philippines',
-    'robert.graduation': 'Expected Graduation: 2025',
+    'robert.education': 'Bachelor of Science in Information Technology graduate from St. Paul University Philippines (Graduated June 2026)',
+    'robert.location': 'Philippines',
+    'robert.graduation': 'Graduated: June 2026',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -83,8 +83,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '4to año de Licenciatura en Ciencias de la Informática en la Universidad de St. Paul Philippines',
-    'robert.graduation': 'Graduación esperada: 2025',
+    'robert.education': 'Licenciatura en Ciencias de la Información (BSIT) graduado de St. Paul University Philippines (junio 2026)',
+    'robert.graduation': 'Graduado: junio 2026',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -123,8 +123,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '4ème année de Licence en Informatique à l\'Université de St. Paul Philippines',
-    'robert.graduation': 'Obtention du diplôme prévue : 2025',
+    'robert.education': 'Diplômé en Technologie de l\'Information (BSIT) de l\'Université de St. Paul Philippines (juin 2026)',
+    'robert.graduation': 'Diplômé : juin 2026',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -163,8 +163,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '4. Jahr Bachelor of Science in Information Technology an der St. Paul University Philippines',
-    'robert.graduation': 'Erwarteter Abschluss: 2025',
+    'robert.education': 'Bachelor of Science in Information Technology Absolvent der St. Paul University Philippines (Juni 2026)',
+    'robert.graduation': 'Abschluss: Juni 2026',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -203,8 +203,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '圣保罗大学菲律宾分校信息技术学士学位四年级',
-    'robert.graduation': '预计毕业：2025年',
+    'robert.education': '圣保罗大学菲律宾分校信息技术学士学位毕业生（2026年6月毕业）',
+    'robert.graduation': '毕业时间：2026年6月',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -243,8 +243,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': 'セント・ポール大学フィリピン校情報技術学士課程4年次',
-    'robert.graduation': '卒業予定：2025年',
+    'robert.education': 'セント・ポール大学フィリピン校情報技術学士課程卒業（2026年6月卒業）',
+    'robert.graduation': '卒業：2026年6月',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -283,8 +283,8 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '세인트 폴 대학교 필리핀 정보공학 4학년',
-    'robert.graduation': '예상 졸업: 2025년',
+    'robert.education': '세인트 폴 대학교 필리핀 정보기술학사(BSIT) 졸업 (2026년 6월)',
+    'robert.graduation': '졸업: 2026년 6월',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',
@@ -323,8 +323,9 @@ const translations = {
     
     // Robert's info translations
     'robert.name': 'Robert Simeon Jr.',
-    'robert.education': '4th Year Bachelor of Science in Information Technology sa St. Paul University Philippines',
-    'robert.graduation': 'Inaasahang Graduation: 2025',
+    'robert.education': 'Nagtapos ng Bachelor of Science in Information Technology sa St. Paul University Philippines (Nagtapos noong Hunyo 2026)',
+    'robert.location': 'Pilipinas',
+    'robert.graduation': 'Nagtapos: Hunyo 2026',
     'robert.email': 'robertsimeon12345@gmail.com',
     'robert.phone': '09215512415',
     'robert.linkedin': 'linkedin.com/in/robert-simeon-08063b214/',

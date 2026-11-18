@@ -1,469 +1,780 @@
-// Robert Simeon Jr.'s Knowledge Base for Quick Responses
+// Robert Simeon Jr.'s Multilingual Knowledge Base & Response Engine
+
 export const knowledgeBase = {
   en: {
     greeting: [
-      "Hi! I'm Robert Simeon Jr., a 4th year IT student at SPUP. I'm passionate about full-stack development and building innovative solutions. How can I help you today?",
-      "Hello! I'm Robert, an aspiring full-stack developer graduating in 2025. I love working with React, Node.js, and exploring AI/ML. What would you like to know about my work?"
+      "Hi! 👋 I'm **Robert Simeon Jr.** from the Philippines — a **BSIT graduate** from **St. Paul University Philippines** (June 2026) with proven industry experience at **DOÑA ALEJANDRA INC.** and **Employability Advantage Australia**, and a globally certified **IT Specialist in HTML & CSS** by **Certiport (Pearson VUE)**. How can I help you today?",
+      "Hello! 👋 I'm **Robert Simeon Jr.**, a **Full-Stack & Agentic AI Developer** with verified credentials from **Certiport Pearson** and **Employability Advantage Australia**. What would you like to explore — my projects, skills, credentials, or a coding question?"
     ],
-    
     about: [
-      "I'm Robert Simeon Jr., currently in my 4th year studying Information Technology at St. Paul University Philippines. I specialize in full-stack web development with React, Next.js, and Node.js, and I'm also exploring AI/ML and game development.",
-      "I'm a soon-to-be graduate from SPUP's IT program (2025). My focus is on building practical solutions - from enterprise systems like my Activity Scheduling System to e-commerce platforms and even games using Godot Engine."
+      "### **About Robert Simeon Jr.** 👨‍💻\n\nI'm a **Full-Stack & Agentic AI Developer** from **Centro, Santo Niño, Cagayan, Philippines**.\n\n• **Degree:** **Bachelor of Science in Information Technology (BSIT)** — **St. Paul University Philippines (SPUP)** (Graduated **June 2026**)\n• **STEM Honors:** Senior High School **STEM with Academic Honors** — Santo Niño National High School (2021–2022)\n• **Industry Experience:** **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)** & **DOÑA ALEJANDRA INC.**\n• **Global License:** **IT Specialist in HTML & CSS** by **Certiport Pearson VUE** (Verification ID: `Co7F-DwVk`)\n• **Status:** Open to full-time software engineering, Technical Virtual Assistant (VA), and client projects!"
     ],
-    
+    education: [
+      "### **Educational Background** 🎓\n\n• **Bachelor of Science in Information Technology (BSIT)**\n  **St. Paul University Philippines (SPUP)**, Tuguegarao City *(2022 – June 2026)*\n  Focused on full-stack software engineering, systems analysis, database architecture, and emerging AI technologies.\n• **Senior High School – STEM Track (Academic Honors)**\n  **Santo Niño National High School** *(2021 – 2022)* — Graduated with **Academic Honors**."
+    ],
     skills: [
-      "My core skills include JavaScript/TypeScript, React, Next.js, Node.js, and database management with MySQL and MongoDB. I'm also proficient in Python for AI/ML projects, C# for enterprise development, and GDScript for game development with Godot.",
-      "I work across the full stack - frontend with React/Next.js/Tailwind, backend with Node.js/Express, databases like MySQL/MongoDB/PostgreSQL, and I'm expanding into AI/ML with TensorFlow and game development with Godot Engine."
+      "### **Technical Skills & Stack** ⚡\n\n• **Languages:** JavaScript (ES6+), TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• **Frontend & 3D:** React, Next.js (App Router), Tailwind CSS, Pure CSS 3D Transforms, Three.js, HTML5 Canvas, Bootstrap\n• **Backend & APIs:** Node.js, Express.js, PHP Laravel, RESTful APIs, NextAuth\n• **Databases & Caching:** MySQL, PostgreSQL, MongoDB, Redis\n• **Cloud, AI & Tools:** Git, GitHub, Docker, Vercel, Postman, VS Code, Figma, Groq Cloud LLM Inference, Web Speech APIs"
     ],
-    
+    certifications: [
+      "### **Verified Certifications & Licenses** 🏆\n\n1. **IT Specialist – HTML and CSS** — **Certiport (A Pearson VUE Business)**\n   *Issued Nov 2025 · Expires Nov 2030 · Verification ID:* `Co7F-DwVk`\n2. **Full Stack Developer Certificate** — **Employability Advantage Australia**\n   *Issued Sept 2025 · Certificate ID:* `168610825` *(AusBiz Consulting Pty Ltd)*\n3. **Certificate of Membership** — **Junior Philippine Computer Society (JPCS)** – SPUP Chapter *(AY 2025–2026)*\n4. **Mentorship Lecturer** — **SPUP Mentorship Program** *(April 2026)* guiding IT students on Capstone Development."
+    ],
     projects: {
-      scheduling: [
-        "My In-Off Campus Activity Scheduling System is one of my proudest projects! I built it with React and Node.js to help universities manage events efficiently. It handles everything from event registration to resource allocation, making campus life much more organized."
-      ],
-      ecommerce: [
-        "The E-Bayo e-commerce platform was a challenging full-stack project. I implemented everything from product catalogs and shopping carts to secure payment processing using React, Node.js, and modern payment gateway integrations."
-      ],
-      chatbot: [
-        "My AI-Powered Student Assistant Chatbot uses Python and TensorFlow to provide 24/7 academic support. It integrates with university databases and uses NLP to understand student queries about courses, campus resources, and academic information."
-      ],
-      game: [
-        "Bert and Jack Adventure is my game development project using Godot Engine and GDScript. It features character progression, combat mechanics, treasure hunting, and gem collection - it was really fun to build something completely different from web apps!"
-      ]
+      overview: "### **Featured Software Projects (6 Systems)** 💻\n\n1. **In-Off Campus Activity Scheduling System** *(PHP, Laravel, MySQL)* — Automated university event & facility scheduling.\n2. **Santo Niño Building Permit System** *(PHP, MySQL, Bootstrap, PDF Gen)* — Municipal e-governance for LGU Santo Niño.\n3. **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)** *(Next.js, React, TypeScript)* — AI heuristic thesis title synthesis engine.\n4. **[SIP 3D – Beverage Showcase](https://jacksimeon1.github.io/3d-can-animation/)** *(HTML5 Canvas, CSS 3D, JS)* — Interactive 360° 3D can physics showcase.\n5. **[3D Room – Isometric Sanctuary](https://jacksimeon1.github.io/3D-Room/)** *(Pure CSS 3D Transforms, JS)* — Interactive isometric 3D studio with dynamic lighting.\n6. **Employee Attendance Tracking System** *(PHP, MySQL, Bootstrap)* — Corporate DTR & attendance platform for DOÑA ALEJANDRA INC.\n\nWhich project would you like to explore in detail?",
+      scheduling: "### **In-Off Campus Activity Scheduling System**\nBuilt with **PHP, Laravel, Bootstrap, and MySQL**, this platform automates university campus event management, student organization activity scheduling, participant registrations, real-time schedule conflict detection, and multi-stage facility approvals.",
+      permit: "### **Santo Niño Building Permit System**\nA municipal e-governance web application developed for the **Local Government Unit (LGU) of Santo Niño, Cagayan** using **PHP, MySQL, Bootstrap, JavaScript**, and automated **PDF generation**. It streamlines digital blueprint submissions, engineering evaluations, cashier payment processing, and municipal revenue reporting.",
+      capstoneTitleAi: "### **Capstone AI Title Generator** 🤖\n• **Live Demo:** https://jacksimeon1.github.io/capstone-title-ai/\n• **Source Code:** https://github.com/jacksimeon1/capstone-title-ai\n• **Tech Stack:** Next.js, React, TypeScript, Tailwind CSS\n\nAn open-source academic research platform and thesis title synthesis engine that formulates defensible capstone project titles with live heuristic validation across **IT, CS, and IS** disciplines.",
+      sip3d: "### **SIP 3D — Interactive 3D Beverage Showcase** 🥤\n• **Live Demo:** https://jacksimeon1.github.io/3d-can-animation/\n• **Source Code:** https://github.com/jacksimeon1/3d-can-animation\n• **Tech Stack:** JavaScript ES6+, CSS 3D Transforms, HTML5 Canvas\n\nFeatures real-time **360° can cylinder rotation physics**, dynamic multi-flavor environment switching, kinetic typography, and interactive particle canvas effects.",
+      room3d: "### **3D Room — Isometric 3D Sanctuary & Studio** 🏠\n• **Live Demo:** https://jacksimeon1.github.io/3D-Room/\n• **Source Code:** https://github.com/jacksimeon1/3D-Room\n• **Tech Stack:** Pure CSS 3D Transforms, Vanilla JavaScript, HTML5\n\nAn interactive isometric 3D living sanctuary built entirely with **pure CSS 3D matrix transforms** — featuring real-time 360° camera rotation/zoom, dynamic lighting presets, an interactive TV screen, and ambient audio.",
+      attendance: "### **Employee Attendance Tracking System**\nEngineered for **DOÑA ALEJANDRA INC.** using **PHP, MySQL, and Bootstrap**. It automates employee Daily Time Records (DTR), secure time-in/time-out attendance logs, department reporting, and corporate employee records."
     },
-    
     experience: [
-      "As a 4th year IT student, I've gained extensive hands-on experience through my academic projects. Each project has taught me different aspects of software development - from system design and database architecture to user experience and deployment.",
-      "My experience spans web development, AI/ML, and even game development. I've worked with various technologies and frameworks, giving me a well-rounded skill set that I'm excited to apply in professional settings."
+      "### **Verified Industry Experience** 💼\n\n1. **Full-Stack & Agentic AI Developer** — **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)**\n   Completed an intensive 10-week industry project delivering full-stack web applications, AI features, and AWS Cloud deployments *(Certificate ID: `168610825`)*.\n2. **Web Developer** — **DOÑA ALEJANDRA INC.**\n   Designed, developed, and deployed the corporate **Employee Attendance Tracking System** using PHP, MySQL, and Bootstrap.\n3. **Mentorship Lecturer** — **St. Paul University Philippines (SPUP)** *(April 2026)*\n   Guided undergraduate IT students on Capstone Development and software architecture."
     ],
-    
+    va: "### **Technical Virtual Assistant (VA) & Developer Support** 🤝\n\nYes! I am actively open to **Technical Virtual Assistant (VA)**, **Technical Support**, and **Full-Stack Software Engineering** roles.\n\nWith my **BSIT degree from SPUP (June 2026)**, **Certiport HTML/CSS global license**, and industry experience at **AusBiz Consulting (Australia)** and **Doña Alejandra Inc.**, I can help you with:\n• Full-stack web development & website maintenance (Next.js, React, WordPress, PHP, Laravel)\n• Database administration, spreadsheets, & data automation (SQL, Python, Redis)\n• AI workflow integration, technical documentation, & client support\n\n📧 **Email:** robertsimeon12345@gmail.com | 📱 **Phone:** (+63) 921 551 2415",
     contact: [
-      "You can reach me at robertsimeon12345@gmail.com or +63 921 551 2415. I'm also active on LinkedIn (linkedin.com/in/robert-simeon-08063b214/) and GitHub (github.com/jacksimeon1). I'm always open to discussing projects and opportunities!",
-      "I'd love to connect! Email me at robertsimeon12345@gmail.com, find me on LinkedIn, or check out my GitHub projects. I'm currently seeking internship and full-time opportunities as I approach graduation in 2025."
+      "### **Contact & Hire Robert Simeon Jr.** 📬\n\n• **Email:** robertsimeon12345@gmail.com\n• **Mobile / WhatsApp:** (+63) 921 551 2415\n• **LinkedIn:** https://www.linkedin.com/in/robert-simeon-08063b214/\n• **GitHub:** https://github.com/jacksimeon1\n• **Portfolio:** https://simeon-digital-twin.vercel.app/\n• **Location:** Centro, Santo Niño, Cagayan, Philippines (3525)\n• **Official Resume:** /Robert_Simeon_Jr_Resume.pdf"
     ],
-    
     availability: [
-      "I'm currently available for internships and part-time projects, and I'll be graduating in 2025, so I'm also exploring full-time opportunities. I'm particularly interested in full-stack development, AI/ML roles, or software engineering positions.",
-      "As I approach graduation in 2025, I'm actively seeking opportunities to apply my skills. I'm open to internships, freelance projects, and full-time positions where I can contribute to meaningful software solutions."
-    ]
+      "### **Immediate Onboarding Availability** ✅\n\nI am **actively available** for **full-time software engineering roles** (remote, hybrid, or on-site), **Technical Virtual Assistant (VA)** positions, and **freelance client projects**.\n\nHaving graduated with my **BSIT degree from SPUP in June 2026** alongside verified industry credentials from **Employability Advantage Australia** and **Certiport Pearson VUE**, I am ready for **immediate onboarding**!"
+    ],
+    resume: "### **Official Verified Resume (CV)** 📄\n\nYou can view and download my official, print-ready curriculum vitae directly at **/Robert_Simeon_Jr_Resume.pdf** (or scroll to the **Resume** section on this page).\n\nIt includes my **SPUP BSIT degree (June 2026)**, **STEM Academic Honors**, **Certiport Pearson VUE license (`Co7F-DwVk`)**, **Employability Advantage Australia certificate (`168610825`)**, and all 6 software engineering projects.",
+    fallback: `Thanks for reaching out! As **Robert Simeon Jr.'s AI Digital Twin**, here is a quick snapshot of my profile:
+
+• **Education:** **BSIT Graduate** from **St. Paul University Philippines (SPUP, June 2026)** & **STEM with Academic Honors**.
+• **Verified Credentials:** **IT Specialist in HTML & CSS** by **Certiport Pearson** (\`Co7F-DwVk\`) & **Full Stack Developer Certificate** from **Employability Advantage Australia** (\`168610825\`).
+• **Industry Experience:** **AusBiz Consulting Pty Ltd (Australia)** & **DOÑA ALEJANDRA INC.**
+• **Featured Projects:** **[3D Room](https://jacksimeon1.github.io/3D-Room/)**, **[SIP 3D](https://jacksimeon1.github.io/3d-can-animation/)**, **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)**, and **Municipal Building Permit System**.
+• **Contact:** robertsimeon12345@gmail.com | (+63) 921 551 2415`
   },
-  
-  es: {
-    greeting: [
-      "¡Hola! Soy Robert Simeon Jr., estudiante de 4to año de TI en SPUP. Me apasiona el desarrollo full-stack y construir soluciones innovadoras. ¿Cómo puedo ayudarte hoy?",
-      "¡Hola! Soy Robert, un aspirante a desarrollador full-stack que se gradúa en 2025. Me encanta trabajar con React, Node.js y explorar IA/ML. ¿Qué te gustaría saber sobre mi trabajo?"
-    ],
-    
-    about: [
-      "Soy Robert Simeon Jr., actualmente en mi 4to año estudiando Tecnología de la Información en la Universidad de St. Paul Philippines. Me especializo en desarrollo web full-stack con React, Next.js y Node.js, y también estoy explorando IA/ML y desarrollo de juegos.",
-      "Soy un futuro graduado del programa de TI de SPUP (2025). Mi enfoque es construir soluciones prácticas - desde sistemas empresariales como mi Sistema de Programación de Actividades hasta plataformas de comercio electrónico e incluso juegos usando Godot Engine."
-    ],
-    
-    skills: [
-      "Mis habilidades principales incluyen JavaScript/TypeScript, React, Next.js, Node.js y gestión de bases de datos con MySQL y MongoDB. También soy proficiente en Python para proyectos de IA/ML, C# para desarrollo empresarial, y GDScript para desarrollo de juegos con Godot.",
-      "Trabajo en todo el stack - frontend con React/Next.js/Tailwind, backend con Node.js/Express, bases de datos como MySQL/MongoDB/PostgreSQL, y estoy expandiendo hacia IA/ML con TensorFlow y desarrollo de juegos con Godot Engine."
-    ],
-    
-    projects: {
-      scheduling: [
-        "¡Mi Sistema de Programación de Actividades Dentro-Fuera del Campus es uno de mis proyectos más orgulloso! Lo construí con React y Node.js para ayudar a las universidades a gestionar eventos eficientemente. Maneja todo desde registro de eventos hasta asignación de recursos, haciendo la vida universitaria mucho más organizada."
-      ],
-      ecommerce: [
-        "La plataforma de comercio electrónico E-Bayo fue un proyecto full-stack desafiante. Implementé todo desde catálogos de productos y carritos de compras hasta procesamiento seguro de pagos usando React, Node.js e integraciones modernas de pasarelas de pago."
-      ],
-      chatbot: [
-        "Mi Chatbot Asistente Estudiante Impulsado por IA usa Python y TensorFlow para proporcionar soporte académico 24/7. Se integra con bases de datos universitarias y usa NLP para entender consultas estudiantiles sobre cursos, recursos del campus e información académica."
-      ],
-      game: [
-        "Bert y Jack Adventure es mi proyecto de desarrollo de juegos usando Godot Engine y GDScript. Presenta progresión de personajes, mecánicas de combate, búsqueda de tesoros y colección de gemas - ¡fue muy divertido construir algo completamente diferente de las aplicaciones web!"
-      ]
-    },
-    
-    experience: [
-      "Como estudiante de 4to año de TI, he ganado amplia experiencia práctica a través de mis proyectos académicos. Cada proyecto me ha enseñado diferentes aspectos del desarrollo de software - desde diseño de sistemas y arquitectura de bases de datos hasta experiencia de usuario y despliegue.",
-      "Mi experiencia abarca desarrollo web, IA/ML e incluso desarrollo de juegos. He trabajado con varias tecnologías y frameworks, dándome un conjunto de habilidades versátil que estoy emocionado de aplicar en entornos profesionales."
-    ],
-    
-    contact: [
-      "Puedes contactarme en robertsimeon12345@gmail.com o +63 921 551 2415. También estoy activo en LinkedIn (linkedin.com/in/robert-simeon-08063b214/) y GitHub (github.com/jacksimeon1). ¡Siempre estoy abierto a discutir proyectos y oportunidades!",
-      "¡Me encantaría conectarme! Envíame un correo a robertsimeon12345@gmail.com, encuéntrame en LinkedIn, o revisa mis proyectos en GitHub. Actualmente busco oportunidades de prácticas y tiempo completo mientras me acerco a la graduación en 2025."
-    ],
-    
-    availability: [
-      "Actualmente estoy disponible para prácticas y proyectos a tiempo parcial, y me graduaré en 2025, así que también estoy explorando oportunidades de tiempo completo. Estoy particularmente interesado en desarrollo full-stack, roles de IA/ML, o posiciones de ingeniería de software.",
-      "A medida que me acerco a la graduación en 2025, busco activamente oportunidades para aplicar mis habilidades. Estoy abierto a prácticas, proyectos freelance y posiciones de tiempo completo donde pueda contribuir a soluciones de software significativas."
-    ]
-  },
-  
-  fr: {
-    greeting: [
-      "Salut ! Je suis Robert Simeon Jr., étudiant de 4ème année en TI à SPUP. Je suis passionné par le développement full-stack et la construction de solutions innovantes. Comment puis-je vous aider aujourd'hui ?",
-      "Bonjour ! Je suis Robert, un développeur full-stack aspirant qui obtiendra son diplôme en 2025. J'adore travailler avec React, Node.js et explorer l'IA/ML. Qu'aimeriez-vous savoir sur mon travail ?"
-    ],
-    
-    about: [
-      "Je suis Robert Simeon Jr., actuellement en 4ème année étudiant en Technologie de l'Information à l'Université de St. Paul Philippines. Je me spécialise en développement web full-stack avec React, Next.js et Node.js, et j'explore aussi l'IA/ML et le développement de jeux.",
-      "Je suis un futur diplômé du programme TI de SPUP (2025). Mon focus est de construire des solutions pratiques - des systèmes d'entreprise comme mon Système de Planification d'Activités aux plateformes e-commerce et même aux jeux utilisant Godot Engine."
-    ],
-    
-    skills: [
-      "Mes compétences principales incluent JavaScript/TypeScript, React, Next.js, Node.js et la gestion de bases de données avec MySQL et MongoDB. Je suis aussi compétent en Python pour les projets IA/ML, C# pour le développement d'entreprise, et GDScript pour le développement de jeux avec Godot.",
-      "Je travaille sur tout le stack - frontend avec React/Next.js/Tailwind, backend avec Node.js/Express, bases de données comme MySQL/MongoDB/PostgreSQL, et j'étends vers l'IA/ML avec TensorFlow et le développement de jeux avec Godot Engine."
-    ],
-    
-    projects: {
-      scheduling: [
-        "Mon Système de Planification d'Activités Hors-Campus est l'un de mes projets les plus fiers ! Je l'ai construit avec React et Node.js pour aider les universités à gérer les événements efficacement. Il gère tout depuis l'inscription aux événements jusqu'à l'allocation des ressources, rendant la vie universitaire beaucoup plus organisée."
-      ],
-      ecommerce: [
-        "La plateforme e-commerce E-Bayo était un projet full-stack stimulant. J'ai implémenté tout depuis les catalogues de produits et paniers d'achat jusqu'au traitement sécurisé des paiements utilisant React, Node.js et des intégrations modernes de passerelles de paiement."
-      ],
-      chatbot: [
-        "Mon Chatbot Assistant Étudiant Alimenté par IA utilise Python et TensorFlow pour fournir un support académique 24/7. Il s'intègre avec les bases de données universitaires et utilise NLP pour comprendre les requêtes étudiantes sur les cours, ressources du campus et informations académiques."
-      ],
-      game: [
-        "Bert et Jack Aventure est mon projet de développement de jeux utilisant Godot Engine et GDScript. Il présente la progression des personnages, les mécaniques de combat, la chasse aux trésors et la collection de gemmes - c'était vraiment amusant de construire quelque chose de complètement différent des applications web !"
-      ]
-    },
-    
-    experience: [
-      "En tant qu'étudiant de 4ème année en TI, j'ai acquis une expérience pratique étendue à travers mes projets académiques. Chaque projet m'a enseigné différents aspects du développement de logiciel - depuis la conception de systèmes et l'architecture de bases de données jusqu'à l'expérience utilisateur et le déploiement.",
-      "Mon expérience couvre le développement web, l'IA/ML et même le développement de jeux. J'ai travaillé avec diverses technologies et frameworks, me donnant un ensemble de compétences polyvalent que je suis excité d'appliquer dans des environnements professionnels."
-    ],
-    
-    contact: [
-      "Vous pouvez me contacter à robertsimeon12345@gmail.com ou +63 921 551 2415. Je suis aussi actif sur LinkedIn (linkedin.com/in/robert-simeon-08063b214/) et GitHub (github.com/jacksimeon1). Je suis toujours ouvert à discuter de projets et d'opportunités !",
-      "J'aimerais me connecter ! Envoyez-moi un email à robertsimeon12345@gmail.com, trouvez-moi sur LinkedIn, ou consultez mes projets GitHub. Je cherche actuellement des opportunités de stage et à temps plein alors que j'approche de l'obtention de mon diplôme en 2025."
-    ],
-    
-    availability: [
-      "Je suis actuellement disponible pour des stages et des projets à temps partiel, et j'obtiendrai mon diplôme en 2025, donc j'explore aussi des opportunités à temps plein. Je suis particulièrement intéressé par le développement full-stack, les rôles IA/ML, ou les positions d'ingénieur logiciel.",
-      "À mesure que j'approche de l'obtention de mon diplôme en 2025, je cherche activement des opportunités pour appliquer mes compétences. Je suis ouvert aux stages, projets freelance et positions à temps plein où je peux contribuer à des solutions logicielles significatives."
-    ]
-  },
-  
-  de: {
-    greeting: [
-      "Hallo! Ich bin Robert Simeon Jr., ein 4. Jahr IT-Student an der SPUP. Ich bin begeistert von Full-Stack-Entwicklung und dem Bau innovativer Lösungen. Wie kann ich Ihnen heute helfen?",
-      "Hallo! Ich bin Robert, ein angehender Full-Stack-Entwickler, der 2025 abschließt. Ich liebe es, mit React, Node.js zu arbeiten und KI/ML zu erkunden. Was würden Sie über meine Arbeit wissen möchten?"
-    ],
-    
-    about: [
-      "Ich bin Robert Simeon Jr., derzeit in meinem 4. Jahr studiere ich Informationstechnologie an der St. Paul University Philippines. Ich spezialisiere mich auf Full-Stack-Webentwicklung mit React, Next.js und Node.js und erkunde auch KI/ML und Spielentwicklung.",
-      "Ich bin ein zukünftiger Absolvent des IT-Programms von SPUP (2025). Mein Fokus liegt auf dem Bau praktischer Lösungen - von Unternehmenssystemen wie meinem Aktivitätsplanungssystem bis hin zu E-Commerce-Plattformen und sogar Spielen mit Godot Engine."
-    ],
-    
-    skills: [
-      "Meine Kernkompetenzen umfassen JavaScript/TypeScript, React, Next.js, Node.js und Datenbankverwaltung mit MySQL und MongoDB. Ich bin auch versiert in Python für KI/ML-Projekte, C# für Unternehmensentwicklung und GDScript für Spielentwicklung mit Godot.",
-      "Ich arbeite über den gesamten Stack - Frontend mit React/Next.js/Tailwind, Backend mit Node.js/Express, Datenbanken wie MySQL/MongoDB/PostgreSQL und erweitere mich in KI/ML mit TensorFlow und Spielentwicklung mit Godot Engine."
-    ],
-    
-    projects: {
-      scheduling: [
-        "Mein Inner-Outer Campus-Aktivitätsplanungssystem ist eines meiner stolzesten Projekte! Ich habe es mit React und Node.js gebaut, um Universitäten zu helfen, Veranstaltungen effizient zu verwalten. Es verwaltet alles von Veranstaltungsanmeldung bis Ressourcenzuweisung und macht das Universitätsleben viel organisierter."
-      ],
-      ecommerce: [
-        "Die E-Bayo E-Commerce-Plattform war ein herausforderndes Full-Stack-Projekt. Ich habe alles von Produktkatalogen und Warenkörben bis hin zu sicherer Zahlungsverarbeitung mit React, Node.js und modernen Zahlungs-Gateway-Integrationen implementiert."
-      ],
-      chatbot: [
-        "Mein KI-gestützter Studenten-Assistent-Chatbot verwendet Python und TensorFlow, um 24/7 akademische Unterstützung zu bieten. Er integriert sich mit Universitätsdatenbanken und verwendet NLP, um Studentenanfragen zu Kursen, Campus-Ressourcen und akademischen Informationen zu verstehen."
-      ],
-      game: [
-        "Bert und Jack Abenteuer ist mein Spielentwicklungsprojekt mit Godot Engine und GDScript. Es bietet Charakterfortschritt, Kampfmechaniken, Schatzsuche und Edelsteinsammlung - es war wirklich Spaß, etwas völlig anderes als Web-Anwendungen zu bauen!"
-      ]
-    },
-    
-    experience: [
-      "Als 4. Jahr IT-Student habe ich durch meine akademischen Projekte umfangreiche praktische Erfahrung gesammelt. Jedes Projekt hat mir verschiedene Aspekte der Softwareentwicklung beigebracht - von Systemdesign und Datenbankarchitektur bis hin zu Benutzererfahrung und Bereitstellung.",
-      "Meine Erfahrung umfasst Webentwicklung, KI/ML und sogar Spielentwicklung. Ich habe mit verschiedenen Technologien und Frameworks gearbeitet, was mir einen vielseitigen Fähigkeitssatz gibt, den ich begeistert in professionellen Umgebungen anwenden möchte."
-    ],
-    
-    contact: [
-      "Sie können mich unter robertsimeon12345@gmail.com oder +63 921 551 2415 erreichen. Ich bin auch auf LinkedIn (linkedin.com/in/robert-simeon-08063b214/) und GitHub (github.com/jacksimeon1) aktiv. Ich bin immer offen für Diskussionen über Projekte und Möglichkeiten!",
-      "Ich würde mich gerne verbinden! Schicken Sie mir eine E-Mail an robertsimeon12345@gmail.com, finden Sie mich auf LinkedIn oder sehen Sie sich meine GitHub-Projekte an. Ich suche derzeit Praktika und Vollzeitstellen, während ich dem Abschluss 2025 nähere."
-    ],
-    
-    availability: [
-      "Ich bin derzeit verfügbar für Praktika und Teilzeitprojekte und werde 2025 abschließen, also erkunde ich auch Vollzeitmöglichkeiten. Ich bin besonders interessiert an Full-Stack-Entwicklung, KI/ML-Rollen oder Software-Engineering-Positionen.",
-      "Während ich dem Abschluss 2025 nähere, suche ich aktiv nach Möglichkeiten, meine Fähigkeiten anzuwenden. Ich bin offen für Praktika, Freelance-Projekte und Vollzeitpositionen, wo ich zu bedeutenden Softwarelösungen beitragen kann."
-    ]
-  },
-  
-  zh: {
-    greeting: [
-      "你好！我是Robert Simeon Jr.，SPUP的4年级IT学生。我对全栈开发和构建创新解决方案充满热情。今天我能如何帮助你？",
-      "你好！我是Robert，一名即将在2025年毕业的全栈开发者。我喜欢使用React、Node.js并探索AI/ML。你想了解我的工作吗？"
-    ],
-    
-    about: [
-      "我是Robert Simeon Jr.，目前在圣保罗大学菲律宾分校读4年级信息技术专业。我专门从事使用React、Next.js和Node.js的全栈网页开发，我也在探索AI/ML和游戏开发。",
-      "我是SPUP IT项目（2025年）的未来毕业生。我的重点是构建实用解决方案 - 从我的活动调度系统等企业系统到电子商务平台，甚至使用Godot Engine的游戏。"
-    ],
-    
-    skills: [
-      "我的核心技能包括JavaScript/TypeScript、React、Next.js、Node.js以及使用MySQL和MongoDB的数据库管理。我也精通Python用于AI/ML项目，C#用于企业开发，GDScript用于Godot游戏开发。",
-      "我在整个栈工作 - 前端使用React/Next.js/Tailwind，后端使用Node.js/Express，数据库如MySQL/MongoDB/PostgreSQL，我正在扩展到使用TensorFlow的AI/ML和使用Godot Engine的游戏开发。"
-    ],
-    
-    projects: {
-      scheduling: [
-        "我的校内校外活动调度系统是我最自豪的项目之一！我用React和Node.js构建它来帮助大学高效管理活动。它处理从活动注册到资源分配的一切，让校园生活更加有序。"
-      ],
-      ecommerce: [
-        "E-Bayo电子商务平台是一个具有挑战性的全栈项目。我使用React、Node.js和现代支付网关集成实现了从产品目录和购物车到安全支付处理的一切。"
-      ],
-      chatbot: [
-        "我的AI驱动学生助手聊天机器人使用Python和TensorFlow提供24/7学术支持。它与大学数据库集成，使用NLP理解学生关于课程、校园资源和学术信息的查询。"
-      ],
-      game: [
-        "伯特和杰克冒险是我的游戏开发项目，使用Godot Engine和GDScript。它具有角色进展、战斗机制、寻宝和宝石收集功能 - 构建与网页应用完全不同的东西真的很有趣！"
-      ]
-    },
-    
-    experience: [
-      "作为4年级IT学生，我通过学术项目获得了广泛的实践经验。每个项目教会了我软件开发的不同方面 - 从系统设计和数据库架构到用户体验和部署。",
-      "我的经验涵盖网页开发、AI/ML甚至游戏开发。我使用过各种技术和框架，拥有多面手的技能集，我渴望在专业环境中应用。"
-    ],
-    
-    contact: [
-      "你可以在robertsimeon12345@gmail.com或+63 921 551 2415联系我。我也在LinkedIn（linkedin.com/in/robert-simeon-08063b214/）和GitHub（github.com/jacksimeon1）上活跃。我总是乐于讨论项目和机会！",
-      "我很想联系！给我发邮件到robertsimeon12345@gmail.com，在LinkedIn上找我，或查看我的GitHub项目。随着我接近2025年毕业，我目前正在寻找实习和全职机会。"
-    ],
-    
-    availability: [
-      "我目前可用于实习和兼职项目，我将在2025年毕业，所以我也在探索全职机会。我对全栈开发、AI/ML职位或软件工程职位特别感兴趣。",
-      "随着我接近2025年毕业，我正在积极寻找应用我技能的机会。我对实习、自由职业项目和全职职位开放，在那里我可以为有意义的软件解决方案做出贡献。"
-    ]
-  },
-  
-  ja: {
-    greeting: [
-      "こんにちは！私はRobert Simeon Jr.、SPUPの4年生IT学生です。フルスタック開発と革新的なソリューションの構築に情熱を注いでいます。今日どのようにお手伝いできますか？",
-      "こんにちは！私はRobert、2025年に卒業予定のフルスタック開発者です。React、Node.jsで作業し、AI/MLを探検するのが好きです。私の仕事について何を知りたいですか？"
-    ],
-    
-    about: [
-      "私はRobert Simeon Jr.、現在セント・ポール大学フィリピン校の4年生で情報技術を学んでいます。React、Next.js、Node.jsでのフルスタックウェブ開発を専門とし、AI/MLとゲーム開発も探検しています。",
-      "私はSPUP ITプログラム（2025年）の未来の卒業生です。私の焦点は実用的なソリューションを構築することです - 私の活動スケジューリングシステムなどのエンタープライズシステムからEコマースプラットフォーム、さらにはGodot Engineを使用したゲームまで。"
-    ],
-    
-    skills: [
-      "私のコアスキルにはJavaScript/TypeScript、React、Next.js、Node.js、MySQLとMongoDBでのデータベース管理が含まれます。AI/MLプロジェクト用のPython、企業開発用のC#、Godotでのゲーム開発用のGDScriptにも精通しています。",
-      "私はスタック全体で作業します - React/Next.js/Tailwindでのフロントエンド、Node.js/Expressでのバックエンド、MySQL/MongoDB/PostgreSQLなどのデータベース、TensorFlowでのAI/MLとGodot Engineでのゲーム開発に拡張中です。"
-    ],
-    
-    projects: {
-      scheduling: [
-        "私の学内外活動スケジューリングシステムは私の最も誇り高いプロジェクトの一つです！ReactとNode.jsで構築し、大学がイベントを効率的に管理できるようにしました。イベント登録からリソース割り当てまですべてを処理し、キャンパス生活をはるかに整理されたものにします。"
-      ],
-      ecommerce: [
-        "E-Bayo Eコマースプラットフォームは挑戦的なフルスタックプロジェクトでした。React、Node.js、最新の決済ゲートウェイ統合を使用して、製品カタログとショッピングカートから安全な決済処理まですべてを実装しました。"
-      ],
-      chatbot: [
-        "私のAI駆動学生アシスタントチャットボットは、24/7学術サポートを提供するためにPythonとTensorFlowを使用します。大学データベースと統合され、NLPを使用してコース、キャンパスリソース、学術情報に関する学生の質問を理解します。"
-      ],
-      game: [
-        "バートとジャックアドベンチャーはGodot EngineとGDScriptを使用した私のゲーム開発プロジェクトです。キャラクター進行、戦闘メカニクス、宝探し、宝石収集機能があります - ウェブアプリとは完全に異なるものを構築するのは本当に楽しかったです！"
-      ]
-    },
-    
-    experience: [
-      "4年生IT学生として、学術プロジェクトを通じて広範な実践経験を積んできました。各プロジェクトは、システム設計とデータベースアーキテクチャからユーザーエクスペリエンスとデプロイメントまで、ソフトウェア開発の異なる側面を教えてくれました。",
-      "私の経験はウェブ開発、AI/ML、さらにはゲーム開発に及びます。様々な技術とフレームワークで作業してきたため、多様なスキルセットを持ち、専門環境で適用することに興奮しています。"
-    ],
-    
-    contact: [
-      "robertsimeon12345@gmail.comまたは+63 921 551 2415で連絡できます。LinkedIn（linkedin.com/in/robert-simeon-08063b214/）とGitHub（github.com/jacksimeon1）でも活動しています。プロジェクトと機会について議論することに常にオープンです！",
-      "繋がりたいです！robertsimeon12345@gmail.comにメールを送信し、LinkedInで私を見つけ、私のGitHubプロジェクトをチェックしてください。2025年卒業に近づくにつれ、現在インターンシップとフルタイムの機会を探しています。"
-    ],
-    
-    availability: [
-      "現在インターンシップとパートタイムプロジェクトに利用可能で、2025年に卒業するので、フルタイムの機会も探検しています。フルスタック開発、AI/ML役割、またはソフトウェアエンジニアリングポジションに特に興味があります。",
-      "2025年卒業に近づくにつれ、私のスキルを適用する機会を積極的に探しています。意味のあるソフトウェアソリューションに貢献できるインターンシップ、フリーランスプロジェクト、フルタイムポジションにオープンです。"
-    ]
-  },
-  
-  ko: {
-    greeting: [
-      "안녕하세요! 저는 Robert Simeon Jr., SPUP의 4학년 IT 학생입니다. 저는 풀스택 개발과 혁신적인 솔루션 구축에 열정적입니다. 오늘 제가 어떻게 도와드릴까요?",
-      "안녕하세요! 저는 Robert, 2025년에 졸업할 풀스택 개발자입니다. React, Node.js로 작업하고 AI/ML을 탐험하는 것을 좋아합니다. 제 작업에 대해 무엇을 알고 싶으신가요?"
-    ],
-    
-    about: [
-      "저는 Robert Simeon Jr., 현재 세인트 폴 대학교 필리핀에서 정보기술 4학년을 공부하고 있습니다. React, Next.js, Node.js로 풀스택 웹 개발을 전문으로 하며, AI/ML과 게임 개발도 탐험하고 있습니다.",
-      "저는 SPUP IT 프로그램(2025년)의 미래 졸업생입니다. 제 초점은 실용적인 솔루션을 구축하는 것입니다 - 제 활동 스케줄링 시스템과 같은 엔터프라이즈 시스템부터 전자상거래 플랫폼, 심지어 Godot Engine을 사용하는 게임까지."
-    ],
-    
-    skills: [
-      "저의 핵심 기술에는 JavaScript/TypeScript, React, Next.js, Node.js, MySQL과 MongoDB로 데이터베이스 관리가 포함됩니다. AI/ML 프로젝트용 Python, 엔터프라이즈 개발용 C#, Godot 게임 개발용 GDScript에도 능숙합니다.",
-      "저는 전체 스택에서 작업합니다 - React/Next.js/Tailwind로 프론트엔드, Node.js/Express로 백엔드, MySQL/MongoDB/PostgreSQL 같은 데이터베이스, TensorFlow로 AI/ML과 Godot Engine으로 게임 개발으로 확장 중입니다."
-    ],
-    
-    projects: {
-      scheduling: [
-        "저의 교내외 활동 스케줄링 시스템은 제가 가장 자랑스러운 프로젝트 중 하나입니다! React와 Node.js로 구축하여 대학이 이벤트를 효율적으로 관리할 수 있도록 도왔습니다. 이벤트 등록부터 자원 할당까지 모든 것을 처리하여 캠퍼스 생활을 훨씬 더 체계적으로 만듭니다."
-      ],
-      ecommerce: [
-        "E-Bayo 전자상거래 플랫폼은 도전적인 풀스택 프로젝트였습니다. React, Node.js, 최신 결제 게이트웨이 통합을 사용하여 제품 카탈로그와 쇼핑 카트부터 안전한 결제 처리까지 모든 것을 구현했습니다."
-      ],
-      chatbot: [
-        "저의 AI 기반 학생 도우미 챗봇은 24/7 학술 지원을 제공하기 위해 Python과 TensorFlow를 사용합니다. 대학 데이터베이스와 통합되고 NLP를 사용하여 과정, 캠퍼스 리소스, 학술 정보에 대한 학생 질문을 이해합니다."
-      ],
-      game: [
-        "버트와 잭 어드벤처는 Godot Engine과 GDScript를 사용한 저의 게임 개발 프로젝트입니다. 캐릭터 진행, 전투 메커니즘, 보물 사냥, 보석 수집 기능이 있습니다 - 웹 앱과 완전히 다른 것을 구축하는 것은 정말 재미있었습니다!"
-      ]
-    },
-    
-    experience: [
-      "4학년 IT 학생으로서, 저는 학술 프로젝트를 통해 광범위한 실무 경험을 쌓았습니다. 각 프로젝트는 시스템 설계와 데이터베이스 아키텍처부터 사용자 경험과 배포까지 소프트웨어 개발의 다양한 측면을 가르쳐주었습니다.",
-      "저의 경험은 웹 개발, AI/ML, 심지어 게임 개발까지 포함합니다. 저는 다양한 기술과 프레임워크로 작업해왔으며, 전문 환경에서 적용할 다재다능한 기술 세트를 가지고 있습니다."
-    ],
-    
-    contact: [
-      "robertsimeon12345@gmail.com 또는 +63 921 551 2415로 연락할 수 있습니다. 저는 LinkedIn(linkedin.com/in/robert-simeon-08063b214/)과 GitHub(github.com/jacksimeon1)에서도 활동합니다. 저는 항상 프로젝트와 기회에 대해 논의하는 데 열려 있습니다!",
-      "연결하고 싶습니다! robertsimeon12345@gmail.com으로 이메일을 보내시고, LinkedIn에서 저를 찾으시거나, 저의 GitHub 프로젝트를 확인하세요. 2025년 졸업에 다가가면서 현재 인턴십과 풀타임 기회를 찾고 있습니다."
-    ],
-    
-    availability: [
-      "저는 현재 인턴십과 파트타임 프로젝트에 사용 가능하며, 2025년에 졸업할 예정이므로 풀타임 기회도 탐색하고 있습니다. 저는 풀스택 개발, AI/ML 역할, 또는 소프트웨어 엔지니어링 직책에 특히 관심이 있습니다.",
-      "2025년 졸업에 다가가면서, 저는 제 기술을 적용할 기회를 적극적으로 찾고 있습니다. 저는 의미 있는 소프트웨어 솔루션에 기여할 수 있는 인턴십, 프리랜스 프로젝트, 풀타임 직책에 열려 있습니다."
-    ]
-  },
-  
+
   tl: {
     greeting: [
-      "Kamusta! Ako si Robert Simeon Jr., 4th year IT student sa SPUP. Ako ay passionate sa full-stack development at building ng innovative solutions. Paano kita matutulungan ngayon?",
-      "Hello! Ako si Robert, isang aspiring full-stack developer na mag-graduate sa 2025. Mahilig akong mag-work gamit ang React, Node.js at pag-explore sa AI/ML. Ano ang gusto mong malaman about sa work ko?"
+      "Kamusta! Ako si Robert Simeon Jr., graduate ng BS Information Technology mula sa St. Paul University Philippines (Hunyo 2026). Mayroon akong industry OJT experience sa DOÑA ALEJANDRA INC at Employability Advantage Australia, at certified IT Specialist sa HTML & CSS mula sa Certiport (Pearson VUE). Paano kita matutulungan ngayon?",
+      "Hello! Ako si Robert, isang Full-Stack at Agentic AI Developer mula sa Cagayan, Pilipinas. Ano ang gusto mong malaman tungkol sa aking mga proyekto, kasanayan, o resume?"
     ],
-    
     about: [
-      "Ako si Robert Simeon Jr., kasalukuyan sa aking 4th year na nag-aaral ng Information Technology sa St. Paul University Philippines. I specialize sa full-stack web development gamit ang React, Next.js, at Node.js, at nag-e-explore rin ako sa AI/ML at game development.",
-      "Ako ay isang future graduate ng SPUP IT program (2025). Ang focus ko ay building ng practical solutions - galing sa enterprise systems tulad ng aking Activity Scheduling System hanggang sa e-commerce platforms at kahit mga games gamit ang Godot Engine."
+      "Nagmula ako sa Centro, Santo Niño, Cagayan, Pilipinas. Nagtapos ako ng Bachelor of Science in Information Technology (BSIT) sa St. Paul University Philippines noong Hunyo 2026. Nagtapos din ako na may Academic Honors sa STEM sa Santo Niño National High School (2021–2022). May karanasan ako sa full-stack development sa DOÑA ALEJANDRA INC at AusBiz Consulting Pty Ltd / Employability Advantage Australia, at lisensyadong IT Specialist sa HTML & CSS (ID: Co7F-DwVk)."
     ],
-    
+    education: [
+      "Narito ang aking buong educational background:\n• Bachelor of Science in Information Technology (BSIT) sa St. Paul University Philippines (SPUP), Tuguegarao City (2022 – Hunyo 2026).\n• Senior High School – STEM na may Academic Honors sa Santo Niño National High School (2021 – 2022)."
+    ],
     skills: [
-      "Ang aking core skills ay include ang JavaScript/TypeScript, React, Next.js, Node.js, at database management gamit ang MySQL at MongoDB. Ako rin ay proficient sa Python para sa AI/ML projects, C# para sa enterprise development, at GDScript para sa game development gamit ang Godot.",
-      "Ako ay nag-work sa buong stack - frontend gamit ang React/Next.js/Tailwind, backend gamit ang Node.js/Express, databases tulad ng MySQL/MongoDB/PostgreSQL, at expanding ako sa AI/ML gamit ang TensorFlow at game development gamit ang Godot Engine."
+      "Kabilang sa aking kasanayan ang:\n• Programming Languages: JavaScript (ES6+), TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• Frontend: React, Next.js (App Router), Tailwind CSS, CSS 3D Transforms, Three.js, Canvas, Bootstrap\n• Backend: Node.js, Express.js, PHP Laravel, RESTful APIs, NextAuth\n• Databases: MySQL, PostgreSQL, MongoDB, Redis\n• Tools: Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
     ],
-    
+    certifications: [
+      "Aking mga verified certifications:\n1. IT Specialist - HTML & CSS mula sa Certiport Pearson VUE (ID: Co7F-DwVk)\n2. Full Stack Developer Certificate mula sa Employability Advantage Australia (ID: 168610825)\n3. Certificate of Membership – Junior Philippine Computer Society (JPCS) – SPUP Chapter (2025–2026)\n4. Lecturer – SPUP Mentorship Program (Abril 2026) para sa Capstone Development."
+    ],
     projects: {
-      scheduling: [
-        "Ang aking In-Off Campus Activity Scheduling System ay isa sa aking pinakaproud na projects! Ginawa ko ito gamit ang React at Node.js para tulungan ang mga universities na mag-manage ng events nang efficient. Nag-handle ito ng lahat galing sa event registration hanggang sa resource allocation, ginagawang mas organized ang campus life."
-      ],
-      ecommerce: [
-        "Ang E-Bayo e-commerce platform ay isang challenging full-stack project. In-implement ko ang lahat galing sa product catalogs at shopping carts hanggang sa secure payment processing gamit ang React, Node.js, at modern payment gateway integrations."
-      ],
-      chatbot: [
-        "Ang aking AI-Powered Student Assistant Chatbot ay gumagamit ng Python at TensorFlow para magbigay ng 24/7 academic support. Nag-integrate ito sa university databases at gumagamit ng NLP para maunawaan ang mga student queries tungkol sa courses, campus resources, at academic information."
-      ],
-      game: [
-        "Ang Bert at Jack Adventure ay aking game development project gamit ang Godot Engine at GDScript. Nag-feature ito ng character progression, combat mechanics, treasure hunting, at gem collection - masaya talagang mag-build ng something completely different sa web apps!"
-      ]
+      overview: "Mayroon akong 6 na tampok na proyekto:\n1. In-Off Campus Activity Scheduling System (PHP, Laravel, MySQL)\n2. Santo Niño Building Permit System (PHP, MySQL, Bootstrap)\n3. Capstone AI Title Generator (Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/)\n4. SIP 3D Can Showcase (3D Animation – https://jacksimeon1.github.io/3d-can-animation/)\n5. 3D Room Isometric Sanctuary (CSS 3D – https://jacksimeon1.github.io/3D-Room/)\n6. Employee Attendance Tracking System (Doña Alejandra, Inc.)\nAlin dito ang nais mong alamin?",
+      scheduling: "Ang In-Off Campus Activity Scheduling System ay binuo gamit ang PHP Laravel, MySQL, at Bootstrap para sa pamamahala ng mga kaganapan at pasilidad sa unibersidad.",
+      permit: "Ang Santo Niño Building Permit System ay isang municipal e-governance platform para sa LGU ng Santo Niño, Cagayan gamit ang PHP, MySQL, Bootstrap, at automated PDF generation.",
+      capstoneTitleAi: "Ang Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) ay open-source tool para sa pagsusuri at pagbuo ng defensible capstone titles.",
+      sip3d: "Ang SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) ay interactive 3D can animation demo na may 360-degree rotation physics at particle canvas.",
+      room3d: "Ang 3D Room (https://jacksimeon1.github.io/3D-Room/) ay isang isometric 3D virtual studio na gawa sa pure CSS 3D transforms at JavaScript.",
+      attendance: "Ang Employee Attendance Tracking System ay ginawa para sa DOÑA ALEJANDRA INC upang maayos na ma-manage ang Daily Time Records (DTR) ng mga empleyado."
     },
-    
     experience: [
-      "Bilang isang 4th year IT student, nakakuha ako ng extensive hands-on experience sa aking mga academic projects. Ang bawat project ay nagturo sa akin ng iba't ibang aspects ng software development - galing sa system design at database architecture hanggang sa user experience at deployment.",
-      "Ang aking experience ay sumasaklaw sa web development, AI/ML, at kahit game development. Nag-work ako sa iba't ibang technologies at frameworks, na nagbibigay sa akin ng well-rounded skill set na excited akong i-apply sa professional settings."
+      "Karanasan sa industriya:\n1. Full-Stack & Agentic AI Developer sa Employability Advantage Australia (10-linggong proyekto sa full-stack at AWS Cloud, Cert ID: 168610825).\n2. Web Developer sa DOÑA ALEJANDRA INC (Employee Attendance Tracking System sa PHP at MySQL).\n3. Lecturer sa SPUP Mentorship Program (Abril 2026) para sa mga estudyante ng IT."
     ],
-    
+    va: "Oo, tiyak! Bukas ako para sa Virtual Assistant (VA), Technical Assistant, at Software Engineering roles. Gamit ang aking BSIT degree sa SPUP, Certiport HTML/CSS certification, at OJT experience, kaya kong humawak ng web development, database management, technical documentation, at system maintenance. Makipag-ugnayan sa akin sa robertsimeon12345@gmail.com o (+63) 921 551 2415!",
     contact: [
-      "Makakontak mo ako sa robertsimeon12345@gmail.com o +63 921 551 2415. Ako rin ay aktibo sa LinkedIn (linkedin.com/in/robert-simeon-08063b214/) at GitHub (github.com/jacksimeon1). Ako ay palaging open sa pag-discuss ng projects at opportunities!",
-      "Gusto kitang konektahin! I-email mo ako sa robertsimeon12345@gmail.com, hanapin mo ako sa LinkedIn, o check ang aking GitHub projects. Kasalukuyan akong naghahanap ng internship at full-time opportunities habang papalapit ako sa graduation sa 2025."
+      "Maaari mo akong maabot sa:\n• Email: robertsimeon12345@gmail.com\n• Mobile: (+63) 921 551 2415\n• LinkedIn: https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub: https://github.com/jacksimeon1\n• Lokasyon: Centro, Santo Niño, Cagayan, Pilipinas\n• Resume: /Robert_Simeon_Jr_Resume.pdf"
     ],
-    
     availability: [
-      "Ako ay currently available para sa internships at part-time projects, at mag-graduate ako sa 2025, kaya nag-e-explore rin ako sa full-time opportunities. Ako ay particularly interested sa full-stack development, AI/ML roles, o software engineering positions.",
-      "Habang papalapit ako sa graduation sa 2025, aktibo akong naghahanap ng opportunities para i-apply ang aking skills. Ako ay open sa internships, freelance projects, at full-time positions kung saan ako makakapag-contribute ng meaningful software solutions."
-    ]
+      "Kasalukuyan akong available para sa full-time software engineering roles, virtual assistant roles, at freelance client projects. Handa akong magsimula agad!"
+    ],
+    resume: "Maaari mong i-download ang aking opisyal na resume sa /Robert_Simeon_Jr_Resume.pdf. Naglalaman ito ng aking edukasyon sa SPUP, global Certiport license, industry experience, at kumpletong listahan ng mga proyekto.",
+    fallback: `Salamat sa iyong mensahe! Bilang AI Digital Twin ni Robert Simeon Jr., narito ang buod ng kanyang propesyon:
+
+• Edukasyon: BSIT graduate mula sa St. Paul University Philippines (SPUP, Hunyo 2026) at STEM with Academic Honors.
+• Lisensya: IT Specialist sa HTML & CSS mula sa Certiport Pearson VUE (ID: Co7F-DwVk).
+• Karanasan: AusBiz Consulting Pty Ltd (Australia) at DOÑA ALEJANDRA INC.
+• Mga Proyekto: SIP 3D, 3D Room, Capstone AI Title Generator, at Building Permit System.
+• Availability: Bukas para sa full-time roles, Virtual Assistant (VA), at freelance projects.
+
+Maaari mong ma-download ang resume sa /Robert_Simeon_Jr_Resume.pdf o mag-email sa robertsimeon12345@gmail.com!`
+  },
+
+  es: {
+    greeting: [
+      "¡Hola! Soy Robert Simeon Jr. de Filipinas, graduado de BSIT en St. Paul University Philippines (junio 2026) con experiencia laboral comprobada en DOÑA ALEJANDRA INC y Employability Advantage Australia, y especialista en TI certificado en HTML y CSS por Certiport (Pearson VUE). ¿Cómo puedo ayudarte hoy?",
+      "¡Hola! Soy Robert, desarrollador Full-Stack e IA agéntica con credenciales globales verificadas. ¿Qué te gustaría saber sobre mi experiencia o proyectos?"
+    ],
+    about: [
+      "Soy de Centro, Santo Niño, Cagayán, Filipinas. Me gradué con honores de STEM en la escuela secundaria (2021-2022) y obtuve mi título de Licenciatura en Ciencias de la Información (BSIT) en St. Paul University Philippines en junio de 2026. Cuento con experiencia laboral en DOÑA ALEJANDRA INC y Employability Advantage Australia (AusBiz Consulting Pty Ltd), y poseo una licencia global de Certiport en HTML y CSS (ID: Co7F-DwVk)."
+    ],
+    education: [
+      "Mi formación académica:\n• Licenciatura en Ciencias de la Tecnología de la Información (BSIT), St. Paul University Philippines (2022 – junio 2026).\n• Educación Secundaria – STEM con Honores Académicos en Santo Niño National High School (2021 – 2022)."
+    ],
+    skills: [
+      "Mis habilidades técnicas incluyen:\n• Lenguajes: JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• Frontend: React, Next.js, Tailwind CSS, transformaciones 3D en CSS, Three.js, Canvas, Bootstrap\n• Backend: Node.js, Express, PHP Laravel, APIs RESTful\n• Bases de datos: MySQL, PostgreSQL, MongoDB, Redis\n• Herramientas: Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "Mis certificaciones verificadas:\n1. Especialista en TI - HTML y CSS por Certiport Pearson VUE (ID: Co7F-DwVk)\n2. Certificado Full Stack Developer de Employability Advantage Australia (ID: 168610825)\n3. Miembro de Junior Philippine Computer Society (JPCS) – Capítulo SPUP\n4. Docente en el Programa de Mentoría de SPUP (abril 2026)."
+    ],
+    projects: {
+      overview: "He desarrollado 6 proyectos destacados:\n1. Sistema de Programación de Actividades Escolares (PHP, Laravel, MySQL)\n2. Sistema de Permisos de Construcción de Santo Niño (PHP, MySQL, Bootstrap)\n3. Capstone AI Title Generator (Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/)\n4. SIP 3D (Animación de bebidas en 3D – https://jacksimeon1.github.io/3d-can-animation/)\n5. 3D Room (Estudio isométrico interactivo en 3D – https://jacksimeon1.github.io/3D-Room/)\n6. Sistema de Asistencia de Empleados (Doña Alejandra, Inc.)\n¿Sobre cuál te gustaría saber más?",
+      scheduling: "El Sistema de Programación de Actividades gestiona eventos universitarios y aprobaciones de instalaciones con PHP, Laravel y MySQL.",
+      permit: "El Sistema de Permisos de Construcción de Santo Niño digitaliza planos y permisos municipales para el LGU de Santo Niño, Cagayán.",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) formula títulos de tesis académicas con validación heurística.",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) es una vitrina interactiva de latas en 3D con física de rotación en 360° y efectos Canvas.",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/) es un santuario y estudio isométrico 3D creado con transformaciones puras en CSS 3D y JavaScript.",
+      attendance: "El Sistema de Asistencia de Empleados fue desarrollado para DOÑA ALEJANDRA INC para administrar registros de tiempo y asistencia."
+    },
+    experience: [
+      "Experiencia profesional:\n1. Desarrollador Full-Stack e IA Agéntica en Employability Advantage Australia (proyecto de 10 semanas en desarrollo web y AWS Cloud).\n2. Desarrollador Web en DOÑA ALEJANDRA INC (Sistema de Asistencia en PHP y MySQL).\n3. Docente en el Programa de Mentoría de SPUP (abril 2026)."
+    ],
+    va: "¡Sí, por supuesto! Estoy totalmente disponible para roles de Asistente Virtual (VA), Asistente Técnico y Desarrollador Web. Con mi título BSIT en SPUP y certificación global de Certiport, puedo gestionar desarrollo web, administración de bases de datos y soporte técnico. ¡Escríbeme a robertsimeon12345@gmail.com o (+63) 921 551 2415!",
+    contact: [
+      "Puedes comunicarte conmigo:\n• Correo: robertsimeon12345@gmail.com\n• Teléfono: (+63) 921 551 2415\n• LinkedIn: https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub: https://github.com/jacksimeon1\n• CV descargable: /Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "Actualmente estoy disponible para puestos de tiempo completo, asistente virtual, contratos y proyectos freelance. ¡Listo para empezar de inmediato!"
+    ],
+    resume: "Puedes descargar mi currículum vitae oficial en /Robert_Simeon_Jr_Resume.pdf con todos los datos verificados de educación, certificaciones y proyectos.",
+    fallback: `¡Gracias por tu mensaje! Como gemelo digital de Robert Simeon Jr., aquí tienes un resumen de su perfil:
+
+• Educación: Graduado de BSIT en St. Paul University Philippines (junio 2026) con honores en STEM.
+• Certificación: Especialista en TI en HTML y CSS por Certiport Pearson VUE (ID: Co7F-DwVk).
+• Experiencia: AusBiz Consulting Pty Ltd (Australia) y DOÑA ALEJANDRA INC.
+• Proyectos: SIP 3D, 3D Room, Capstone AI Title Generator y Sistema de Permisos de Construcción.
+• Disponibilidad: Disponible para puestos de tiempo completo, asistente virtual y proyectos freelance.
+
+Puedes descargar su currículum en /Robert_Simeon_Jr_Resume.pdf o escribir a robertsimeon12345@gmail.com.`
+  },
+
+  fr: {
+    greeting: [
+      "Bonjour ! Je suis Robert Simeon Jr. des Philippines, diplômé en informatique (BSIT) de l'Université St. Paul Philippines (juin 2026), avec une expérience industrielle chez DOÑA ALEJANDRA INC et Employability Advantage Australia, et certifié IT Specialist en HTML & CSS par Certiport (Pearson VUE). Comment puis-je vous aider ?",
+      "Bonjour ! Je suis Robert, développeur Full-Stack et IA agentique. Que souhaitez-vous savoir sur mon parcours, mes compétences ou mes projets ?"
+    ],
+    about: [
+      "Je viens de Centro, Santo Niño, Cagayan, Philippines. J'ai obtenu mon diplôme de Bachelor of Science in Information Technology (BSIT) à l'Université St. Paul Philippines en juin 2026 avec mention d'honneur en STEM. J'ai acquis une solide expérience chez DOÑA ALEJANDRA INC et Employability Advantage Australia, et détiens une licence mondiale Certiport HTML & CSS (ID : Co7F-DwVk)."
+    ],
+    education: [
+      "Mon parcours académique :\n• Bachelor of Science in Information Technology (BSIT) à St. Paul University Philippines (2022 – juin 2026).\n• Enseignement secondaire – STEM avec mention d'honneur à Santo Niño National High School (2021 – 2022)."
+    ],
+    skills: [
+      "Mes compétences clés :\n• Langages : JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• Frontend : React, Next.js, Tailwind CSS, transformations 3D CSS, Three.js, Canvas\n• Backend : Node.js, Express, PHP Laravel, APIs RESTful\n• Bases de données : MySQL, PostgreSQL, MongoDB, Redis\n• Outils : Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "Mes certifications vérifiées :\n1. Spécialiste IT - HTML & CSS par Certiport Pearson VUE (ID : Co7F-DwVk)\n2. Certificat Full Stack Developer d'Employability Advantage Australia (ID : 168610825)\n3. Membre de la Junior Philippine Computer Society (JPCS) – Chapitre SPUP\n4. Formateur au programme de mentorat SPUP (avril 2026)."
+    ],
+    projects: {
+      overview: "J'ai développé 6 projets majeurs :\n1. Système de Planification d'Activités sur Campus (PHP, Laravel, MySQL)\n2. Système de Permis de Construire de Santo Niño (PHP, MySQL, Bootstrap)\n3. Capstone AI Title Generator (Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/)\n4. SIP 3D Can Showcase (Animation 3D – https://jacksimeon1.github.io/3d-can-animation/)\n5. 3D Room Isometric Sanctuary (CSS 3D – https://jacksimeon1.github.io/3D-Room/)\n6. Système de Suivi des Présences (Doña Alejandra, Inc.)\nQuel projet souhaitez-vous découvrir ?",
+      scheduling: "Système complet de planification des activités et approbation des ressources du campus en PHP Laravel et MySQL.",
+      permit: "Plateforme municipale de gestion des permis de construire et soumission de plans PDF pour la municipalité de Santo Niño, Cagayan.",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) formule des titres de thèse avec validation heuristique.",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) est une vitrine interactive 3D avec rotation de canette à 360° et effets de particules.",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/) est un studio isométrique 3D interactif conçu avec de pures transformations 3D CSS et JavaScript.",
+      attendance: "Système de suivi du temps et des présences des employés conçu pour DOÑA ALEJANDRA INC."
+    },
+    experience: [
+      "Expérience industrielle :\n1. Développeur Full-Stack & IA Agentique chez Employability Advantage Australia (projet de 10 semaines, développement web & cloud AWS).\n2. Développeur Web chez DOÑA ALEJANDRA INC (Système de suivi des présences).\n3. Formateur au programme de mentorat SPUP (avril 2026)."
+    ],
+    va: "Oui, tout à fait ! Je suis ouvert aux opportunités d'assistant virtuel (VA), assistant technique et ingénieur logiciel. Grâce à mon diplôme BSIT et ma certification Certiport, je peux gérer le développement web, l'administration de bases de données et le support technique. Contactez-moi à robertsimeon12345@gmail.com !",
+    contact: [
+      "Vous pouvez me contacter directement :\n• E-mail : robertsimeon12345@gmail.com\n• Téléphone : (+63) 921 551 2415\n• LinkedIn : https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub : https://github.com/jacksimeon1\n• CV : /Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "Je suis immédiatement disponible pour des postes à temps plein, des missions d'assistant virtuel et des projets clients freelance."
+    ],
+    resume: "Vous pouvez télécharger mon CV officiel au format PDF à l'adresse /Robert_Simeon_Jr_Resume.pdf.",
+    fallback: `Merci pour votre message ! En tant que jumeau numérique de Robert Simeon Jr., voici un aperçu de son profil :
+
+• Formation : Diplômé BSIT de St. Paul University Philippines (juin 2026) avec mention d'honneur en STEM.
+• Certification : Spécialiste IT en HTML & CSS par Certiport Pearson VUE (ID : Co7F-DwVk).
+• Expérience : AusBiz Consulting Pty Ltd (Australie) et DOÑA ALEJANDRA INC.
+• Projets : SIP 3D, 3D Room, Capstone AI Title Generator et Système de Permis de Construire.
+• Disponibilité : Disponible pour des rôles à temps plein, d'assistant virtuel (VA) et projets freelance.
+
+Téléchargez le CV complet sur /Robert_Simeon_Jr_Resume.pdf ou écrivez à robertsimeon12345@gmail.com.`
+  },
+
+  de: {
+    greeting: [
+      "Hallo! Ich bin Robert Simeon Jr. von den Philippinen, BSIT-Absolvent der St. Paul University Philippines (Juni 2026) mit Praxiserfahrung bei DOÑA ALEJANDRA INC und Employability Advantage Australia sowie zertifizierter IT-Spezialist in HTML & CSS von Certiport (Pearson VUE). Wie kann ich Ihnen helfen?",
+      "Hallo! Ich bin Robert, Full-Stack- und Agentic-AI-Entwickler. Was möchten Sie über meine Erfahrungen, Fähigkeiten oder Projekte wissen?"
+    ],
+    about: [
+      "Ich komme aus Centro, Santo Niño, Cagayan, Philippinen. Ich habe mein BSIT-Studium an der St. Paul University Philippines im Juni 2026 abgeschlossen und zuvor das Abitur in STEM mit Auszeichnung absolviert. Ich habe praktische Branchenerfahrung bei DOÑA ALEJANDRA INC und Employability Advantage Australia (AusBiz Consulting Pty Ltd) und besitze eine globale Certiport-Lizenz in HTML & CSS (ID: Co7F-DwVk)."
+    ],
+    education: [
+      "Mein Bildungshintergrund:\n• Bachelor of Science in Information Technology (BSIT), St. Paul University Philippines (2022 – Juni 2026).\n• Senior High School – STEM mit Auszeichnung an der Santo Niño National High School (2021 – 2022)."
+    ],
+    skills: [
+      "Meine Kernkompetenzen umfassen:\n• Sprachen: JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• Frontend: React, Next.js, Tailwind CSS, CSS 3D-Transformationen, Three.js, Canvas, Bootstrap\n• Backend: Node.js, Express, PHP Laravel, REST APIs\n• Datenbanken: MySQL, PostgreSQL, MongoDB, Redis\n• Werkzeuge: Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "Meine Zertifizierungen:\n1. IT-Spezialist in HTML & CSS von Certiport Pearson VUE (ID: Co7F-DwVk)\n2. Full Stack Developer Zertifikat von Employability Advantage Australia (ID: 168610825)\n3. Mitglied der Junior Philippine Computer Society (JPCS) – SPUP Chapter\n4. Dozent im SPUP-Mentorenprogramm (April 2026)."
+    ],
+    projects: {
+      overview: "Ich habe 6 Hauptprojekte entwickelt:\n1. In-Off Campus Aktivitätsplanungssystem (PHP, Laravel, MySQL)\n2. Baugenehmigungssystem Santo Niño (PHP, MySQL, Bootstrap)\n3. Capstone AI Title Generator (Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/)\n4. SIP 3D Can Showcase (3D-Animation – https://jacksimeon1.github.io/3d-can-animation/)\n5. 3D Room Isometrisches Studio (CSS 3D – https://jacksimeon1.github.io/3D-Room/)\n6. Mitarbeiter-Anwesenheitssystem (Doña Alejandra, Inc.)\nÜber welches Projekt möchten Sie mehr erfahren?",
+      scheduling: "Aktivitäts- und Genehmigungssystem für Hochschulen, entwickelt mit PHP Laravel und MySQL.",
+      permit: "E-Governance-Plattform zur Digitalisierung von Baugenehmigungen für die Gemeinde Santo Niño, Cagayan.",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) formuliert akademische Forschungstitel mit heuristischer Validierung.",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) ist eine interaktive 3D-Getränkeschau mit 360°-Zylinderrotation und Partikeleffekten.",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/) ist ein isometrisches 3D-Studio, gebaut mit reinen CSS 3D-Transformationen und JavaScript.",
+      attendance: "System zur Verwaltung der täglichen Arbeitszeiterfassung für DOÑA ALEJANDRA INC."
+    },
+    experience: [
+      "Branchenerfahrung:\n1. Full-Stack & AI-Entwickler bei Employability Advantage Australia (10-wöchiges Projekt für Full-Stack & AWS Cloud).\n2. Webentwickler bei DOÑA ALEJANDRA INC (Anwesenheitssystem in PHP/MySQL).\n3. Dozent im SPUP Mentorship Program (April 2026)."
+    ],
+    va: "Ja, absolut! Ich stehe für Positionen als virtueller Assistent (VA), technischer Assistent und Softwareentwickler zur Verfügung. Mit meinem BSIT-Abschluss und Certiport-Zertifizierung übernehme ich Webentwicklung, Datenbankverwaltung und technischen Support. Schreiben Sie mir an robertsimeon12345@gmail.com!",
+    contact: [
+      "Kontaktieren Sie mich:\n• E-Mail: robertsimeon12345@gmail.com\n• Mobil: (+63) 921 551 2415\n• LinkedIn: https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub: https://github.com/jacksimeon1\n• Lebenslauf: /Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "Ich bin ab sofort für Vollzeitstellen, virtuelle Assistenz und freiberufliche Softwareprojekte verfügbar."
+    ],
+    resume: "Sie können meinen offiziellen Lebenslauf direkt unter /Robert_Simeon_Jr_Resume.pdf herunterladen.",
+    fallback: `Vielen Dank für Ihre Nachricht! Als digitaler Zwilling von Robert Simeon Jr. hier eine kurze Zusammenfassung:
+
+• Ausbildung: BSIT-Absolvent der St. Paul University Philippines (Juni 2026) mit Auszeichnung in STEM.
+• Zertifizierung: IT-Spezialist in HTML & CSS von Certiport Pearson VUE (ID: Co7F-DwVk).
+• Erfahrung: AusBiz Consulting Pty Ltd (Australien) und DOÑA ALEJANDRA INC.
+• Projekte: SIP 3D, 3D Room, Capstone AI Title Generator und Baugenehmigungssystem.
+• Verfügbarkeit: Offen für Vollzeitstellen, virtuelle Assistenz (VA) und Kundenprojekte.
+
+Lebenslauf herunterladen unter /Robert_Simeon_Jr_Resume.pdf oder E-Mail an robertsimeon12345@gmail.com.`
+  },
+
+  zh: {
+    greeting: [
+      "你好！我是来自菲律宾的Robert Simeon Jr.，毕业于圣保罗大学菲律宾分校信息技术专业（BSIT，2026年6月毕业），在DOÑA ALEJANDRA INC和澳大利亚Employability Advantage拥有丰富的行业项目经验，并获得Certiport Pearson VUE的HTML与CSS全球IT专家认证。请问有什么我可以协助您的？",
+      "您好！我是Robert，一名全栈与代理AI（Agentic AI）开发者。您想了解我的项目经验、专业技能还是简历？"
+    ],
+    about: [
+      "我来自菲律宾卡加延省Santo Niño。我于2026年6月从圣保罗大学菲律宾分校（SPUP）获得信息技术学士学位（BSIT），并在高中以优异成绩毕业于STEM科学工程专业（2021-2022）。我在DOÑA ALEJANDRA INC和澳大利亚Employability Advantage（AusBiz Consulting Pty Ltd）拥有实战开发经验，持有Certiport HTML & CSS全球IT专家认证（ID: Co7F-DwVk）。"
+    ],
+    education: [
+      "我的完整教育背景：\n• 菲律宾圣保罗大学（SPUP）信息技术学士学位（BSIT，2022年 – 2026年6月）\n• Santo Niño国家高级中学 – STEM理科工程优等生（2021年 – 2022年）"
+    ],
+    skills: [
+      "我的核心技术栈包括：\n• 编程语言：JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• 前端：React, Next.js (App Router), Tailwind CSS, CSS 3D Transforms, Three.js, Canvas, Bootstrap\n• 后端：Node.js, Express, PHP Laravel, RESTful APIs\n• 数据库：MySQL, PostgreSQL, MongoDB, Redis\n• 工具平台：Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "我的官方认证资质：\n1. Certiport Pearson VUE IT专家（HTML & CSS，验证ID: Co7F-DwVk）\n2. 澳大利亚Employability Advantage全栈开发者证书（ID: 168610825）\n3. 菲律宾青年计算机学会（JPCS）SPUP分会认证会员\n4. SPUP导师计划讲师（2026年4月），为学生讲解毕业设计开发。"
+    ],
+    projects: {
+      overview: "我主导开发了6个核心软件项目：\n1. 校内外活动调度信息系统（PHP, Laravel, MySQL）\n2. Santo Niño建筑许可证系统（PHP, MySQL, Bootstrap）\n3. Capstone AI毕业论文题目生成器（Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/）\n4. SIP 3D罐装饮品展示（交互式3D Web – https://jacksimeon1.github.io/3d-can-animation/）\n5. 3D Room等距空间展示（纯CSS 3D变换 – https://jacksimeon1.github.io/3D-Room/）\n6. 员工考勤跟踪系统（Doña Alejandra, Inc.）\n您想了解哪一个项目的技术细节？",
+      scheduling: "基于PHP Laravel和MySQL的高校校园活动与场地审批综合管理系统。",
+      permit: "为卡加延省Santo Niño市政府量身定制的电子政务建筑许可审核与报表系统。",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) 是一个启发式毕业论文课题生成与校验平台。",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) 是基于HTML5 Canvas与CSS 3D变换的高性能360度旋转展示网站。",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/) 是纯CSS 3D变换与JavaScript打造的交互式等距3D房间体验。",
+      attendance: "为DOÑA ALEJANDRA INC开发的员工日常工时与考勤自动化管理系统。"
+    },
+    experience: [
+      "行业实践经验：\n1. 澳大利亚Employability Advantage全栈及AI开发者（10周全栈及AWS云开发实战，证书ID: 168610825）。\n2. DOÑA ALEJANDRA INC Web开发者（主导开发考勤跟踪系统）。\n3. 圣保罗大学导师计划讲师（2026年4月）。"
+    ],
+    va: "是的，完全可以！我非常欢迎虚拟助手（Virtual Assistant / VA）、技术助理以及软件工程全职/兼职工作。凭借在SPUP取得的BSIT学位、Certiport全球IT认证及实战经验，我能够胜任全栈网站开发、数据库管理、技术文档编写和日常技术支持。欢迎随时通过邮箱 robertsimeon12345@gmail.com 或电话 (+63) 921 551 2415 联系我！",
+    contact: [
+      "您可以直接通过以下方式联系我：\n• 电子邮箱：robertsimeon12345@gmail.com\n• 电话：(+63) 921 551 2415\n• LinkedIn：https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub：https://github.com/jacksimeon1\n• 简历下载：/Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "我目前已毕业，可以立即入职全职软件工程师、虚拟技术助手或承接自由职业开发项目！"
+    ],
+    resume: "您可以直接访问 /Robert_Simeon_Jr_Resume.pdf 下载我的官方排版打印版PDF简历。",
+    fallback: `感谢您的咨询！作为Robert Simeon Jr.的AI数字分身，以下是他的核心背景概览：
+
+• 教育经历：菲律宾圣保罗大学信息技术学士（BSIT，2026年6月毕业），高中STEM荣誉毕业生。
+• 全球认证：Certiport Pearson VUE HTML & CSS IT专家认证（ID: Co7F-DwVk）。
+• 行业经验：AusBiz Consulting Pty Ltd（澳大利亚）及DOÑA ALEJANDRA INC实战项目。
+• 核心项目：SIP 3D、3D Room等距空间、Capstone AI课题生成器和市政建筑许可系统。
+• 求职意向：支持全职软件开发、虚拟助理（VA）与自由职业项目。
+
+可在 /Robert_Simeon_Jr_Resume.pdf 下载简历，或发送邮件至 robertsimeon12345@gmail.com！`
+  },
+
+  ja: {
+    greeting: [
+      "こんにちは！フィリピンのRobert Simeon Jr.です。セント・ポール大学フィリピン校情報技術学部（BSIT、2026年6月卒業）を卒業し、DOÑA ALEJANDRA INCおよびオーストラリアのEmployability Advantageでの業界実務経験を持ち、Certiport（Pearson VUE）によるHTML＆CSSのITスペシャリスト認定資格を保有しています。本日はどのようなご用件でしょうか？",
+      "こんにちは！RobertのAIデジタルツインです。フルスタック開発、3Dウェブ制作、AIツール、プロジェクト経歴について日本語でお答えできます。"
+    ],
+    about: [
+      "フィリピン・カガヤン州サント・ニーニョ出身です。2026年6月にセント・ポール大学フィリピン校（SPUP）で情報技術学士（BSIT）を取得し、高校時代はSTEM理数科コースを優秀な成績で修了しました。DOÑA ALEJANDRA INCおよびEmployability Advantage Australiaでの実務開発実績があり、CertiportのHTML＆CSS認定（ID: Co7F-DwVk）を保有しています。"
+    ],
+    education: [
+      "学歴情報：\n• セント・ポール大学フィリピン校（SPUP）情報技術学士（BSIT、2022年～2026年6月卒業）\n• サント・ニーニョ国立高校 – 理数工学科（STEM）名誉卒業（2021年～2022年）"
+    ],
+    skills: [
+      "主な技術スキル：\n• 言語：JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• フロントエンド：React, Next.js (App Router), Tailwind CSS, CSS 3D Transforms, Three.js, Canvas\n• バックエンド：Node.js, Express, PHP Laravel, RESTful APIs\n• データベース：MySQL, PostgreSQL, MongoDB, Redis\n• 開発ツール：Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "認定資格・所属：\n1. Certiport Pearson VUE認定 ITスペシャリスト（HTML & CSS、検証ID: Co7F-DwVk）\n2. オーストラリアEmployability Advantage フルスタック開発者修了証（ID: 168610825）\n3. フィリピン青少年コンピュータ協会（JPCS）SPUP支部 正会員\n4. SPUPメンターシッププログラム講師（2026年4月）"
+    ],
+    projects: {
+      overview: "主な6つの開発プロジェクト：\n1. キャンパス内外活動スケジューリングシステム（PHP, Laravel, MySQL）\n2. サント・ニーニョ建築許可システム（PHP, MySQL, Bootstrap）\n3. Capstone AI卒論タイトルジェネレーター（Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/）\n4. SIP 3D飲料缶プロモーション（3D Web – https://jacksimeon1.github.io/3d-can-animation/）\n5. 3D Room アイソメトリックスタジオ（CSS 3D Transforms – https://jacksimeon1.github.io/3D-Room/）\n6. 従業員勤怠管理システム（Doña Alejandra, Inc.）\nどのプロジェクトについて詳しく知りたいですか？",
+      scheduling: "PHP LaravelとMySQLで開発した大学向けイベント・施設予約統合管理システム。",
+      permit: "サント・ニーニョ市役所向けに開発した建築許可申請および自動PDF図面審査システム。",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/) は卒業論文のテーマ生成プラットフォームです。",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/) は360度シリンダー回転物理を搭載した3D飲料プロモーションサイトです。",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/) は純粋なCSS 3DとJavaScriptで構築したアイソメトリック3D空間です。",
+      attendance: "DOÑA ALEJANDRA INC向けに構築した日次勤怠管理およびタイムレコードシステム。"
+    },
+    experience: [
+      "実務経験：\n1. Employability Advantage Australiaでのフルスタック＆AI開発者（10週間のフルスタックおよびAWSクラウド実戦プロジェクト）。\n2. DOÑA ALEJANDRA INCでのWeb開発者（勤怠管理システムの構築）。\n3. SPUPメンターシッププログラム講師（2026年4月）。"
+    ],
+    va: "はい、もちろん可能です！バーチャルアシスタント（VA）、テクニカルアシスタント、Webエンジニアとしてのお仕事に積極的に対応しています。BSIT学位とCertiport資格を持ち、Webサイト保守、データベース管理、システム運用、技術サポートを幅広く担当できます。連絡先：robertsimeon12345@gmail.com または (+63) 921 551 2415 までお気軽にどうぞ！",
+    contact: [
+      "お問い合わせ先：\n• メール：robertsimeon12345@gmail.com\n• 電話：(+63) 921 551 2415\n• LinkedIn：https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub：https://github.com/jacksimeon1\n• 英文レジュメPDF：/Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "現在フルタイム勤務、バーチャルアシスタント業務、フリーランス開発のご依頼を受け付けており、即時稼働可能です。"
+    ],
+    resume: "公式レジュメ（PDF）は /Robert_Simeon_Jr_Resume.pdf から直接ダウンロードできます。",
+    fallback: `ご連絡ありがとうございます！Robert Simeon Jr.のAIデジタルツインによるプロフィール要約です：
+
+• 学歴：セント・ポール大学フィリピン校 情報技術学士（BSIT、2026年6月卒業）、STEMコース名誉修了。
+• 資格：Certiport Pearson VUE HTML＆CSS認定（ID: Co7F-DwVk）。
+• 実務経験：AusBiz Consulting Pty Ltd（豪州）および DOÑA ALEJANDRA INC。
+• 代表作：SIP 3D、3D Room、Capstone AI卒論タイトルジェネレーター、建築許可システム。
+• 稼働状況：フルタイム開発、バーチャルアシスタント（VA）、フリーランス案件に対応可能。
+
+レジュメは /Robert_Simeon_Jr_Resume.pdf より入手可能です。メール：robertsimeon12345@gmail.com`
+  },
+
+  ko: {
+    greeting: [
+      "안녕하세요! 필리핀의 Robert Simeon Jr.입니다. 세인트 폴 대학교 필리핀(SPUP) 정보기술학사(BSIT, 2026년 6월 졸업)를 졸업하고, DOÑA ALEJANDRA INC 및 호주 Employability Advantage에서 실무 프로젝트를 수행했으며, Certiport(Pearson VUE) HTML & CSS 공인 IT 전문가 자격을 취득했습니다. 무엇을 도와드릴까요?",
+      "안녕하세요! Robert의 AI 디지털 트윈입니다. 풀스택 개발, 3D 웹 인터랙션, 프로젝트 경험에 대해 한국어로 답변해 드릴 수 있습니다."
+    ],
+    about: [
+      "저는 필리핀 카가얀주 산토 니뇨 출신입니다. 2026년 6월 세인트 폴 대학교 필리핀에서 정보기술학사(BSIT)를 취득했으며, 고등학교 STEM 과정을 우등으로 졸업했습니다(2021-2022). DOÑA ALEJANDRA INC와 호주 Employability Advantage(AusBiz Consulting Pty Ltd)에서 검증된 산업 인턴십 경험을 쌓았으며 Certiport HTML & CSS 글로벌 라이선스를 보유하고 있습니다(ID: Co7F-DwVk)."
+    ],
+    education: [
+      "학력 정보:\n• 세인트 폴 대학교 필리핀(SPUP) 정보기술학사(BSIT, 2022년 – 2026년 6월 졸업)\n• 산토 니뇨 국립고등학교 – STEM(이공계) 우등 졸업(2021년 – 2022년)"
+    ],
+    skills: [
+      "핵심 기술 스택:\n• 언어: JavaScript, TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• 프론트엔드: React, Next.js (App Router), Tailwind CSS, CSS 3D Transforms, Three.js, Canvas\n• 백엔드: Node.js, Express, PHP Laravel, RESTful APIs\n• 데이터베이스: MySQL, PostgreSQL, MongoDB, Redis\n• 도구: Git, GitHub, Docker, Vercel, Postman, VS Code, Figma"
+    ],
+    certifications: [
+      "공인 자격증 및 수료 내역:\n1. Certiport Pearson VUE 공인 IT 전문가 (HTML & CSS, 검증 ID: Co7F-DwVk)\n2. 호주 Employability Advantage 풀스택 개발자 수료증 (ID: 168610825)\n3. 필리핀 청소년 컴퓨터 협회(JPCS) SPUP 지부 정회원\n4. SPUP 멘토링 프로그램 강사 (2026년 4월)"
+    ],
+    projects: {
+      overview: "주요 6대 개발 프로젝트:\n1. 교내외 행사 스케줄링 정보 시스템 (PHP, Laravel, MySQL)\n2. 산토 니뇨 건축 허가 시스템 (PHP, MySQL, Bootstrap)\n3. Capstone AI 캡스톤 논문 주제 생성기 (Next.js, React – https://jacksimeon1.github.io/capstone-title-ai/)\n4. SIP 3D 음료 캔 3D 쇼케이스 (3D Web – https://jacksimeon1.github.io/3d-can-animation/)\n5. 3D Room 아이소메트릭 룸 (순수 CSS 3D – https://jacksimeon1.github.io/3D-Room/)\n6. 직원 근태 관리 시스템 (Doña Alejandra, Inc.)\n어떤 프로젝트에 대해 더 알고 싶으신가요?",
+      scheduling: "대학 행사 계획, 자원 승인 및 시설 예약을 자동화하는 PHP Laravel 기반 플랫폼.",
+      permit: "산토 니뇨 시청을 위해 개발한 전자 정부 건축 허가 및 도면 심사 시스템.",
+      capstoneTitleAi: "Capstone AI Title Generator (https://jacksimeon1.github.io/capstone-title-ai/)는 AI 휴리스틱 기반 학술 논문 제목 생성기입니다.",
+      sip3d: "SIP 3D (https://jacksimeon1.github.io/3d-can-animation/)는 360도 회전 물리와 캔버스 파티클 효과를 갖춘 3D 음료 웹 쇼케이스입니다.",
+      room3d: "3D Room (https://jacksimeon1.github.io/3D-Room/)은 순수 CSS 3D 변환과 JavaScript로 구현한 가상 룸 스튜디오입니다.",
+      attendance: "DOÑA ALEJANDRA INC를 위해 개발한 직원 일일 출퇴근 기록(DTR) 관리 시스템."
+    },
+    experience: [
+      "실무 경력:\n1. Employability Advantage Australia 풀스택 & AI 개발자 (10주간의 풀스택 웹 및 AWS 클라우드 프로젝트).\n2. DOÑA ALEJANDRA INC 웹 개발자 (근태 관리 시스템 개발).\n3. SPUP 멘토링 프로그램 강사 (2026년 4월)."
+    ],
+    va: "네, 적극적으로 환영합니다! 가상 비서(Virtual Assistant / VA), 테크니컬 어시스턴트, 소프트웨어 엔지니어 역할 모두 가능합니다. SPUP 정보기술학사 학위와 Certiport 글로벌 자격을 바탕으로 웹 개발, 데이터베이스 관리, 시스템 유지보수 및 기술 지원을 능숙하게 수행할 수 있습니다. 문의: robertsimeon12345@gmail.com 또는 (+63) 921 551 2415!",
+    contact: [
+      "연락처 안내:\n• 이메일: robertsimeon12345@gmail.com\n• 전화: (+63) 921 551 2415\n• LinkedIn: https://www.linkedin.com/in/robert-simeon-08063b214/\n• GitHub: https://github.com/jacksimeon1\n• 이력서 다운로드: /Robert_Simeon_Jr_Resume.pdf"
+    ],
+    availability: [
+      "현재 정규직 소프트웨어 엔지니어, 가상 비서(VA), 프리랜서 프로젝트 모두 즉시 참여 가능합니다."
+    ],
+    resume: "공식 이력서(PDF)는 /Robert_Simeon_Jr_Resume.pdf 에서 다운로드하실 수 있습니다.",
+    fallback: `문의해 주셔서 감사합니다! Robert Simeon Jr.의 AI 디지털 트윈 요약 정보입니다:
+
+• 학력: 세인트 폴 대학교 필리핀 정보기술학사 (BSIT, 2026년 6월 졸업), STEM 우등 졸업.
+• 자격: Certiport Pearson VUE HTML & CSS IT 전문가 인증 (ID: Co7F-DwVk).
+• 경력: AusBiz Consulting Pty Ltd (호주) 및 DOÑA ALEJANDRA INC.
+• 프로젝트: SIP 3D, 3D Room, Capstone AI 논문 제목 생성기, 건축 허가 시스템.
+• 지원 분야: 풀타임 개발자, 가상 비서(VA), 프리랜서 개발 프로젝트.
+
+이력서 다운로드: /Robert_Simeon_Jr_Resume.pdf | 이메일: robertsimeon12345@gmail.com`
   }
 };
 
-// Quick response function for common questions
-export function getQuickResponse(message: string, language: keyof typeof knowledgeBase = 'en'): string | null {
-  const lowerMessage = message.toLowerCase();
-  const langData = knowledgeBase[language] || knowledgeBase.en;
-  
-  if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || lowerMessage.includes('hey') || 
-      lowerMessage.includes('kamusta') || lowerMessage.includes('hola') || lowerMessage.includes('bonjour') || 
-      lowerMessage.includes('hallo') || lowerMessage.includes('你好') || lowerMessage.includes('こんにちは') || 
-      lowerMessage.includes('안녕하세요')) {
-    return langData.greeting[Math.floor(Math.random() * langData.greeting.length)];
+// Automatic language detection from message text
+export function detectLanguage(message: string, fallbackLang: keyof typeof knowledgeBase = 'en'): keyof typeof knowledgeBase {
+  const msg = message.toLowerCase().trim();
+
+  // 1. Korean (Hangul)
+  if (/[\uac00-\ud7af\u1100-\u11ff]/.test(msg)) {
+    return 'ko';
   }
-  
-  if (lowerMessage.includes('about') || lowerMessage.includes('who') || lowerMessage.includes('ano') || 
-      lowerMessage.includes('sino') || lowerMessage.includes('qué') || lowerMessage.includes('qui') || 
-      lowerMessage.includes('wer') || lowerMessage.includes('关于') || lowerMessage.includes('について') || 
-      lowerMessage.includes('에 대해')) {
-    return langData.about[Math.floor(Math.random() * langData.about.length)];
+
+  // 2. Japanese (Hiragana / Katakana)
+  if (/[\u3040-\u309f\u30a0-\u30ff]/.test(msg)) {
+    return 'ja';
   }
-  
-  if (lowerMessage.includes('skill') || lowerMessage.includes('technology') || lowerMessage.includes('tech') || 
-      lowerMessage.includes('kasanayan') || lowerMessage.includes('habilidad') || lowerMessage.includes('compétence') || 
-      lowerMessage.includes('fähigkeit') || lowerMessage.includes('技能') || lowerMessage.includes('スキル') || 
-      lowerMessage.includes('기술')) {
-    return langData.skills[Math.floor(Math.random() * langData.skills.length)];
+
+  // 3. Chinese (Hanzi without Kana)
+  if (/[\u4e00-\u9fff]/.test(msg)) {
+    return 'zh';
   }
-  
-  if (lowerMessage.includes('project') || lowerMessage.includes('work') || lowerMessage.includes('portfolio') || 
-      lowerMessage.includes('proyekto') || lowerMessage.includes('proyecto') || lowerMessage.includes('projet') || 
-      lowerMessage.includes('projekt') || lowerMessage.includes('项目') || lowerMessage.includes('プロジェクト') || 
-      lowerMessage.includes('프로젝트')) {
-    return "I've worked on several exciting projects! My main ones include the In-Off Campus Activity Scheduling System, E-Bayo e-commerce platform, AI-Powered Student Assistant Chatbot, Student Grade Calculator, and Bert and Jack Adventure game. Which specific project interests you most?";
+
+  // For Latin-script languages, calculate match scores to prevent short word collisions
+  const scores: Record<string, number> = { tl: 0, es: 0, fr: 0, de: 0 };
+
+  const tlMatches = msg.match(/\b(kamusta|kumusta|ano|sino|paano|bakit|kailan|saan|nasaan|mga|proyekto|karanasan|kasanayan|aral|nagtapos|trabaho|pwede|makontak|taga|mayroon|meron|po|opo|ba|ka|ko|mo|ako|ikaw|siya|kami|tayo|sila|ito|iyon|yan|yun|nang|ng|sa|ang|para|dahil|kahit|tutulungan|magkano|matutulungan|gawa|gawin|tungkol|aling|alin)\b/gi);
+  if (tlMatches) scores.tl = tlMatches.length;
+
+  const esMatches = msg.match(/\b(hola|cómo|como|qué|quién|quien|dónde|donde|cuándo|cuando|por qué|porque|proyectos|proyecto|habilidades|habilidad|educación|educacion|experiencia|contacto|trabajo|disponible|asistente|virtual|eres|estudió|estudiaste|estudios|tienes|puedes|gracias|buenos|buenas|titulación|titulacion|universidad|currículum|curriculum|cuáles|cuales|cuál|cual|sobre|tus|mis|hacer|hecho)\b/gi);
+  if (esMatches) scores.es = esMatches.length;
+
+  const frMatches = msg.match(/\b(bonjour|salut|comment|quels|quelles|quel|quelle|projets|projet|competence|competences|compétence|compétences|formation|experience|expérience|disponible|travail|vous|qui|pouvez|merci|etudie|etudié|étudié|etudes|études|diplome|diplomes|diplôme|diplômes|coordonnees|coordonnées|cv|parle|parlez|moi|pourquoi|quand|avec|votre|vos|mon|mes|faire|fait)\b/gi);
+  if (frMatches) scores.fr = frMatches.length;
+
+  const deMatches = msg.match(/\b(hallo|guten|morgen|tag|abend|wie|was|wer|wo|warum|wann|projekte|projekt|fähigkeiten|faehigkeiten|ausbildung|erfahrung|kontakt|arbeit|verfügbar|verfuegbar|bist|kannst|danke|universität|universitaet|studium|lebenslauf|deine|dein|ihre|ihr|fuer|für|ueber|über|sind|haben|hast|machst|bitte)\b/gi);
+  if (deMatches) scores.de = deMatches.length;
+
+  let bestLang = '';
+  let maxScore = 0;
+  for (const [lang, score] of Object.entries(scores)) {
+    if (score > maxScore) {
+      maxScore = score;
+      bestLang = lang;
+    }
   }
-  
-  if (lowerMessage.includes('scheduling') || lowerMessage.includes('activity') || lowerMessage.includes('campus') || 
-      lowerMessage.includes('iskedyul') || lowerMessage.includes('horario') || lowerMessage.includes('planning') || 
-      lowerMessage.includes('planung') || lowerMessage.includes('调度') || lowerMessage.includes('スケジュール') || 
-      lowerMessage.includes('스케줄')) {
-    return langData.projects.scheduling[0];
+
+  if (maxScore > 0 && bestLang in knowledgeBase) {
+    return bestLang as keyof typeof knowledgeBase;
   }
-  
-  if (lowerMessage.includes('ecommerce') || lowerMessage.includes('e-bayo') || lowerMessage.includes('shop') || 
-      lowerMessage.includes('tindahan') || lowerMessage.includes('comercio') || lowerMessage.includes('commerce') || 
-      lowerMessage.includes('e-commerce') || lowerMessage.includes('电子商务') || lowerMessage.includes('eコマース') || 
-      lowerMessage.includes('전자상거래')) {
-    return langData.projects.ecommerce[0];
+
+  return fallbackLang in knowledgeBase ? fallbackLang : 'en';
+}
+
+// Quick response function that matches intent and returns the response in the user's language
+export function getQuickResponse(message: string, preferredLang: keyof typeof knowledgeBase = 'en'): string | null {
+  const lang = detectLanguage(message, preferredLang);
+  const lowerMessage = message.toLowerCase().trim();
+  const data = (knowledgeBase[lang] || knowledgeBase.en) as any;
+
+  // 1. General AI / Technical Guide Questions (check specific topics before broad keywords)
+  if (lowerMessage.includes('2,400') || (lowerMessage.includes('requests per minute') && lowerMessage.includes('3.5 days'))) {
+    return `Here is the **step-by-step calculation**:
+
+1. **Requests per hour:**
+   \`2,400 requests/min × 60 minutes = 144,000 requests/hour\`
+2. **Requests per day (24 hours):**
+   \`144,000 requests/hour × 24 hours = 3,456,000 requests/day\`
+3. **Requests over 3.5 days:**
+   \`3,456,000 requests/day × 3.5 days = 12,096,000 requests\`
+
+✅ **Final Answer:** The server will handle **12,096,000 API requests** (12.096 million requests) over 3.5 days.`;
   }
-  
-  if (lowerMessage.includes('chatbot') || lowerMessage.includes('ai') || lowerMessage.includes('assistant') || 
-      lowerMessage.includes('chat') || lowerMessage.includes('asistente') || lowerMessage.includes('assistant') || 
-      lowerMessage.includes('アシスタント') || lowerMessage.includes('어시스턴트')) {
-    return langData.projects.chatbot[0];
+
+  if (lowerMessage.includes('sql vs nosql') || (lowerMessage.includes('sql') && lowerMessage.includes('nosql'))) {
+    return `### **SQL vs. NoSQL Databases**
+
+- **SQL (Relational — e.g., MySQL, PostgreSQL):**
+  - **Structure:** Predefined schemas with tables, rows, and strict foreign-key relationships.
+  - **ACID Compliance:** Strong transactional integrity (ideal for banking, ERP, e-governance, and inventory).
+  - **Scaling:** Vertically scalable (larger server hardware) with powerful complex \`JOIN\` queries.
+- **NoSQL (Non-Relational — e.g., MongoDB, Redis):**
+  - **Structure:** Flexible JSON documents, key-value pairs, or wide-column stores.
+  - **Speed & Scale:** Horizontally scalable across distributed clusters; ultra-fast for unstructured data and real-time caching.
+
+**When to choose each:**
+- Choose **SQL (MySQL/PostgreSQL)** when data relationships and strict consistency matter (like my **Santo Niño Building Permit System** and **Employee Attendance System**).
+- Choose **NoSQL (MongoDB/Redis)** when you need rapid schema iteration, real-time session caching (like the **Redis** session layer in this Digital Twin portfolio), or high-velocity document storage.`;
   }
-  
-  if (lowerMessage.includes('game') || lowerMessage.includes('bert') || lowerMessage.includes('adventure') || 
-      lowerMessage.includes('laro') || lowerMessage.includes('juego') || lowerMessage.includes('jeu') || 
-      lowerMessage.includes('spiel') || lowerMessage.includes('游戏') || lowerMessage.includes('ゲーム') || 
-      lowerMessage.includes('게임')) {
-    return langData.projects.game[0];
+
+  if (lowerMessage.includes('cors')) {
+    return `### **Why CORS Errors Happen & 3 Ways to Fix Them**
+
+**Why it happens:** **CORS (Cross-Origin Resource Sharing)** is a browser security feature that blocks frontend JavaScript on one origin (e.g., \`http://localhost:3000\`) from reading responses from a different origin (e.g., \`https://api.example.com\`) unless the server explicitly allows it via HTTP headers.
+
+**3 Effective Ways to Resolve CORS:**
+1. **Configure Server Response Headers (Recommended):**
+   Add \`Access-Control-Allow-Origin\` on your backend API:
+\`\`\`javascript
+res.setHeader('Access-Control-Allow-Origin', 'https://yourdomain.com');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+\`\`\`
+2. **Use Next.js API Route Proxies / Rewrites:**
+   Route requests through your own Next.js server (\`/api/...\`) or configure \`rewrites\` in \`next.config.ts\` so the browser makes same-origin calls.
+3. **Use Middleware in Express / Laravel:**
+   Enable the official \`cors\` middleware in Node/Express (\`app.use(cors())\`) or configure \`config/cors.php\` in Laravel.`;
   }
-  
-  if (lowerMessage.includes('experience') || lowerMessage.includes('background') || lowerMessage.includes('education') || 
-      lowerMessage.includes('karanasan') || lowerMessage.includes('experiencia') || lowerMessage.includes('expérience') || 
-      lowerMessage.includes('erfahrung') || lowerMessage.includes('经验') || lowerMessage.includes('経験') || 
-      lowerMessage.includes('경험')) {
-    return langData.experience[Math.floor(Math.random() * langData.experience.length)];
+
+  if (lowerMessage.includes('interview tip') || (lowerMessage.includes('interview') && lowerMessage.includes('developer'))) {
+    return `### **Top 5 Tips for Acing a Full-Stack Developer Interview**
+
+1. **Master the Fundamentals First:** Be ready to explain core concepts clearly — closures, \`async/await\`, event loop, REST APIs, SQL indexing, and component lifecycle.
+2. **Showcase Real, Deployed Projects:** Walk interviewers through live systems you've built end-to-end (architecture decisions, database schema, and how you solved bottlenecks).
+3. **Think Out Loud During Coding Challenges:** Clarify edge cases, state time/space complexity (Big-O), and write modular, readable code before optimizing.
+4. **Demonstrate Full-Stack Debugging Skills:** Share concrete stories of how you diagnosed production bugs using DevTools, server logs, or query profiling.
+5. **Ask Insightful Engineering Questions:** Ask about the team's CI/CD pipeline, code review culture, and upcoming architectural challenges.`;
   }
-  
-  if (lowerMessage.includes('contact') || lowerMessage.includes('email') || lowerMessage.includes('reach') || 
-      lowerMessage.includes('kontak') || lowerMessage.includes('contacto') || lowerMessage.includes('contact') || 
-      lowerMessage.includes('kontakt') || lowerMessage.includes('联系') || lowerMessage.includes('連絡') || 
-      lowerMessage.includes('연락')) {
-    return langData.contact[Math.floor(Math.random() * langData.contact.length)];
+
+  if (lowerMessage.includes('quantum computing') || lowerMessage.includes('qubit')) {
+    return `### **Quantum Computing Explained Simply**
+
+- **Classical Computers (Bits):** Everything is processed as switches that are either **0** or **1** at any given instant.
+- **Qubits (Quantum Bits):** Using subatomic particles, a qubit doesn't have to be just 0 or 1 — it can exist in a fluid combination of both.
+- **Superposition:** Think of a spinning coin. While flat on a table it's heads (1) or tails (0), while spinning in the air it's in a *superposition* of both until measured. This lets quantum computers evaluate vast possibilities simultaneously.
+- **Entanglement:** Two qubits become linked so the state of one instantaneously determines the state of the other, exponentially multiplying computing power for cryptography, molecular simulation, and optimization.`;
   }
-  
-  if (lowerMessage.includes('available') || lowerMessage.includes('hire') || lowerMessage.includes('job') || 
-      lowerMessage.includes('opportunity') || lowerMessage.includes('available') || lowerMessage.includes('disponible') || 
-      lowerMessage.includes('verfügbar') || lowerMessage.includes('可用') || lowerMessage.includes('利用可能') || 
-      lowerMessage.includes('이용 가능')) {
-    return langData.availability[Math.floor(Math.random() * langData.availability.length)];
+
+  if (lowerMessage.includes('poem') && (lowerMessage.includes('bug') || lowerMessage.includes('coding') || lowerMessage.includes('2:00'))) {
+    return `### **The 2:00 AM Bug Hunt** ☕🐛
+
+*The monitor glows in the quiet of night,*
+*Two hundred lines look completely alright.*
+*The coffee is cold, the terminal gleams,*
+*A missing semicolon haunts all my dreams.*
+
+*I console-logged \`here\`, I console-logged \`why\`,*
+*I watched seventeen stack traces flutter on by.*
+*Then deep in the state, on line forty-two—*
+*An \`=\` where \`===\` was meant to be true!*
+
+*One keystroke of glory, the tests turn to green,*
+*The sweetest deployment that production has seen!* 🚀`;
   }
-  
-  if (lowerMessage.includes('graduat') || lowerMessage.includes('year') || lowerMessage.includes('study') || 
-      lowerMessage.includes('gradweyt') || lowerMessage.includes('año') || lowerMessage.includes('année') || 
-      lowerMessage.includes('jahr') || lowerMessage.includes('毕业') || lowerMessage.includes('卒業') || 
-      lowerMessage.includes('졸업')) {
-    return "I'm in my 4th year of Information Technology at St. Paul University Philippines, expecting to graduate in 2025. It's been an amazing journey learning everything from web development to AI and even game programming!";
+
+  if (lowerMessage.includes('web app ideas') || lowerMessage.includes('project ideas')) {
+    return `### **3 Standout Web Application Ideas for a Portfolio**
+
+1. **AI-Powered Codebase & Architecture Visualizer**
+   - **Concept:** Upload a GitHub repo and generate an interactive 3D/2D dependency graph with AI security & performance insights.
+   - **Tech Stack:** Next.js, TypeScript, Three.js / React Flow, Tailwind CSS, Groq LLM API.
+2. **Real-Time Collaborative Incident & Disaster Response Map**
+   - **Concept:** Municipal e-governance platform with live geospatial pins, resource dispatch routing, and offline-first PWA sync.
+   - **Tech Stack:** React, Node.js, WebSockets, PostgreSQL + PostGIS, Redis.
+3. **Interactive 3D Product Configurator & Spatial Showroom**
+   - **Concept:** Allow users to customize materials, lighting, and physics in real time right in the browser (inspired by my **SIP 3D** and **3D Room** projects!).
+   - **Tech Stack:** HTML5 Canvas, CSS 3D Transforms / Three.js, Next.js.`;
   }
-  
+
+  if (lowerMessage.includes('ssr') && lowerMessage.includes('csr')) {
+    return `### **SSR (Server-Side Rendering) vs. CSR (Client-Side Rendering)**
+
+- **SSR (Server-Side Rendering — e.g., Next.js App Router):**
+  - The server generates the full HTML for the page on each request (or at build time with SSG) and sends it ready-to-display to the browser.
+  - **Pros:** Instant First Contentful Paint (FCP), superior SEO, and great performance on low-powered devices.
+- **CSR (Client-Side Rendering — e.g., traditional SPA):**
+  - The server sends a minimal HTML shell plus a JavaScript bundle; the browser downloads and executes JS to render the UI.
+  - **Pros:** Rich client-side interactivity and smooth transitions after initial load, though slower initial SEO/load without pre-rendering.`;
+  }
+
+  if (lowerMessage.includes('large language model') || lowerMessage.includes('how do llms work')) {
+    return `### **How Large Language Models (LLMs) Work**
+
+1. **Tokenization:** Text is broken down into numerical chunks called *tokens* (words or sub-words).
+2. **Transformer Architecture & Self-Attention:** Using the *Attention Mechanism*, the model weighs how every word in a sentence relates to every other word in parallel, capturing deep context and nuance.
+3. **Pre-Training at Scale:** The neural network trains on billions of documents to predict the most probable next token, learning grammar, coding languages, reasoning patterns, and world facts.
+4. **Fine-Tuning & RLHF:** Through *Reinforcement Learning from Human Feedback*, the model is aligned to follow instructions safely, accurately, and conversationally.`;
+  }
+
+  // 2. Virtual Assistant / VA / Assistant roles
+  if (lowerMessage.includes('virtual assistant') || /\bva\b/i.test(lowerMessage) || lowerMessage.includes('assistant') || 
+      lowerMessage.includes('asistente') || lowerMessage.includes('virtual') || lowerMessage.includes('technical support') || 
+      lowerMessage.includes('birtual') || lowerMessage.includes('バーチャル') || 
+      lowerMessage.includes('가상 비서') || lowerMessage.includes('虚拟助手')) {
+    return data.va || knowledgeBase.en.va;
+  }
+
+  // 3. Greetings and polite starters (supports typos like hellow, helo, etc.)
+  if ((/\b(hellow|hello|helo|hi|hey|howdy|sup|wassup|yo|kamusta|kumusta|hola|bonjour|hallo)\b/i.test(lowerMessage) && lowerMessage.split(/\s+/).length <= 6) ||
+      /\bgood\s*(morning|afternoon|evening|day)\b/i.test(lowerMessage) ||
+      /(how\s*(are|r)\s*(you|u)|how's\s*it\s*going|what's\s*up)/i.test(lowerMessage) ||
+      /(cómo\s*estás|como\s*estas|comment\s*allez-vous|wie\s*geht\s*es|你好|こんにちは|안녕하세요)/i.test(lowerMessage)) {
+    if (/(how\s*(are|r)\s*(you|u)|how's\s*it\s*going|cómo\s*estás|wie\s*geht|comment\s*allez)/i.test(lowerMessage)) {
+      if (lang === 'tl') return "Mabuti naman ako, salamat sa pagtanong! 😊 Ako ang AI Digital Twin ni Robert Simeon Jr. Handa akong sumagot tungkol sa kanyang BSIT degree sa SPUP, industry experience, at 6 na software projects. Paano kita matutulungan?";
+      if (lang === 'es') return "¡Hola! Estoy muy bien, ¡gracias por preguntar! 😊 Soy el gemelo digital de Robert Simeon Jr. Puedo contarte sobre su educación en SPUP, su experiencia en DOÑA ALEJANDRA INC y sus proyectos de software. ¿En qué te puedo ayudar hoy?";
+      if (lang === 'fr') return "Bonjour ! Je vais très bien, merci de demander ! 😊 Je suis le jumeau numérique de Robert Simeon Jr. Je peux vous renseigner sur sa formation, ses projets et ses compétences. Que souhaitez-vous savoir ?";
+      if (lang === 'de') return "Hallo! Mir geht es blendend, danke der Nachfrage! 😊 Ich bin Roberts digitaler Zwilling. Wie kann ich Ihnen heute behilflich sein?";
+      if (lang === 'zh') return "您好！我很好，谢谢关心！😊 我是Robert Simeon Jr.的AI数字分身，随时可以向您介绍他的学历背景、认证资格与项目经历。请问有什么我可以协助您的？";
+      if (lang === 'ja') return "こんにちは！元気です、お尋ねいただきありがとうございます！😊 Robert Simeon Jr.のAIデジタルツインです。学歴、資格、実務プロジェクトについて何でもご質問ください。";
+      if (lang === 'ko') return "안녕하세요! 저는 잘 지내고 있습니다, 물어봐 주셔서 감사합니다! 😊 Robert Simeon Jr.의 AI 디지털 트윈입니다. 학력, 자격증, 프로젝트에 대해 궁금한 점을 편하게 물어보세요.";
+      return "Hello! I'm doing great, thank you for asking! 😊 I'm Robert Simeon Jr.'s AI Digital Twin. I can answer any questions about Robert's education at SPUP (BSIT June 2026), industry experience at Employability Advantage and Doña Alejandra, verified Certiport credentials, or his software projects. How can I help you today?";
+    }
+    return data.greeting[Math.floor(Math.random() * data.greeting.length)];
+  }
+
+  // 4. Polite acknowledgments (thanks, cool, ok)
+  if (/(thank\s*you|thanks|salamat|salamat\s*po|gracias|merci|danke|谢谢|ありがとう|감사)\b/i.test(lowerMessage) && lowerMessage.length < 35) {
+    if (lang === 'tl') return "Walang anuman! Sabihin mo lang kung may iba ka pang nais malaman tungkol sa mga proyekto o resume ni Robert.";
+    if (lang === 'es') return "¡De nada! Si tienes alguna otra pregunta sobre los proyectos, habilidades o currículum de Robert, aquí estaré.";
+    if (lang === 'fr') return "Je vous en prie ! N'hésitez pas à poser d'autres questions sur les projets ou le parcours de Robert.";
+    if (lang === 'de') return "Sehr gerne! Lassen Sie mich wissen, wenn Sie weitere Fragen zu Roberts Projekten oder Fähigkeiten haben.";
+    if (lang === 'zh') return "不客气！如果您对Robert的项目、技能或简历还有其他疑问，欢迎随时提问！";
+    if (lang === 'ja') return "どういたしまして！Robertのプロジェクトやスキルについて、他に知りたいことがあればお気軽にどうぞ。";
+    if (lang === 'ko') return "천만에요! Robert의 프로젝트나 이력에 대해 더 궁금한 점이 있으시면 언제든 편하게 물어보세요.";
+    return "You're very welcome! Feel free to ask anything else about Robert's projects, skills, education, or resume. Let me know how I can help!";
+  }
+
+  // 5. Resume / CV download
+  if (lowerMessage.includes('resume') || lowerMessage.includes('cv') || lowerMessage.includes('curriculum') || 
+      lowerMessage.includes('pdf') || lowerMessage.includes('biodata') || lowerMessage.includes('lebenslauf') || 
+      lowerMessage.includes('简历') || lowerMessage.includes('レジュメ') || lowerMessage.includes('이력서')) {
+    return data.resume || knowledgeBase.en.resume;
+  }
+
+  // 6. Specific High School STEM Honors vs General Education
+  if (/\bstem\b/i.test(lowerMessage) || lowerMessage.includes('high school') || lowerMessage.includes('academic honors')) {
+    if (lang === 'en') {
+      return `### **Senior High School — STEM with Academic Honors** 🎓\n\nI completed my **Senior High School – STEM (Science, Technology, Engineering, and Mathematics)** track at **Santo Niño National High School** (2021 – 2022) and **Graduated with Academic Honors**.\n\nThis rigorous STEM curriculum built my strong quantitative, analytical, and problem-solving foundation before pursuing my **Bachelor of Science in Information Technology (BSIT)** at **St. Paul University Philippines (SPUP)** (Graduated June 2026).`;
+    }
+    return data.education ? data.education[0] : knowledgeBase.en.education[0];
+  }
+
+  // 7. Education / College / Degree / SPUP
+  if (lowerMessage.includes('education') || lowerMessage.includes('degree') || lowerMessage.includes('school') || 
+      lowerMessage.includes('college') || lowerMessage.includes('university') || lowerMessage.includes('spup') || 
+      lowerMessage.includes('st. paul') || lowerMessage.includes('edukasyon') || 
+      lowerMessage.includes('educación') || lowerMessage.includes('educacion') || lowerMessage.includes('estudio') || 
+      lowerMessage.includes('formation') || lowerMessage.includes('etude') || lowerMessage.includes('étude') || 
+      lowerMessage.includes('diplom') || lowerMessage.includes('ausbildung') || lowerMessage.includes('graduat') || 
+      lowerMessage.includes('study') || lowerMessage.includes('学历') || lowerMessage.includes('教育') || 
+      lowerMessage.includes('学歴') || lowerMessage.includes('학력') || lowerMessage.includes('졸업')) {
+    return data.education ? data.education[0] : knowledgeBase.en.education[0];
+  }
+
+  // 8. Certifications / Licenses / Certiport / JPCS
+  if (lowerMessage.includes('certificat') || lowerMessage.includes('license') || lowerMessage.includes('certiport') || 
+      lowerMessage.includes('pearson') || lowerMessage.includes('jpcs') || lowerMessage.includes('credential') || 
+      lowerMessage.includes('lisensya') || lowerMessage.includes('sertipiko') || lowerMessage.includes('certificación') || 
+      lowerMessage.includes('zertifikat') || lowerMessage.includes('资格') || lowerMessage.includes('认证') || 
+      lowerMessage.includes('資格') || lowerMessage.includes('자격증')) {
+    return data.certifications ? data.certifications[0] : knowledgeBase.en.certifications[0];
+  }
+
+  // 9. Specialized Skill Queries (Frontend/3D, Backend/DB, Agentic AI)
+  if (lowerMessage.includes('frontend') || lowerMessage.includes('3d web') || lowerMessage.includes('three.js')) {
+    return `### **Frontend & 3D Web Graphics Capabilities** ⚡\n\n- **Modern Frameworks:** Next.js (App Router, SSR/SSG), React 19, TypeScript, and Tailwind CSS.\n- **3D & Spatial Web:** Pure CSS 3D Transforms (used in my **[3D Room Isometric Sanctuary](https://jacksimeon1.github.io/3D-Room/)**), Three.js WebGL shaders, and HTML5 Canvas particle & cylinder physics (used in **[SIP 3D](https://jacksimeon1.github.io/3d-can-animation/)**).\n- **UI/UX Engineering:** Responsive glassmorphic interfaces, dark/light theme architecture, micro-interactions, and WCAG accessibility.`;
+  }
+  if (lowerMessage.includes('backend') || (lowerMessage.includes('database') && lowerMessage.includes('robert'))) {
+    return `### **Backend, APIs & Database Architecture** 🗄️\n\n- **Backend Frameworks:** Node.js, Express.js, PHP, and **Laravel** (used in the Campus Activity Scheduling System and Municipal Building Permit System).\n- **APIs & Auth:** RESTful API design, Next.js Server Actions, Edge Streaming (SSE), and **NextAuth.js** (Google OAuth & Guest sessions).\n- **Databases & Caching:** **MySQL**, **PostgreSQL**, **MongoDB**, and **Redis** (used for real-time chat session persistence and analytics tracking).`;
+  }
+  if (lowerMessage.includes('agentic ai') || lowerMessage.includes('groq') || lowerMessage.includes('heuristics')) {
+    return `### **Agentic AI, LLMs & Heuristic Systems** 🤖\n\n- **AI Digital Twin Architecture:** Engineered this real-time streaming AI Digital Twin using **Groq Cloud LLM inference**, custom knowledge-base retrieval, and **Web Speech APIs** (voice recognition + speech synthesis across 8 languages).\n- **Heuristic Synthesis:** Built the **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)**, an academic research title synthesis engine with heuristic validation across IT, CS, and IS domains.\n- **Industry Experience:** Completed a 10-week intensive engagement as a **Full-Stack & Agentic AI Developer** with **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)**.`;
+  }
+
+  // 10. Specific Projects
+  if (lowerMessage.includes('sip') || lowerMessage.includes('3d can') || lowerMessage.includes('beverage')) {
+    return data.projects?.sip3d || knowledgeBase.en.projects.sip3d;
+  }
+  if (lowerMessage.includes('3d room') || lowerMessage.includes('isometric') || lowerMessage.includes('sanctuary') || 
+      lowerMessage.includes('kuwarto') || lowerMessage.includes('habitación') || lowerMessage.includes('部屋')) {
+    return data.projects?.room3d || knowledgeBase.en.projects.room3d;
+  }
+  if (lowerMessage.includes('capstone') || lowerMessage.includes('title generator') || lowerMessage.includes('thesis') || 
+      lowerMessage.includes('generator')) {
+    return data.projects?.capstoneTitleAi || knowledgeBase.en.projects.capstoneTitleAi;
+  }
+  if (lowerMessage.includes('scheduling') || lowerMessage.includes('activity scheduling') || lowerMessage.includes('campus scheduling') || 
+      lowerMessage.includes('iskedyul')) {
+    return data.projects?.scheduling || knowledgeBase.en.projects.scheduling;
+  }
+  if (lowerMessage.includes('building permit') || lowerMessage.includes('permit') || 
+      (lowerMessage.includes('lgu') && !lowerMessage.includes('school'))) {
+    return data.projects?.permit || knowledgeBase.en.projects.permit;
+  }
+  if (lowerMessage.includes('attendance') || lowerMessage.includes('tracking system') || lowerMessage.includes('dtr')) {
+    return data.projects?.attendance || knowledgeBase.en.projects.attendance;
+  }
+
+  // 11. Experience / OJT / Intern
+  if (lowerMessage.includes('experience') || lowerMessage.includes('ojt') || lowerMessage.includes('intern') || 
+      lowerMessage.includes('ausbiz') || lowerMessage.includes('dona alejandra') || lowerMessage.includes('doña') ||
+      lowerMessage.includes('work experience') || lowerMessage.includes('karanasan') || 
+      lowerMessage.includes('experiencia') || lowerMessage.includes('expérience') || lowerMessage.includes('erfahrung') || 
+      lowerMessage.includes('经历') || lowerMessage.includes('经验') || lowerMessage.includes('経験') || 
+      lowerMessage.includes('경력')) {
+    return data.experience ? data.experience[0] : knowledgeBase.en.experience[0];
+  }
+
+  // 12. Projects Overview
+  if (lowerMessage.includes('project') || lowerMessage.includes('portfolio') || lowerMessage.includes('proyekto') || 
+      lowerMessage.includes('proyecto') || lowerMessage.includes('projet') || lowerMessage.includes('projekt') || 
+      lowerMessage.includes('项目') || lowerMessage.includes('プロジェクト') || lowerMessage.includes('프로젝트')) {
+    return data.projects?.overview || knowledgeBase.en.projects.overview;
+  }
+
+  // 13. Skills & Tech Stack
+  if (lowerMessage.includes('skill') || lowerMessage.includes('technology') || lowerMessage.includes('tech stack') || 
+      lowerMessage.includes('stack') || lowerMessage.includes('kasanayan') || lowerMessage.includes('languages') || 
+      lowerMessage.includes('framework') || lowerMessage.includes('habilidad') || lowerMessage.includes('compétence') || 
+      lowerMessage.includes('fähigkeit') || lowerMessage.includes('技能') || lowerMessage.includes('技术') || 
+      lowerMessage.includes('スキル') || lowerMessage.includes('기술')) {
+    return data.skills ? data.skills[0] : knowledgeBase.en.skills[0];
+  }
+
+  // 14. Availability / Onboarding / Remote or Hybrid
+  if (lowerMessage.includes('availab') || lowerMessage.includes('onboarding') || lowerMessage.includes('remote or hybrid') || 
+      lowerMessage.includes('full-time') || lowerMessage.includes('freelance')) {
+    if (lowerMessage.includes('contact') || lowerMessage.includes('hire')) {
+      return `${data.contact ? data.contact[0] : knowledgeBase.en.contact[0]}\n\n${data.availability ? data.availability[0] : knowledgeBase.en.availability[0]}`;
+    }
+    return data.availability ? data.availability[0] : knowledgeBase.en.availability[0];
+  }
+
+  // 15. Contact / Hire details
+  if (lowerMessage.includes('contact') || lowerMessage.includes('hire') || lowerMessage.includes('email') || 
+      lowerMessage.includes('phone') || lowerMessage.includes('number') || lowerMessage.includes('reach') || 
+      lowerMessage.includes('kontak') || lowerMessage.includes('contacto') || lowerMessage.includes('kontakt') || 
+      lowerMessage.includes('联系') || lowerMessage.includes('連絡') || lowerMessage.includes('연락처')) {
+    return data.contact ? data.contact[0] : knowledgeBase.en.contact[0];
+  }
+
+  // 16. About / Bio / Who are you / Name
+  if (lowerMessage.includes('about') || lowerMessage.includes('who are you') || lowerMessage.includes('who is robert') || 
+      lowerMessage.includes('sino ka') || lowerMessage.includes('tungkol') || lowerMessage.includes('quién eres') || 
+      lowerMessage.includes('qui es-tu') || lowerMessage.includes('wer bist du') || lowerMessage.includes('你是谁') || 
+      lowerMessage.includes('自己紹介') || lowerMessage.includes('당신은 누구') ||
+      /(what('?s|\s+is)\s+(your|ur)\s+name|your\s+name|whhats?\s+(your|ur)\s+name|ano(ng)?\s+pangalan|pangalan\s+mo|cómo\s+te\s+llamas|como\s+te\s+llamas|comment\s+t'appelles-tu|wie\s+heißt\s+du|你叫什么|お名前|이름)/i.test(lowerMessage)) {
+    if (/(name|pangalan|llamas|appelles|heißt|名字|名前|이름)/i.test(lowerMessage)) {
+      if (lang === 'tl') return "Ako ang **AI Digital Twin ni Robert Simeon Jr.**! Isang interactive AI assistant na kumakatawan kay Robert Simeon Jr., isang Full-Stack at Agentic AI Developer mula sa Cagayan, Pilipinas (BSIT graduate mula sa SPUP, Hunyo 2026). Maaari mo akong tanungin tungkol sa kanyang mga proyekto, kasanayan, edukasyon, o kahit anong AI at coding questions!";
+      if (lang === 'es') return "¡Soy el **Gemelo Digital de IA de Robert Simeon Jr.**! Un asistente de IA interactivo que representa a Robert Simeon Jr., desarrollador Full-Stack y de IA agéntica de Filipinas. ¡Pregúntame lo que quieras sobre su trayectoria o proyectos!";
+      return "I am **Robert Simeon Jr.'s AI Digital Twin**! I'm an interactive AI assistant representing Robert Simeon Jr., a Full-Stack and Agentic AI Developer from Cagayan, Philippines (BSIT graduate from St. Paul University Philippines, June 2026). Feel free to ask me about Robert's education, projects, skills, certifications, or any coding and general AI questions!";
+    }
+    return data.about ? data.about[0] : knowledgeBase.en.about[0];
+  }
+
+  // 17. Basic Math & Calculation questions
+  const mathMatch = lowerMessage.match(/(?:what\s+is\s+|calculate\s+|solve\s+)?([0-9\.\s\+\-\*\/\^\(\)]+)/i);
+  if (mathMatch && /[\+\-\*\/]/.test(mathMatch[1]) && !/[a-z]{3,}/i.test(lowerMessage)) {
+    try {
+      const sanitized = mathMatch[1].replace(/[^0-9\+\-\*\/\.\(\)\s]/g, '');
+      const fn = new Function(`return (${sanitized})`);
+      const result = fn();
+      if (typeof result === 'number' && !isNaN(result) && isFinite(result)) {
+        return `The answer to **${sanitized.trim()}** is **${result}**. Let me know if you have any other math or coding questions!`;
+      }
+    } catch {}
+  }
+
+  // 18. Jokes & Fun
+  if (/\b(joke|funny|make me laugh|tawa|humor|pun)\b/i.test(lowerMessage)) {
+    const jokes = [
+      "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😄",
+      "There are 10 types of people in the world: those who understand binary, and those who don't. 💻",
+      "Why did the JavaScript developer wear glasses? Because they didn't C#! 🤓",
+      "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?' 🍻",
+      "Why do Java programmers wear glasses? Because they don't see sharp! ⚡",
+    ];
+    return jokes[Math.floor(Math.random() * jokes.length)];
+  }
+
+  // 19. General Coding & Programming Help
+  if (/\b(code|coding|python|javascript|typescript|react|html|css|php|sql|api|function|bug|loop|array|async|promise)\b/i.test(lowerMessage)) {
+    if (lowerMessage.includes('python')) {
+      return `Here is a clean **Python** example:\n\`\`\`python\n# Python Hello World & Function Example\ndef greet(name: str) -> str:\n    return f"Hello, {name}! Welcome to Python development."\n\nif __name__ == "__main__":\n    print(greet("World"))\n\`\`\`\nPython is renowned for its clean syntax and power in AI, automation, and backend systems. What specific Python task would you like to build?`;
+    }
+    if (lowerMessage.includes('async') || lowerMessage.includes('promise')) {
+      return `### **Async/Await & Promises in JavaScript**\n\n**Promises** represent the eventual completion (or failure) of an asynchronous operation, and **\`async/await\`** lets you write asynchronous code that reads cleanly like synchronous code:\n\`\`\`javascript\nasync function fetchUserProfile(userId) {\n  try {\n    const response = await fetch(\`https://api.example.com/users/\${userId}\`);\n    if (!response.ok) throw new Error(\`HTTP error: \${response.status}\`);\n    const user = await response.json();\n    return user;\n  } catch (error) {\n    console.error('Failed to fetch user:', error);\n  }\n}\n\`\`\`\n💡 **Pro Tip:** Use \`await Promise.all([fetchA(), fetchB()])\` when running multiple independent requests in parallel for maximum speed!`;
+    }
+    return `I can help with coding in **JavaScript, TypeScript, Python, PHP, React, Next.js, and SQL**! Share the specific topic, code snippet, or error message you'd like to solve and I'll walk you through it.`;
+  }
+
   return null;
+}
+
+// Fallback generator that answers gracefully in the user's language
+export function generateSmartResponse(message: string, preferredLang: keyof typeof knowledgeBase = 'en'): string {
+  const lang = detectLanguage(message, preferredLang);
+  const quick = getQuickResponse(message, lang);
+  if (quick) return quick;
+
+  // If the question is conversational or general
+  if (message.trim().endsWith('?') || message.split(' ').length > 2) {
+    return `That's an interesting question! As Robert Simeon Jr.'s AI Digital Twin, I can answer questions about anything — software development, mathematics, computer science, project ideas, or Robert's verified credentials, education (SPUP BSIT June 2026), and full-stack projects (3D Room, SIP 3D, AI Title Generator, Building Permit System).\n\nCould you elaborate a bit more on what you'd like to explore, or click **Guide Questions** to see popular topics?`;
+  }
+
+  const data = (knowledgeBase[lang] || knowledgeBase.en) as any;
+  return data.fallback || knowledgeBase.en.fallback;
 }

@@ -14,11 +14,11 @@ export default function MatrixRain() {
   const [drops, setDrops] = useState<MatrixDrop[]>([]);
 
   useEffect(() => {
-    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    const matrixChars = '01{}<>/~+=*#λπ';
     const generateDrops = () => {
       const newDrops: MatrixDrop[] = [];
-      for (let i = 0; i < 15; i++) {
-        const charCount = Math.floor(Math.random() * 15) + 10;
+      for (let i = 0; i < 10; i++) {
+        const charCount = Math.floor(Math.random() * 8) + 6;
         const chars = [];
         for (let j = 0; j < charCount; j++) {
           chars.push(matrixChars[Math.floor(Math.random() * matrixChars.length)]);
@@ -26,9 +26,9 @@ export default function MatrixRain() {
         newDrops.push({
           id: i,
           x: Math.random() * 100,
+          speed: Math.random() * 4 + 4,
+          opacity: Math.random() * 0.12 + 0.04,
           chars,
-          speed: Math.random() * 3 + 2,
-          opacity: Math.random() * 0.3 + 0.1,
         });
       }
       setDrops(newDrops);
@@ -38,11 +38,11 @@ export default function MatrixRain() {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-5">
+    <div className="hidden dark:block fixed inset-0 pointer-events-none overflow-hidden z-0">
       {drops.map((drop) => (
         <div
           key={drop.id}
-          className="absolute text-green-500 font-mono text-sm"
+          className="absolute text-purple-400 font-mono text-[11px] select-none"
           style={{
             left: `${drop.x}%`,
             animation: `matrix-rain ${drop.speed}s linear infinite`,
@@ -52,10 +52,9 @@ export default function MatrixRain() {
           {drop.chars.map((char, index) => (
             <div
               key={index}
-              className="block"
+              className="block leading-tight"
               style={{
-                opacity: 1 - (index / drop.chars.length) * 0.8,
-                fontSize: `${14 - index * 0.5}px`,
+                opacity: 1 - (index / drop.chars.length) * 0.7,
               }}
             >
               {char}

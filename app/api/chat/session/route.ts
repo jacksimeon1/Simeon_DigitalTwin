@@ -27,11 +27,22 @@ export async function GET(req: NextRequest) {
     }
     
     // Retrieve chat session from Redis
-    const messages = await redis.get(`chat:${sessionId}`);
+    const rawMessages = await redis.get(`chat:${sessionId}`);
     
-    return NextResponse.json({ messages: messages || [] });
+    let messages = [];
+    if (typeof rawMessages === 'string') {
+      try {
+        messages = JSON.parse(rawMessages);
+      } catch {
+        messages = [];
+      }
+    } else if (Array.isArray(rawMessages)) {
+      messages = rawMessages;
+    }
+    
+    return NextResponse.json({ messages: Array.isArray(messages) ? messages : [] });
   } catch (error) {
     console.error('Failed to retrieve chat session:', error);
-    return NextResponse.json({ error: 'Failed to retrieve session' }, { status: 500 });
+    return NextResponse.json({ error: 'Failed to retrieve session', messages: [] }, { status: 500 });
   }
 }
