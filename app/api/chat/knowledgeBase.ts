@@ -7,37 +7,37 @@ export const knowledgeBase = {
       "Hello! 👋 I'm **Robert Simeon Jr.**, a **Full-Stack & Agentic AI Developer** with verified credentials from **Certiport Pearson** and **Employability Advantage Australia**. What would you like to explore — my projects, skills, credentials, or a coding question?"
     ],
     about: [
-      "### **About Robert Simeon Jr.** 👨‍💻\n\nI'm a **Full-Stack & Agentic AI Developer** from **Centro, Santo Niño, Cagayan, Philippines**.\n\n• **Degree:** **Bachelor of Science in Information Technology (BSIT)** — **St. Paul University Philippines (SPUP)** (Graduated **June 2026**)\n• **STEM Honors:** Senior High School **STEM with Academic Honors** — Santo Niño National High School (2021–2022)\n• **Industry Experience:** **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)** & **DOÑA ALEJANDRA INC.**\n• **Global License:** **IT Specialist in HTML & CSS** by **Certiport Pearson VUE** (Verification ID: `Co7F-DwVk`)\n• **Status:** Open to full-time software engineering, Technical Virtual Assistant (VA), and client projects!"
+      "### **About Robert Simeon Jr.** 👨‍💻\n\nI build software that makes life easier for people. With a background in **full-stack development** and **autonomous AI systems**, I enjoy taking an idea from scratch and turning it into a fast, functional, and easy-to-use digital product. Whether I'm collaborating with a team on core system architecture or experimenting with emerging tech to automate tedious workflows, I focus on clean execution and practical results.\n\n• **Location:** **Santo Niño, Cagayan, Philippines** *(Centro, Santo Niño, 3525)*\n• **Degree:** **Bachelor of Science in Information Technology (BSIT)** — **St. Paul University Philippines (SPUP)** *(2022 – June 2026)*\n• **STEM Honors:** **STEM Strand (With Honors)** — **St. Paul University Philippines / Santo Niño National High School** *(2021 – 2022)*\n• **Industry Experience:** **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)** & **DOÑA ALEJANDRA INC.**\n• **Global License:** **IT Specialist in HTML & CSS** by **Certiport Pearson VUE** *(Verification ID: `Co7F-DwVk`)*\n• **Contact:** robertsimeon12345@gmail.com | (+63) 9215512415"
     ],
     education: [
-      "### **Educational Background** 🎓\n\n• **Bachelor of Science in Information Technology (BSIT)**\n  **St. Paul University Philippines (SPUP)**, Tuguegarao City *(2022 – June 2026)*\n  Focused on full-stack software engineering, systems analysis, database architecture, and emerging AI technologies.\n• **Senior High School – STEM Track (Academic Honors)**\n  **Santo Niño National High School** *(2021 – 2022)* — Graduated with **Academic Honors**."
+      "### **Educational Background** 🎓\n\n• **Bachelor of Science in Information Technology (BSIT)**\n  **St. Paul University Philippines (SPUP)**, Tuguegarao City *(2022 – June 2026)*\n  Focused on full-stack software engineering, systems analysis, database architecture, and emerging AI technologies.\n• **STEM Strand (Science, Technology, Engineering, and Mathematics)**\n  **St. Paul University Philippines / Santo Niño National High School** *(2021 – 2022)* — Graduated **WITH HONORS**."
     ],
     skills: [
-      "### **Technical Skills & Stack** ⚡\n\n• **Languages:** JavaScript (ES6+), TypeScript, PHP, Python, Java, C#, SQL, HTML5, CSS3\n• **Frontend & 3D:** React, Next.js (App Router), Tailwind CSS, Pure CSS 3D Transforms, Three.js, HTML5 Canvas, Bootstrap\n• **Backend & APIs:** Node.js, Express.js, PHP Laravel, RESTful APIs, NextAuth\n• **Databases & Caching:** MySQL, PostgreSQL, MongoDB, Redis\n• **Cloud, AI & Tools:** Git, GitHub, Docker, Vercel, Postman, VS Code, Figma, Groq Cloud LLM Inference, Web Speech APIs"
+      "### **Technical Skills (From Resume)** ⚡\n\n• **Frontend:** React, Next.js, TypeScript, Tailwind CSS, HTML/CSS, JavaScript, Bootstrap, Pure CSS 3D Transforms, Three.js, HTML5 Canvas\n• **Backend & Databases:** Node.js, Python, Express.js, PostgreSQL, MongoDB, PHP, Laravel, MySQL, NextAuth/Auth.js, Java, Redis\n• **Tools & Platforms:** Git, GitHub, Docker, AWS (Amazon Web Services), Vercel, Figma"
     ],
     certifications: [
-      "### **Verified Certifications & Licenses** 🏆\n\n1. **IT Specialist – HTML and CSS** — **Certiport (A Pearson VUE Business)**\n   *Issued Nov 2025 · Expires Nov 2030 · Verification ID:* `Co7F-DwVk`\n2. **Full Stack Developer Certificate** — **Employability Advantage Australia**\n   *Issued Sept 2025 · Certificate ID:* `168610825` *(AusBiz Consulting Pty Ltd)*\n3. **Certificate of Membership** — **Junior Philippine Computer Society (JPCS)** – SPUP Chapter *(AY 2025–2026)*\n4. **Mentorship Lecturer** — **SPUP Mentorship Program** *(April 2026)* guiding IT students on Capstone Development."
+      "### **Awards & Certifications (From Resume)** 🏆\n\n1. **Full Stack Developer — Employability Advantage Australia** *(2025 · Certificate ID: `168610825`)*\n   Credential: https://www.credential.net/bc9c7415-d631-4d18-b5c2-117ce7938286#acc.VWDI1UBJ\n2. **Employability Advantage | Full-Stack and Agentic AI Developer** *(Sept 2025)*\n   Completed a 10-week industry project focused on full-stack development and Amazon Web Services (AWS) Cloud under **AusBiz Consulting Pty Ltd**.\n3. **Certiport | Information Technology Specialist – HTML & CSS** *(Nov 2025 – Nov 2030 · Verification ID: `Co7F-DwVk`)*\n   Passed the official Certiport Pearson VUE examination in web development, styling, accessibility, and responsive design.\n4. **Certificate of Membership — Junior Philippine Computer Society (JPCS) – SPUP Chapter** *(January 15, 2026 · AY 2025–2026)*\n5. **St. Paul University Philippines | Mentorship Program Lecturer** *(April 2026)*\n   Served as lecturer for IT students, sharing tutorials, practical tips, and guidance on Capstone Development."
     ],
     projects: {
-      overview: "### **Featured Software Projects (6 Systems)** 💻\n\n1. **In-Off Campus Activity Scheduling System** *(PHP, Laravel, MySQL)* — Automated university event & facility scheduling.\n2. **Santo Niño Building Permit System** *(PHP, MySQL, Bootstrap, PDF Gen)* — Municipal e-governance for LGU Santo Niño.\n3. **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)** *(Next.js, React, TypeScript)* — AI heuristic thesis title synthesis engine.\n4. **[SIP 3D – Beverage Showcase](https://jacksimeon1.github.io/3d-can-animation/)** *(HTML5 Canvas, CSS 3D, JS)* — Interactive 360° 3D can physics showcase.\n5. **[3D Room – Isometric Sanctuary](https://jacksimeon1.github.io/3D-Room/)** *(Pure CSS 3D Transforms, JS)* — Interactive isometric 3D studio with dynamic lighting.\n6. **Employee Attendance Tracking System** *(PHP, MySQL, Bootstrap)* — Corporate DTR & attendance platform for DOÑA ALEJANDRA INC.\n\nWhich project would you like to explore in detail?",
-      scheduling: "### **In-Off Campus Activity Scheduling System**\nBuilt with **PHP, Laravel, Bootstrap, and MySQL**, this platform automates university campus event management, student organization activity scheduling, participant registrations, real-time schedule conflict detection, and multi-stage facility approvals.",
-      permit: "### **Santo Niño Building Permit System**\nA municipal e-governance web application developed for the **Local Government Unit (LGU) of Santo Niño, Cagayan** using **PHP, MySQL, Bootstrap, JavaScript**, and automated **PDF generation**. It streamlines digital blueprint submissions, engineering evaluations, cashier payment processing, and municipal revenue reporting.",
-      capstoneTitleAi: "### **Capstone AI Title Generator** 🤖\n• **Live Demo:** https://jacksimeon1.github.io/capstone-title-ai/\n• **Source Code:** https://github.com/jacksimeon1/capstone-title-ai\n• **Tech Stack:** Next.js, React, TypeScript, Tailwind CSS\n\nAn open-source academic research platform and thesis title synthesis engine that formulates defensible capstone project titles with live heuristic validation across **IT, CS, and IS** disciplines.",
-      sip3d: "### **SIP 3D — Interactive 3D Beverage Showcase** 🥤\n• **Live Demo:** https://jacksimeon1.github.io/3d-can-animation/\n• **Source Code:** https://github.com/jacksimeon1/3d-can-animation\n• **Tech Stack:** JavaScript ES6+, CSS 3D Transforms, HTML5 Canvas\n\nFeatures real-time **360° can cylinder rotation physics**, dynamic multi-flavor environment switching, kinetic typography, and interactive particle canvas effects.",
-      room3d: "### **3D Room — Isometric 3D Sanctuary & Studio** 🏠\n• **Live Demo:** https://jacksimeon1.github.io/3D-Room/\n• **Source Code:** https://github.com/jacksimeon1/3D-Room\n• **Tech Stack:** Pure CSS 3D Transforms, Vanilla JavaScript, HTML5\n\nAn interactive isometric 3D living sanctuary built entirely with **pure CSS 3D matrix transforms** — featuring real-time 360° camera rotation/zoom, dynamic lighting presets, an interactive TV screen, and ambient audio.",
-      attendance: "### **Employee Attendance Tracking System**\nEngineered for **DOÑA ALEJANDRA INC.** using **PHP, MySQL, and Bootstrap**. It automates employee Daily Time Records (DTR), secure time-in/time-out attendance logs, department reporting, and corporate employee records."
+      overview: "### **Featured Software Projects (6 Resume Systems)** 💻\n\n1. **In-Off Campus Activity Scheduling Information System** *(PHP, Laravel, Bootstrap, MySQL)* — Centralized campus event & activity scheduling with conflict detection.\n2. **Santo Niño Building Permit System** *(PHP, MySQL, Bootstrap)* — Municipal e-governance platform for LGU Santo Niño, Cagayan.\n3. **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)** *(Next.js, React, TypeScript, Tailwind CSS)* — Open-source AI thesis title synthesis engine.\n4. **[SIP 3D – 3D Beverage Showcase Website](https://jacksimeon1.github.io/3d-can-animation/)** *(Three.js, CSS 3D Transforms, JS ES6+, HTML5 Canvas)* — Interactive 360° 3D can physics showcase.\n5. **[3D Room – Isometric 3D Room & Studio](https://jacksimeon1.github.io/3D-Room/)** *(CSS 3D Transforms, JS ES6+, HTML5 Canvas)* — Interactive isometric 3D studio with dynamic lighting.\n6. **Employee Attendance Tracking System** *(PHP, MySQL, Bootstrap)* — Corporate DTR & attendance platform for **Doña Alejandra, Inc.**\n\nWhich project would you like to explore in detail?",
+      scheduling: "### **In-Off Campus Activity Scheduling Information System**\n• **Technologies:** PHP, Laravel, Bootstrap, MySQL\n\nDeveloped a centralized platform for managing and organizing on-campus and off-campus activity schedules, featuring a **conflict detection mechanism** that identifies overlapping schedules and prevents scheduling conflicts while streamlining administrative processes.",
+      permit: "### **Santo Niño Building Permit System**\n• **Technologies:** PHP, MySQL, Bootstrap, JavaScript, PDF Reports\n\nA specialized municipal e-governance platform designed for the **Local Government Unit (LGU) of Santo Niño, Cagayan**. Automates citizen building permit applications, blueprint and floor plan submissions, municipal administrative evaluations, cashier payment processing, and revenue reporting.",
+      capstoneTitleAi: "### **Capstone AI Title Generator** 🤖\n• **Live Demo:** https://jacksimeon1.github.io/capstone-title-ai/\n• **Source Code:** https://github.com/jacksimeon1/capstone-title-ai\n• **Technologies:** Next.js, React, TypeScript, Tailwind CSS\n\nAn open-source AI-powered academic research platform and thesis title synthesis engine with live heuristic validation and an interactive verification sandbox tailored by academic program.",
+      sip3d: "### **SIP 3D — 3D Beverage Showcase Website** 🥤\n• **Live Demo:** https://jacksimeon1.github.io/3d-can-animation/\n• **Source Code:** https://github.com/jacksimeon1/3d-can-animation\n• **Technologies:** Three.js, CSS 3D Transforms, JavaScript ES6+, HTML5 Canvas\n\nInteractive 3D beverage showcase and animation demonstration website featuring real-time **360° can cylinder rotation physics**, multi-flavor switching, dynamic kinetic typography, and canvas particle effects.",
+      room3d: "### **3D Room — Isometric 3D Room & Studio** 🏠\n• **Live Demo:** https://jacksimeon1.github.io/3D-Room/\n• **Source Code:** https://github.com/jacksimeon1/3D-Room\n• **Technologies:** CSS 3D Transforms, JavaScript ES6+, HTML5 Canvas\n\nInteractive isometric 3D living sanctuary and studio showcase built with pure CSS 3D transforms, JavaScript, and HTML5. Features real-time camera perspective rotation, dynamic ambient lighting presets, interactive room elements, multi-channel animated TV display, and relaxing soundscapes.",
+      attendance: "### **Employee Attendance Tracking System**\n• **Technologies:** PHP, MySQL, Bootstrap *(Doña Alejandra, Inc.)*\n\nDeveloped the Employee Attendance Tracking System for **Doña Alejandra, Inc.** — responsible for designing, developing, and implementing the system to streamline office processes and securely manage employee daily time records (DTR), attendance, and corporate information."
     },
     experience: [
-      "### **Verified Industry Experience** 💼\n\n1. **Full-Stack & Agentic AI Developer** — **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)**\n   Completed an intensive 10-week industry project delivering full-stack web applications, AI features, and AWS Cloud deployments *(Certificate ID: `168610825`)*.\n2. **Web Developer** — **DOÑA ALEJANDRA INC.**\n   Designed, developed, and deployed the corporate **Employee Attendance Tracking System** using PHP, MySQL, and Bootstrap.\n3. **Mentorship Lecturer** — **St. Paul University Philippines (SPUP)** *(April 2026)*\n   Guided undergraduate IT students on Capstone Development and software architecture."
+      "### **Verified Industry Experience (From Resume)** 💼\n\n1. **Full-Stack & Agentic AI Developer** — **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)** *(Sept 2025)*\n   Completed a 10-week industry project focused on full-stack development and **Amazon Web Services (AWS) Cloud** under AusBiz Consulting Pty Ltd *(Certificate ID: `168610825`)*.\n2. **Web Developer** — **Doña Alejandra, Inc.**\n   Designed, developed, and implemented the **Employee Attendance Tracking System** using PHP, MySQL, and Bootstrap to manage daily time records and corporate information.\n3. **Mentorship Program Lecturer** — **St. Paul University Philippines (SPUP)** *(April 2026)*\n   Served as a lecturer for Information Technology students, sharing tutorials, practical tips, and guidance on Capstone Development."
     ],
-    va: "### **Technical Virtual Assistant (VA) & Developer Support** 🤝\n\nYes! I am actively open to **Technical Virtual Assistant (VA)**, **Technical Support**, and **Full-Stack Software Engineering** roles.\n\nWith my **BSIT degree from SPUP (June 2026)**, **Certiport HTML/CSS global license**, and industry experience at **AusBiz Consulting (Australia)** and **Doña Alejandra Inc.**, I can help you with:\n• Full-stack web development & website maintenance (Next.js, React, WordPress, PHP, Laravel)\n• Database administration, spreadsheets, & data automation (SQL, Python, Redis)\n• AI workflow integration, technical documentation, & client support\n\n📧 **Email:** robertsimeon12345@gmail.com | 📱 **Phone:** (+63) 921 551 2415",
+    va: "### **Technical Virtual Assistant (VA) & Developer Support** 🤝\n\nYes! I am actively open to **Technical Virtual Assistant (VA)**, **Technical Support**, and **Full-Stack Software Engineering** roles.\n\nWith my **BSIT degree from SPUP (June 2026)**, **Certiport HTML/CSS global license**, and industry experience at **AusBiz Consulting (Australia)** and **Doña Alejandra Inc.**, I can help you with:\n• Full-stack web development & website maintenance (Next.js, React, WordPress, PHP, Laravel)\n• Database administration, spreadsheets, & data automation (SQL, Python, Redis)\n• AI workflow integration, technical documentation, & client support\n\n📧 **Email:** robertsimeon12345@gmail.com | 📱 **Phone:** (+63) 9215512415",
     contact: [
-      "### **Contact & Hire Robert Simeon Jr.** 📬\n\n• **Email:** robertsimeon12345@gmail.com\n• **Mobile / WhatsApp:** (+63) 921 551 2415\n• **LinkedIn:** https://www.linkedin.com/in/robert-simeon-08063b214/\n• **GitHub:** https://github.com/jacksimeon1\n• **Portfolio:** https://simeon-digital-twin.vercel.app/\n• **Location:** Centro, Santo Niño, Cagayan, Philippines (3525)\n• **Official Resume:** /Robert_Simeon_Jr_Resume.pdf"
+      "### **Contact Information (From Resume)** 📬\n\n• **Phone / Mobile:** (+63) 9215512415\n• **Address:** Santo Niño, Cagayan, Philippines *(Centro, Santo Niño, 3525)*\n• **E-Mail:** robertsimeon12345@gmail.com\n• **Portfolio:** https://simeon-digital-twin.vercel.app/\n• **LinkedIn:** https://www.linkedin.com/in/robert-simeon-08063b214/\n• **Facebook:** https://www.facebook.com/jackieeeeeeeeeeeeeeee/\n• **YouTube:** https://www.youtube.com/@Track_Theory-4ever\n• **GitHub:** https://github.com/jacksimeon1\n• **Official Resume PDF:** [Download Resume](/Robert_Simeon_Jr_Resume.pdf)"
     ],
     availability: [
       "### **Immediate Onboarding Availability** ✅\n\nI am **actively available** for **full-time software engineering roles** (remote, hybrid, or on-site), **Technical Virtual Assistant (VA)** positions, and **freelance client projects**.\n\nHaving graduated with my **BSIT degree from SPUP in June 2026** alongside verified industry credentials from **Employability Advantage Australia** and **Certiport Pearson VUE**, I am ready for **immediate onboarding**!"
     ],
-    resume: "### **Official Verified Resume (CV)** 📄\n\nYou can view and download my official, print-ready curriculum vitae directly at **/Robert_Simeon_Jr_Resume.pdf** (or scroll to the **Resume** section on this page).\n\nIt includes my **SPUP BSIT degree (June 2026)**, **STEM Academic Honors**, **Certiport Pearson VUE license (`Co7F-DwVk`)**, **Employability Advantage Australia certificate (`168610825`)**, and all 6 software engineering projects.",
+    resume: "### **Official Verified Resume (CV)** 📄\n\nYou can view and download my official, print-ready curriculum vitae directly from the **Resume** section on this page (or at `/Robert_Simeon_Jr_Resume.pdf`).\n\nIt includes my **SPUP BSIT degree (2022–June 2026)**, **STEM Strand With Honors (2021–2022)**, **Certiport Pearson VUE license (`Co7F-DwVk`)**, **Employability Advantage Australia certificate (`168610825`)**, **JPCS Membership**, **SPUP Mentorship Lecturer**, and all **6 software engineering projects**.",
     fallback: `Thanks for reaching out! As **Robert Simeon Jr.'s AI Digital Twin**, here is a quick snapshot of my profile:
 
 • **Education:** **BSIT Graduate** from **St. Paul University Philippines (SPUP, June 2026)** & **STEM with Academic Honors**.
@@ -694,7 +694,30 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return data.skills ? data.skills[0] : knowledgeBase.en.skills[0];
   }
 
-  // 14. Availability / Onboarding / Remote or Hybrid
+  // 14. Location / Where does Robert live / Where is he from / Address / Hometown
+  if (
+    /\b(wheres?|where's)\b.*\b(robert|he|you|u|live|living|from|located|based|stay|reside|born|hometown|address)\b/i.test(lowerMessage) ||
+    /\b(hometown|address|location|barangay|municipality|province|cagayan|tuguegarao|taga\s*saan|saan\s*nakatira|saan\s*ka\s*nakatira|dónde\s*vive|donde\s*vive|où\s*habite)\b/i.test(lowerMessage) ||
+    /\b(where\s+(does|do|is|are|did)\s+(robert|he|you|u))\b/i.test(lowerMessage) ||
+    /\b(where\s+(robert|he|you|u)\s+(live|lives|from|stay|reside))\b/i.test(lowerMessage)
+  ) {
+    if (lang === 'tl') {
+      return "Nakatira at nagmula ako sa **Centro, Santo Niño, Cagayan, Pilipinas (3525)** (malapit sa Tuguegarao City kung saan ako nagtapos ng **BS Information Technology sa St. Paul University Philippines**). Bukas ako sa remote, hybrid, at on-site na trabaho!";
+    }
+    return `### **Location & Hometown (From Resume)** 📍\n\nI am from and currently live in **Santo Niño, Cagayan, Philippines** *(Centro, Santo Niño, 3525 — near Tuguegarao City, where I completed my BSIT degree at St. Paul University Philippines)*.\n\n• **Address:** Santo Niño, Cagayan, Philippines\n• **Phone:** (+63) 9215512415\n• **E-Mail:** robertsimeon12345@gmail.com\n• **Work Setup:** Open to **remote, hybrid, and on-site** roles!`;
+  }
+
+  // 15. Mentorship Program / Lecturer at SPUP
+  if (/\b(mentor|mentorship|lecturer|lecture|teaching|taught)\b/i.test(lowerMessage)) {
+    return `### **SPUP Mentorship Program Lecturer (April 2026)** 🎓\n\nIn **April 2026**, I served as a **Lecturer** during the **St. Paul University Philippines (SPUP) Mentorship Program** for Information Technology students — sharing tutorials, practical tips, and technical guidance on **Capstone Development** and software engineering best practices.`;
+  }
+
+  // 16. Why Hire Robert / Strengths / Work Ethic / Soft Skills / Objective
+  if (/\b(why\s+hire|why\s+should\s+(i|we)\s+hire|strengths?|soft\s+skills?|work\s+ethic|objective|career\s+goal|passion)\b/i.test(lowerMessage)) {
+    return `### **Why Work With Robert Simeon Jr. (From Resume)** 🌟\n\n> *"I build software that makes life easier for people. With a background in full-stack development and autonomous AI systems, I enjoy taking an idea from scratch and turning it into a fast, functional, and easy-to-use digital product. Whether I'm collaborating with a team on core system architecture or experimenting with emerging tech to automate tedious workflows, I focus on clean execution and practical results. I am always learning, quick to adapt, and eager to bring my energy and problem-solving mindset to a team focused on real-world impact."*\n\n• **Education:** BSIT Graduate @ St. Paul University Philippines (2022–June 2026) & STEM With Honors\n• **Verified Credentials:** Certiport IT Specialist in HTML & CSS (\`Co7F-DwVk\`) & Employability Advantage Australia Full-Stack & Agentic AI Developer (\`168610825\`)`;
+  }
+
+  // 17. Availability / Onboarding / Remote or Hybrid
   if (lowerMessage.includes('availab') || lowerMessage.includes('onboarding') || lowerMessage.includes('remote or hybrid') || 
       lowerMessage.includes('full-time') || lowerMessage.includes('freelance')) {
     if (lowerMessage.includes('contact') || lowerMessage.includes('hire')) {
@@ -703,29 +726,34 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return data.availability ? data.availability[0] : knowledgeBase.en.availability[0];
   }
 
-  // 15. Contact / Hire details
+  // 18. Contact / Hire / Social Media / Facebook / YouTube / LinkedIn / GitHub / Phone / Email
   if (lowerMessage.includes('contact') || lowerMessage.includes('hire') || lowerMessage.includes('email') || 
-      lowerMessage.includes('phone') || lowerMessage.includes('number') || lowerMessage.includes('reach') || 
+      lowerMessage.includes('gmail') || lowerMessage.includes('phone') || lowerMessage.includes('mobile') || 
+      lowerMessage.includes('number') || lowerMessage.includes('reach') || lowerMessage.includes('facebook') || 
+      /\bfb\b/i.test(lowerMessage) || lowerMessage.includes('youtube') || lowerMessage.includes('linkedin') || 
+      lowerMessage.includes('github') || lowerMessage.includes('social media') || lowerMessage.includes('socials') || 
       lowerMessage.includes('kontak') || lowerMessage.includes('contacto') || lowerMessage.includes('kontakt') || 
       lowerMessage.includes('联系') || lowerMessage.includes('連絡') || lowerMessage.includes('연락처')) {
     return data.contact ? data.contact[0] : knowledgeBase.en.contact[0];
   }
 
-  // 16. About / Bio / Who are you / Name
-  if (lowerMessage.includes('about') || lowerMessage.includes('who are you') || lowerMessage.includes('who is robert') || 
-      lowerMessage.includes('sino ka') || lowerMessage.includes('tungkol') || lowerMessage.includes('quién eres') || 
-      lowerMessage.includes('qui es-tu') || lowerMessage.includes('wer bist du') || lowerMessage.includes('你是谁') || 
-      lowerMessage.includes('自己紹介') || lowerMessage.includes('당신은 누구') ||
-      /(what('?s|\s+is)\s+(your|ur)\s+name|your\s+name|whhats?\s+(your|ur)\s+name|ano(ng)?\s+pangalan|pangalan\s+mo|cómo\s+te\s+llamas|como\s+te\s+llamas|comment\s+t'appelles-tu|wie\s+heißt\s+du|你叫什么|お名前|이름)/i.test(lowerMessage)) {
+  // 19. About / Bio / Who are you / Name
+  if (lowerMessage.includes('about robert') || lowerMessage.includes('about you') || lowerMessage.includes('about him') ||
+      lowerMessage.includes('tell me about') || lowerMessage.includes('who are you') || lowerMessage.includes('who is robert') || 
+      lowerMessage.includes('who is he') || lowerMessage.includes('robert simeon') ||
+      lowerMessage.includes('sino ka') || lowerMessage.includes('sino si robert') || lowerMessage.includes('tungkol kay robert') || 
+      lowerMessage.includes('quién eres') || lowerMessage.includes('qui es-tu') || lowerMessage.includes('wer bist du') || 
+      lowerMessage.includes('你是谁') || lowerMessage.includes('自己紹介') || lowerMessage.includes('당신은 누구') ||
+      /(what('?s|\s+is)\s+(your|ur|his)\s+name|your\s+name|whhats?\s+(your|ur)\s+name|ano(ng)?\s+pangalan|pangalan\s+mo|cómo\s+te\s+llamas|como\s+te\s+llamas|comment\s+t'appelles-tu|wie\s+heißt\s+du|你叫什么|お名前|이름)/i.test(lowerMessage)) {
     if (/(name|pangalan|llamas|appelles|heißt|名字|名前|이름)/i.test(lowerMessage)) {
-      if (lang === 'tl') return "Ako ang **AI Digital Twin ni Robert Simeon Jr.**! Isang interactive AI assistant na kumakatawan kay Robert Simeon Jr., isang Full-Stack at Agentic AI Developer mula sa Cagayan, Pilipinas (BSIT graduate mula sa SPUP, Hunyo 2026). Maaari mo akong tanungin tungkol sa kanyang mga proyekto, kasanayan, edukasyon, o kahit anong AI at coding questions!";
-      if (lang === 'es') return "¡Soy el **Gemelo Digital de IA de Robert Simeon Jr.**! Un asistente de IA interactivo que representa a Robert Simeon Jr., desarrollador Full-Stack y de IA agéntica de Filipinas. ¡Pregúntame lo que quieras sobre su trayectoria o proyectos!";
-      return "I am **Robert Simeon Jr.'s AI Digital Twin**! I'm an interactive AI assistant representing Robert Simeon Jr., a Full-Stack and Agentic AI Developer from Cagayan, Philippines (BSIT graduate from St. Paul University Philippines, June 2026). Feel free to ask me about Robert's education, projects, skills, certifications, or any coding and general AI questions!";
+      if (lang === 'tl') return "Ako ang **AI Digital Twin ni Robert Simeon Jr.**! Isang interactive AI assistant na kumakatawan kay Robert Simeon Jr., isang Full-Stack at Agentic AI Developer mula sa Santo Niño, Cagayan, Pilipinas (BSIT graduate mula sa SPUP, Hunyo 2026). Maaari mo akong tanungin tungkol sa kanyang resume, mga proyekto, kasanayan, edukasyon, o kahit anong tanong!";
+      if (lang === 'es') return "¡Soy el **Gemelo Digital de IA de Robert Simeon Jr.**! Un asistente de IA interactivo que representa a Robert Simeon Jr., desarrollador Full-Stack y de IA agéntica de Filipinas. ¡Pregúntame lo que quieras sobre su currículum o cualquier tema!";
+      return "I am **Robert Simeon Jr.'s AI Digital Twin**! I represent **Robert Simeon Jr.**, a **Full-Stack & Agentic AI Developer** from **Santo Niño, Cagayan, Philippines** (BSIT graduate from St. Paul University Philippines, June 2026). Feel free to ask me anything from my resume or any general question!";
     }
     return data.about ? data.about[0] : knowledgeBase.en.about[0];
   }
 
-  // 17. Basic Math & Calculation questions
+  // 20. Pure Arithmetic Math & Calculation questions
   const mathMatch = lowerMessage.match(/(?:what\s+is\s+|calculate\s+|solve\s+)?([0-9\.\s\+\-\*\/\^\(\)]+)/i);
   if (mathMatch && /[\+\-\*\/]/.test(mathMatch[1]) && !/[a-z]{3,}/i.test(lowerMessage)) {
     try {
@@ -738,41 +766,26 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     } catch {}
   }
 
-  // 18. Jokes & Fun
-  if (/\b(joke|funny|make me laugh|tawa|humor|pun)\b/i.test(lowerMessage)) {
-    const jokes = [
-      "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😄",
-      "There are 10 types of people in the world: those who understand binary, and those who don't. 💻",
-      "Why did the JavaScript developer wear glasses? Because they didn't C#! 🤓",
-      "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?' 🍻",
-      "Why do Java programmers wear glasses? Because they don't see sharp! ⚡",
-    ];
-    return jokes[Math.floor(Math.random() * jokes.length)];
+  // 21. Specific Suggested Coding Prompts (Python Hello World & Async/Await)
+  if (lowerMessage.includes('python hello world') || lowerMessage === 'write a python hello world program') {
+    return `Here is a clean **Python** example:\n\`\`\`python\n# Python Hello World & Function Example\ndef greet(name: str) -> str:\n    return f"Hello, {name}! Welcome to Python development."\n\nif __name__ == "__main__":\n    print(greet("World"))\n\`\`\`\nPython is renowned for its clean syntax and power in AI, automation, and backend systems. What specific Python task would you like to build?`;
   }
-
-  // 19. General Coding & Programming Help
-  if (/\b(code|coding|python|javascript|typescript|react|html|css|php|sql|api|function|bug|loop|array|async|promise)\b/i.test(lowerMessage)) {
-    if (lowerMessage.includes('python')) {
-      return `Here is a clean **Python** example:\n\`\`\`python\n# Python Hello World & Function Example\ndef greet(name: str) -> str:\n    return f"Hello, {name}! Welcome to Python development."\n\nif __name__ == "__main__":\n    print(greet("World"))\n\`\`\`\nPython is renowned for its clean syntax and power in AI, automation, and backend systems. What specific Python task would you like to build?`;
-    }
-    if (lowerMessage.includes('async') || lowerMessage.includes('promise')) {
-      return `### **Async/Await & Promises in JavaScript**\n\n**Promises** represent the eventual completion (or failure) of an asynchronous operation, and **\`async/await\`** lets you write asynchronous code that reads cleanly like synchronous code:\n\`\`\`javascript\nasync function fetchUserProfile(userId) {\n  try {\n    const response = await fetch(\`https://api.example.com/users/\${userId}\`);\n    if (!response.ok) throw new Error(\`HTTP error: \${response.status}\`);\n    const user = await response.json();\n    return user;\n  } catch (error) {\n    console.error('Failed to fetch user:', error);\n  }\n}\n\`\`\`\n💡 **Pro Tip:** Use \`await Promise.all([fetchA(), fetchB()])\` when running multiple independent requests in parallel for maximum speed!`;
-    }
-    return `I can help with coding in **JavaScript, TypeScript, Python, PHP, React, Next.js, and SQL**! Share the specific topic, code snippet, or error message you'd like to solve and I'll walk you through it.`;
+  if (lowerMessage.includes('explain async/await')) {
+    return `### **Async/Await & Promises in JavaScript**\n\n**Promises** represent the eventual completion (or failure) of an asynchronous operation, and **\`async/await\`** lets you write asynchronous code that reads cleanly like synchronous code:\n\`\`\`javascript\nasync function fetchUserProfile(userId) {\n  try {\n    const response = await fetch(\`https://api.example.com/users/\${userId}\`);\n    if (!response.ok) throw new Error(\`HTTP error: \${response.status}\`);\n    const user = await response.json();\n    return user;\n  } catch (error) {\n    console.error('Failed to fetch user:', error);\n  }\n}\n\`\`\`\n💡 **Pro Tip:** Use \`await Promise.all([fetchA(), fetchB()])\` when running multiple independent requests in parallel for maximum speed!`;
   }
 
   return null;
 }
 
-// Fallback generator that answers gracefully in the user's language
+// Fallback generator that answers gracefully in the user's language if offline
 export function generateSmartResponse(message: string, preferredLang: keyof typeof knowledgeBase = 'en'): string {
   const lang = detectLanguage(message, preferredLang);
   const quick = getQuickResponse(message, lang);
   if (quick) return quick;
 
-  // If the question is conversational or general
-  if (message.trim().endsWith('?') || message.split(' ').length > 2) {
-    return `That's an interesting question! As Robert Simeon Jr.'s AI Digital Twin, I can answer questions about anything — software development, mathematics, computer science, project ideas, or Robert's verified credentials, education (SPUP BSIT June 2026), and full-stack projects (3D Room, SIP 3D, AI Title Generator, Building Permit System).\n\nCould you elaborate a bit more on what you'd like to explore, or click **Guide Questions** to see popular topics?`;
+  const lower = message.toLowerCase();
+  if (lower.includes('robert') || lower.includes('simeon') || lower.includes('he ') || lower.includes('his ') || lower.includes('you')) {
+    return `${knowledgeBase.en.about[0]}\n\n${knowledgeBase.en.contact[0]}`;
   }
 
   const data = (knowledgeBase[lang] || knowledgeBase.en) as any;

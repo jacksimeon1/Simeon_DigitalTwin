@@ -43,9 +43,9 @@ function renderMarkdown(text: string): string {
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
 
-  // Italic: *...* or _..._
+  // Italic: *...* or _..._ (only match underscores at word boundaries so file paths like /Robert_Simeon_Jr_Resume.pdf are preserved)
   html = html.replace(/(?<!\*)\*([^*\n]+)\*(?!\*)/g, '<em>$1</em>');
-  html = html.replace(/(?<!_)_([^_\n]+)_(?!_)/g, '<em>$1</em>');
+  html = html.replace(/(?<![\w_])_([^_\n]+)_(?![\w_])/g, '<em>$1</em>');
 
   // Headings
   html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
@@ -528,10 +528,10 @@ export default function Chatbot() {
       }
       const controller = new AbortController();
       abortControllerRef.current = controller;
-      // Client-side safety timeout of 12 seconds so the bot NEVER gets stuck loading
+      // Client-side safety timeout of 30 seconds so general AI reasoning requests complete cleanly
       const timeoutId = setTimeout(() => {
         controller.abort();
-      }, 12000);
+      }, 30000);
 
       let accumulated = '';
 
@@ -653,8 +653,8 @@ export default function Chatbot() {
       console.warn('Chat request notice:', error);
       const isTimeout = error?.name === 'AbortError';
       const fallbackText = isTimeout
-        ? 'The request took a little too long. Feel free to re-ask or choose a topic from Guide Questions!'
-        : 'I\'m Robert Simeon Jr.\'s AI Digital Twin. How can I assist you today? You can ask about my projects, skills, education, or resume!';
+        ? 'The request took a little too long. Please try asking your question again!'
+        : 'I\'m Robert Simeon Jr.\'s AI Digital Twin. How can I assist you today? You can ask about my projects, skills, education, resume, or any general question!';
 
       setMessages(prev =>
         prev.map(m =>
