@@ -598,8 +598,7 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   }
 
   // 5. Resume / CV download
-  if (lowerMessage.includes('resume') || lowerMessage.includes('cv') || lowerMessage.includes('curriculum') || 
-      lowerMessage.includes('pdf') || lowerMessage.includes('biodata') || lowerMessage.includes('lebenslauf') || 
+  if (/\b(resume|cv|curriculum|pdf|biodata|lebenslauf)\b/i.test(lowerMessage) || 
       lowerMessage.includes('简历') || lowerMessage.includes('レジュメ') || lowerMessage.includes('이력서')) {
     return data.resume || knowledgeBase.en.resume;
   }
@@ -644,27 +643,23 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return `### **Agentic AI, LLMs & Heuristic Systems** 🤖\n\n- **AI Digital Twin Architecture:** Engineered this real-time streaming AI Digital Twin using **Groq Cloud LLM inference**, custom knowledge-base retrieval, and **Web Speech APIs** (voice recognition + speech synthesis across 8 languages).\n- **Heuristic Synthesis:** Built the **[Capstone AI Title Generator](https://jacksimeon1.github.io/capstone-title-ai/)**, an academic research title synthesis engine with heuristic validation across IT, CS, and IS domains.\n- **Industry Experience:** Completed a 10-week intensive engagement as a **Full-Stack & Agentic AI Developer** with **Employability Advantage · AusBiz Consulting Pty Ltd (Australia)**.`;
   }
 
-  // 10. Specific Projects
-  if (lowerMessage.includes('sip') || lowerMessage.includes('3d can') || lowerMessage.includes('beverage')) {
+  // 10. Specific Projects (use word boundaries \b to prevent substring collisions like "photosynthesis" matching "thesis")
+  if (/\b(sip\s*3d|sip|3d\s*can|beverage)\b/i.test(lowerMessage)) {
     return data.projects?.sip3d || knowledgeBase.en.projects.sip3d;
   }
-  if (lowerMessage.includes('3d room') || lowerMessage.includes('isometric') || lowerMessage.includes('sanctuary') || 
-      lowerMessage.includes('kuwarto') || lowerMessage.includes('habitación') || lowerMessage.includes('部屋')) {
+  if (/\b(3d\s*room|isometric|sanctuary|kuwarto|habitación)\b/i.test(lowerMessage) || lowerMessage.includes('部屋')) {
     return data.projects?.room3d || knowledgeBase.en.projects.room3d;
   }
-  if (lowerMessage.includes('capstone') || lowerMessage.includes('title generator') || lowerMessage.includes('thesis') || 
-      lowerMessage.includes('generator')) {
+  if (/\b(capstone|title\s*generator|thesis)\b/i.test(lowerMessage)) {
     return data.projects?.capstoneTitleAi || knowledgeBase.en.projects.capstoneTitleAi;
   }
-  if (lowerMessage.includes('scheduling') || lowerMessage.includes('activity scheduling') || lowerMessage.includes('campus scheduling') || 
-      lowerMessage.includes('iskedyul')) {
+  if (/\b(scheduling|activity\s*scheduling|campus\s*scheduling|iskedyul)\b/i.test(lowerMessage)) {
     return data.projects?.scheduling || knowledgeBase.en.projects.scheduling;
   }
-  if (lowerMessage.includes('building permit') || lowerMessage.includes('permit') || 
-      (lowerMessage.includes('lgu') && !lowerMessage.includes('school'))) {
+  if (/\b(building\s*permit|permit|lgu)\b/i.test(lowerMessage)) {
     return data.projects?.permit || knowledgeBase.en.projects.permit;
   }
-  if (lowerMessage.includes('attendance') || lowerMessage.includes('tracking system') || lowerMessage.includes('dtr')) {
+  if (/\b(attendance|tracking\s*system|dtr)\b/i.test(lowerMessage)) {
     return data.projects?.attendance || knowledgeBase.en.projects.attendance;
   }
 
@@ -737,9 +732,9 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return data.contact ? data.contact[0] : knowledgeBase.en.contact[0];
   }
 
-  // 19. About / Bio / Who are you / Name
+  // 19. About Robert / Bio / Who are you / Name (only when referring to Robert or the bot)
   if (lowerMessage.includes('about robert') || lowerMessage.includes('about you') || lowerMessage.includes('about him') ||
-      lowerMessage.includes('tell me about') || lowerMessage.includes('who are you') || lowerMessage.includes('who is robert') || 
+      lowerMessage.includes('about yourself') || lowerMessage.includes('who are you') || lowerMessage.includes('who is robert') || 
       lowerMessage.includes('who is he') || lowerMessage.includes('robert simeon') ||
       lowerMessage.includes('sino ka') || lowerMessage.includes('sino si robert') || lowerMessage.includes('tungkol kay robert') || 
       lowerMessage.includes('quién eres') || lowerMessage.includes('qui es-tu') || lowerMessage.includes('wer bist du') || 
@@ -753,9 +748,38 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     return data.about ? data.about[0] : knowledgeBase.en.about[0];
   }
 
-  // 20. Pure Arithmetic Math & Calculation questions
+  // 20. Age / Graduation Year / Hobbies / Personal conversational questions about Robert
+  if (/\b(how\s+old\s+(is\s+robert|is\s+he|are\s+you)|robert'?s\s+age|his\s+age|your\s+age|when\s+was\s+(robert|he)\s+born)\b/i.test(lowerMessage)) {
+    return "I completed my **Senior High School STEM track (With Honors)** in **2021–2022** and my **Bachelor of Science in Information Technology (BSIT)** degree at **St. Paul University Philippines (SPUP)** from **2022 to June 2026**. I'm a young, energetic **Full-Stack & Agentic AI Developer** from **Santo Niño, Cagayan, Philippines** ready to make a real-world impact!";
+  }
+
+  if (/\b(hobby|hobbies|free\s+time|pastime|what\s+does\s+(robert|he)\s+like|favorite)\b/i.test(lowerMessage)) {
+    return "Outside of core software engineering, I enjoy **experimenting with emerging AI systems**, building **interactive 3D web experiences** (like my **3D Room** and **SIP 3D** projects), creating content on **[YouTube (@Track_Theory-4ever)](https://www.youtube.com/@Track_Theory-4ever)**, and mentoring fellow IT students on Capstone Development!";
+  }
+
+  // 21. Jokes, Riddles & Fun
+  if (/\b(joke|funny|make me laugh|tawa|humor|pun|riddle)\b/i.test(lowerMessage)) {
+    const jokes = [
+      "Why do programmers prefer dark mode? Because light attracts bugs! 🐛😄",
+      "There are 10 types of people in the world: those who understand binary, and those who don't. 💻",
+      "Why did the JavaScript developer wear glasses? Because they didn't C#! 🤓",
+      "A SQL query walks into a bar, walks up to two tables and asks: 'Can I join you?' 🍻",
+      "Why do Java programmers wear glasses? Because they don't see sharp! ⚡",
+    ];
+    return jokes[Math.floor(Math.random() * jokes.length)];
+  }
+
+  // 22. Pure Arithmetic Math & Percentage Calculation questions
+  const pctMatch = lowerMessage.match(/(\d+(?:\.\d+)?)\s*%\s*of\s*(\d+(?:\.\d+)?)/i);
+  if (pctMatch) {
+    const pct = parseFloat(pctMatch[1]);
+    const total = parseFloat(pctMatch[2]);
+    const res = (pct / 100) * total;
+    return `**${pct}% of ${total}** is **${Number(res.toFixed(6))}**.`;
+  }
+
   const mathMatch = lowerMessage.match(/(?:what\s+is\s+|calculate\s+|solve\s+)?([0-9\.\s\+\-\*\/\^\(\)]+)/i);
-  if (mathMatch && /[\+\-\*\/]/.test(mathMatch[1]) && !/[a-z]{3,}/i.test(lowerMessage)) {
+  if (mathMatch && /[\+\-\*\/]/.test(mathMatch[1]) && !/[a-z]{3,}/i.test(lowerMessage.replace(/^(what\s+is|calculate|solve)\s+/i, ''))) {
     try {
       const sanitized = mathMatch[1].replace(/[^0-9\+\-\*\/\.\(\)\s]/g, '');
       const fn = new Function(`return (${sanitized})`);
@@ -766,7 +790,7 @@ res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
     } catch {}
   }
 
-  // 21. Specific Suggested Coding Prompts (Python Hello World & Async/Await)
+  // 23. Specific Suggested Coding Prompts (Python Hello World & Async/Await)
   if (lowerMessage.includes('python hello world') || lowerMessage === 'write a python hello world program') {
     return `Here is a clean **Python** example:\n\`\`\`python\n# Python Hello World & Function Example\ndef greet(name: str) -> str:\n    return f"Hello, {name}! Welcome to Python development."\n\nif __name__ == "__main__":\n    print(greet("World"))\n\`\`\`\nPython is renowned for its clean syntax and power in AI, automation, and backend systems. What specific Python task would you like to build?`;
   }
@@ -784,7 +808,7 @@ export function generateSmartResponse(message: string, preferredLang: keyof type
   if (quick) return quick;
 
   const lower = message.toLowerCase();
-  if (lower.includes('robert') || lower.includes('simeon') || lower.includes('he ') || lower.includes('his ') || lower.includes('you')) {
+  if (/\b(robert|simeon|he|his|him|you|your)\b/i.test(lower)) {
     return `${knowledgeBase.en.about[0]}\n\n${knowledgeBase.en.contact[0]}`;
   }
 

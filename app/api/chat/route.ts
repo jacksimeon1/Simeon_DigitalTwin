@@ -117,6 +117,55 @@ function createLocalStream(text: string): Response {
 }
 
 // ────────────────────────────────────────────────────────────────────────────
+// Zero-rate-limit Live Web Knowledge Lookup (Wikipedia Search + Summary API)
+// Answers general / random / trivia / factual questions in ~450ms when LLMs rate-limit
+// ────────────────────────────────────────────────────────────────────────────
+async function fetchLiveWebKnowledge(query: string, lang = 'en'): Promise<string | null> {
+  try {
+    const cleanQuery = query
+      .replace(/^(what\s+is\s+the\s+|what\s+is\s+a\s+|what\s+is\s+an\s+|what\s+is\s+|what\s+are\s+|who\s+is\s+|who\s+was\s+|where\s+is\s+|when\s+was\s+|why\s+is\s+|how\s+does\s+|how\s+do\s+|how\s+to\s+|tell\s+me\s+about\s+|can\s+you\s+explain\s+|explain\s+|define\s+)/i, '')
+      .replace(/\?+$/, '')
+      .trim();
+
+    if (!cleanQuery || cleanQuery.length < 2) return null;
+
+    const wikiLang = ['en', 'es', 'fr', 'de', 'zh', 'ja', 'ko', 'tl'].includes(lang) ? lang : 'en';
+    const searchUrl = `https://${wikiLang}.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(cleanQuery)}&utf8=&format=json&srlimit=1`;
+
+    const searchRes = await fetch(searchUrl, {
+      headers: { 'User-Agent': 'SimeonDigitalTwinPortfolio/1.0 (robertsimeon12345@gmail.com)' },
+      signal: AbortSignal.timeout(3500),
+    });
+    if (!searchRes.ok) return null;
+
+    const searchData = await searchRes.json();
+    const topHit = searchData?.query?.search?.[0];
+    if (!topHit?.title) {
+      // Fallback to English Wikipedia if localized wiki had no match
+      if (wikiLang !== 'en') {
+        return fetchLiveWebKnowledge(query, 'en');
+      }
+      return null;
+    }
+
+    const summaryUrl = `https://${wikiLang}.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(topHit.title)}`;
+    const summaryRes = await fetch(summaryUrl, {
+      headers: { 'User-Agent': 'SimeonDigitalTwinPortfolio/1.0 (robertsimeon12345@gmail.com)' },
+      signal: AbortSignal.timeout(3500),
+    });
+    if (!summaryRes.ok) return null;
+
+    const summaryData = await summaryRes.json();
+    const extract = summaryData?.extract;
+    if (!extract || extract.length < 20) return null;
+
+    return `### **${summaryData.title || topHit.title}**\n\n${extract}`;
+  } catch {
+    return null;
+  }
+}
+
+// ────────────────────────────────────────────────────────────────────────────
 // Free LLM streaming attempt (always preserves system prompt + recent history)
 // ────────────────────────────────────────────────────────────────────────────
 async function streamFromFreeLLM(
@@ -187,7 +236,8 @@ async function streamFromFreeLLM(
         }
 
         if (!hasSentAnyChunk) {
-          const fallbackText = generateSmartResponse(userText, userLanguage as any);
+          const wikiAnswer = await fetchLiveWebKnowledge(userText, userLanguage);
+          const fallbackText = wikiAnswer || generateSmartResponse(userText, userLanguage as any);
           controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: fallbackText })}\n\n`));
         }
         controller.enqueue(encoder.encode('data: [DONE]\n\n'));
@@ -196,7 +246,8 @@ async function streamFromFreeLLM(
         console.warn('Free LLM stream interrupted:', err);
         try {
           if (!hasSentAnyChunk) {
-            const fallbackText = generateSmartResponse(userText, userLanguage as any);
+            const wikiAnswer = await fetchLiveWebKnowledge(userText, userLanguage);
+            const fallbackText = wikiAnswer || generateSmartResponse(userText, userLanguage as any);
             controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: fallbackText })}\n\n`));
           }
           controller.enqueue(encoder.encode('data: [DONE]\n\n'));
@@ -377,8 +428,9 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    // ── 3. RELIABLE SMART KNOWLEDGEBASE ENGINE (INSTANT & GUARANTEED) ──
-    const smartResponse = generateSmartResponse(userText, userLanguage as any);
+    // ── 3. ZERO-RATE-LIMIT LIVE WEB KNOWLEDGE (WIKIPEDIA) & SMART RESUME ENGINE ──
+    const wikiResponse = await fetchLiveWebKnowledge(userText, userLanguage);
+    const smartResponse = wikiResponse || generateSmartResponse(userText, userLanguage as any);
     if (wantStream) {
       return createLocalStream(smartResponse);
     }
